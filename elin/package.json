@@ -1,9 +1,10 @@
 {
   "name": "elin",
   "version": "1.0.0",
-  "description": "Exploring code - world 8 - final level",
+  "description": "Exploring Code module - World 8 - Final level",
   "main": "index.js",
   "scripts": {
+    "start": "start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elin Nordin",
