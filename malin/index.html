@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malin's level</title>
+    <title>My game</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
-    <h1>Hejsan</h1>
+    <a-scene>
+        <a-assets>
+            <a-asset-items id="warehouse" src="assets/scenenew.gltf"></a-asset-items>
+        </a-assets>
+
+        <a-entity gltf-model="#warehouse"></a-entity>
+    </a-scene>
 </body>
 </html>
