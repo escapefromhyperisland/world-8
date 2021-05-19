@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8">
 
-<title>The cat and the dog game</title>
+<title>The cat and the dog</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 The cat and the dog
@@ -21,25 +21,52 @@ NAME blueprint
 128,159,255
 255,255,255
 
+PAL 1
+159,50,254
+188,187,250
+253,250,251
+
 ROOM 0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+f,d,d,d,d,d,d,d,d,d,d,d,d,d,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,c,0,0,0,d,f
+f,d,0,0,0,0,0,0,0,0,0,0,0,0,d,f
+f,d,d,d,d,d,d,d,d,d,d,d,d,d,d,f
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
 NAME example room
-PAL 0
+EXT 10,12 1 10,12 FX tunnel DLG 6
+PAL 1
+
+ROOM 1
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+f,f,f,f,d,d,d,d,d,d,d,d,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,d,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,0,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,0,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,0,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,0,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,0,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,c,0,d,f,f,f
+f,f,f,f,d,0,0,0,0,0,0,0,d,f,f,f
+f,f,f,f,d,d,d,d,d,d,d,d,d,f,f,f
+f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f
+NAME basement
+EXT 10,12 0 10,12 FX tunnel DLG 4
+PAL 1
 
 TIL a
 11111111
@@ -53,25 +80,71 @@ TIL a
 NAME block
 
 TIL b
+11011110
+11011100
+10001001
+01100011
+11111011
+11111011
+01110001
+01101110
+NAME stone wall
+
+TIL c
+11111111
+10000001
+10101001
+10101001
+10101001
+10101001
+10101001
+11111111
+NAME Stairs
+
+TIL d
+11011101
+00010001
 00000000
+11110111
+10000100
 00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
+11101111
+00001000
+NAME brick wall
+WAL true
+
+TIL e
+01011101
+01100110
+00111110
+10001100
+01111110
+10011001
+01011010
+00111100
+NAME three bottom
+WAL false
+
+TIL f
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
 
 SPR A
-00000000
-10011000
-10011000
-01111100
+00111100
 00111110
-00111101
-00100100
-00100100
-POS 0 4,4
+01101010
+10111100
+00011100
+00111110
+01010100
+00010100
+POS 0 8,11
 
 SPR a
 00000000
@@ -93,7 +166,7 @@ SPR a
 00100100
 NAME cat
 DLG 0
-POS 0 6,4
+POS 0 8,6
 
 SPR b
 00000000
@@ -115,7 +188,7 @@ SPR b
 00100100
 NAME Dog
 DLG 3
-POS 0 11,10
+POS 0 11,9
 
 ITM 0
 00000000
@@ -177,6 +250,18 @@ DLG 3
 }
 """
 NAME Dog dialog
+
+DLG 4
+You walk up the stairs to the first floor.
+NAME exit narration 1
+
+DLG 5
+You walk the staris
+NAME exit narration 2
+
+DLG 6
+You walked down the stairs to the basement.
+NAME exit narration 3
 
 VAR hasTalkedToDog
 0
