@@ -7,30 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boss level</title>
 
+    <!-- javascript import -->
     <script src="index.js" defer></script>
-
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- aframe import -->
+    <script src="https://aframe.io/releases/0.3.2/aframe.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.1/dist/aframe-extras.min.js"></script>
 </head>
 
 <body>
-    <a-scene>
+    <a-scene physics>
         <a-assets>
             <img id="white" src="./assets/textures/white.jpg">
         </a-assets>
 
-        <a-entity id="player" camera look-controls wasd-controls position="5 2 0"></a-entity>
+        <a-entity id="player" camera universal-controls kinematic-body position="5 8 0"></a-entity>
 
         <a-entity id="room">
 
-            <a-plane id="floor" position="0 0 0" rotation="-90 0 0" width="30" height="30" src="#white"></a-plane>
+            <a-plane id="floor" position="0 0 0" rotation="-90 0 0" width="30" height="30" src="#white" static-body></a-plane>
 
             <a-entity id="walls">
-                <a-box position="0 4 -15" rotation="0 0 0" scale="30 8 1" src="#white"></a-box>
-                <a-box position="0 4 15" rotation="0 0 0" scale="30 8 1" src="#white"></a-box>
-                <a-box position="-15 4 0" rotation="0 90 0" scale="30 8 1" src="#white"></a-box>
-                <a-box position="15 4 0" rotation="0 90 0" scale="30 8 1" src="#white"></a-box>
-                <a-box position="-5 4 7.5" rotation="0 90 0" scale="15 8 0.5" src="#white"></a-box>
-                <a-box position="-5 4 -10" rotation="0 90 0" scale="10 8 0.5" src="#white"></a-box>
+                <a-box position="0 4 -15" rotation="0 0 0" scale="30 8 1" src="#white" static-body></a-box>
+                <a-box position="0 4 15" rotation="0 0 0" scale="30 8 1" src="#white" static-body></a-box>
+                <a-box position="-15 4 0" rotation="0 90 0" scale="30 8 1" src="#white" static-body></a-box>
+                <a-box position="15 4 0" rotation="0 90 0" scale="30 8 1" src="#white" static-body></a-box>
+                <a-box position="-5 4 7.5" rotation="0 90 0" scale="15 8 0.5" src="#white" static-body></a-box>
+                <a-box position="-5 4 -10" rotation="0 90 0" scale="10 8 0.5" src="#white" static-body></a-box>
             </a-entity>
 
         </a-entity>
