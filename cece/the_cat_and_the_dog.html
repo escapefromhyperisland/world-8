@@ -12,7 +12,7 @@ The cat and the dog
 # BITSY VERSION 7.2
 
 ! ROOM_FORMAT 1
-  
+
 PAL 0
 NAME blueprint
 0,82,204
@@ -215,11 +215,11 @@ DLG 2
 DLG 0
 """
 {
-- {hasTalkedToDog} == 1 ?
-You talked to dog!! You betrayed me. {shk}You will pay for this.{shk}
-- else ?
-I'm a cat. Don't {clr2}talk to the dog{clr2}
-{hasTalkedToCat = 1}
+  - {hasTalkedToDog} == 1 ?
+    You talked to dog!! You betrayed me. {shk}You will pay for this.{shk}
+  - else ?
+    I'm a cat. Don't {clr2}talk to the dog{clr2}
+    {hasTalkedToCat = 1}
 }
 """
 NAME cat dialog
@@ -235,16 +235,16 @@ NAME key dialog
 DLG 3
 """
 {
-- {hasTalkedToCat} == 0 ?
-Cat! a cat! Do you see the cat? Look at that cat over there!
-- else ?
-Oh Hi! I am {clr2}dog{clr2}
-{pg}
-{rbw}I voff you{rbw}
-{printSprite "A"}
-{pg}
-Let's be {rbw}Best friends!{rbw}
-{hasTalkedToDog = 1}
+  - {hasTalkedToCat} == 0 ?
+    Cat! a cat! Do you see the cat? Look at that cat over there!
+  - else ?
+    Oh Hi! I am {clr2}dog{clr2}
+    {pg}
+    {rbw}I voff you{rbw} 
+    {printSprite "A"}
+    {pg}
+    Let's be {rbw}Best friends!{rbw} 
+    {hasTalkedToDog = 1}
 }
 """
 NAME Dog dialog
