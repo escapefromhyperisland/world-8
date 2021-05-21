@@ -8,17 +8,21 @@
     <title>Boss level</title>
 
     <script src="index.js" defer></script>
-
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
 </head>
 
 <body>
-    <a-scene>
-        <a-assets>
-            <img id="white" src="./assets/textures/white.jpg">
-        </a-assets>
+    <a-scene inspector-plugin-recast>
+        <a-asset>
+            <img id="white" src="/assets/textures/white.jpg">
+            <a-asset-item id="nav-mesh" src="/assets/models/navmesh.gltf"></a-asset-item>
+        </a-asset>
 
-        <a-entity id="player" camera look-controls wasd-controls position="5 2 0"></a-entity>
+        <a-entity movement-controls="speed: 0.5; constrainToNavMesh: true">
+            <a-entity id="player" camera look-controls position="0 4 0"></a-entity>
+        </a-entity>
 
         <a-entity id="room">
 
@@ -33,8 +37,9 @@
                 <a-box position="-5 4 -10" rotation="0 90 0" scale="10 8 0.5" src="#white"></a-box>
             </a-entity>
 
-        </a-entity>
+        </a-entity> 
 
+        <a-entity gltf-model="#nav-mesh" nav-mesh position="0 -0.1 0" visible="false"></a-entity>
     </a-scene>
 </body>
 
