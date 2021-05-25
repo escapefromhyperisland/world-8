@@ -1,19 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My game</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>  -->
+    <script src="js/video.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script> -->
+
 </head>
 <body>
     <a-scene>
         <a-assets>
-            <a-asset-items id="warehouse" src="assets/scenenew.gltf"></a-asset-items>
+            <a-asset-items id="newwarehouse" src="assets/newwarehouse.glb"></a-asset-items>
+            <video id="videonew" src="assets/circle.mp4" autoplay loop preload crossorigin="anonymous"></video>
+            <img id="play" src="assets/play.png">
+            <img id="pause" src="assets/pause.png">
         </a-assets>
 
-        <a-entity gltf-model="#warehouse"></a-entity>
+        <a-entity gltf-model="#newwarehouse"></a-entity>
+
+        <a-entity position="0 0 0">
+            <a-sphere color="pink" position="-10 3 -20" radius="0.6" color="pink" shadow ></a-sphere>
+        </a-entity>  
+
+        <a-video src="#videonew" width="7" height="5.25" position="-10 1.4 -4.4">       
+            <a-image id="videoControls" src="#play" position="0 5 0" play-pause></a-image>
+        </a-video>        
+
+        <!-- <a-entity camera look-controls mouse-cursor>
+
+
     </a-scene>
+
 </body>
 </html>
