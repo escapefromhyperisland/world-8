@@ -13,8 +13,8 @@
 
 #TextBox1 {
   position: absolute;
-  top: 8px;
-  left: 16px;
+  top: 0px;
+  left: 0px;
   z-index: 2;
 }
 
@@ -23,4 +23,21 @@
   left: 30%;
   bottom: 0;
   margin: 0 auto;
+}
+
+#text-TextBox1 {
+  max-width: 300px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 12px;
+}
+
+#text-TextBox2 {
+  max-width: 300px;
+  position: absolute;
+  padding: 10px;
+  top: 20%;
+  left: 35%;
+  font-size: 15px;
 }
