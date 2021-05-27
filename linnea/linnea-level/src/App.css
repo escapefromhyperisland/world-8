@@ -1,9 +1,26 @@
 .App {
   text-align: center;
   font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  color: white;
 }
 
 #Background {
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+#TextBox1 {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  z-index: 2;
+}
+
+#TextBox2 {
+  position: fixed;
+  left: 30%;
+  bottom: 0;
+  margin: 0 auto;
 }
