@@ -25,15 +25,19 @@
             <img id="white" src="/assets/textures/white.jpg">
             <a-asset-item id="nav-mesh" src="/assets/models/navmesh.gltf"></a-asset-item>
             <a-asset-item id="room" src="/assets/models/escape-room1.glb"></a-asset-item>
+            <a-asset-item id="red-button" src="/assets/models/red-button.glb"></a-asset-item>
+            <a-asset-item id="green-button" src="/assets/models/green-button.glb"></a-asset-item>
         </a-asset>
 
         <a-entity movement-controls="speed: 0.5; constrainToNavMesh: true">
-            <a-entity id="player" camera look-controls position="0 4 0">
+            <a-entity id="player" camera look-controls position="0 3 0">
                 <a-cursor cursor="rayOrigin: mouse"></a-cursor>
             </a-entity>
         </a-entity>
 
         <a-entity id="room" gltf-model="#room" position="0 -0.1 0"></a-entity>
+        
+        <a-entity id="button" gltf-model="#red-button" position="7.7 3 -5.75" rotation="0 -90 0"></a-entity>
 
         <a-entity 
             id="keyboard" 

@@ -1,6 +1,9 @@
 AFRAME.registerComponent('keyboard-functions', {
 
     init: function () {
+
+        let isPasswordCorrect = false
+        
         // for referencing issues
         let self = this;
 
@@ -18,10 +21,14 @@ AFRAME.registerComponent('keyboard-functions', {
             self.el.setAttribute("super-keyboard", "value", "");
 
             // handle password
-            if(text === "home") {
+            if(text === "correct") {
                 console.log("You saved the world!")
+                document.querySelector("#button").setAttribute("gltf-model", "/assets/models/green-button.glb")
+                isPasswordCorrect = true
             } else {
                 alert("WRONG PASSWORD.... TRY AGAIN")
+                document.querySelector("#button").setAttribute("gltf-model", "/assets/models/red-button.glb")
+                isPasswordCorrect = false
             }
         });
 
