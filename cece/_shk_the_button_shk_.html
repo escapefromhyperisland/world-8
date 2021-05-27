@@ -286,6 +286,17 @@ TIL t
 NAME shelf bottom left
 WAL true
 
+TIL u
+11110000
+00100000
+01000000
+11110000
+00001111
+00000010
+00000100
+00001111
+NAME Zzzz
+
 SPR A
 00111100
 00111110
@@ -414,9 +425,8 @@ NAME Robot Start dialog
 
 DLG 4
 """
-{printSprite "A"}: Good morning Robotana! Tell me about my day.
-{pg}
-{printSprite "c"}: Good morning beautiful! It's the may the forth year 3000 and the sun is still shining hot over use so don't forget to use sunscreen out there!
+{printSprite "A"}: {printTile "u"} Good morning Robotana...{printTile "u"} Tell me about my day...{printTile "u"}
+{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us so don't forget to put some sunscreen on you before you leave the house!
 """
 NAME exit narration 1
 
