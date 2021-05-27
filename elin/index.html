@@ -24,14 +24,14 @@
         <a-asset>
             <img id="white" src="/assets/textures/white.jpg">
             <a-asset-item id="nav-mesh" src="/assets/models/navmesh.gltf"></a-asset-item>
-            <a-asset-item id="room" src="/assets/models/escape-room1.glb"></a-asset-item>
+            <a-asset-item id="room" src="/assets/models/escape-room.glb"></a-asset-item>
             <a-asset-item id="red-button" src="/assets/models/red-button.glb"></a-asset-item>
             <a-asset-item id="green-button" src="/assets/models/green-button.glb"></a-asset-item>
         </a-asset>
 
         <a-entity movement-controls="speed: 0.5; constrainToNavMesh: true">
             <a-entity id="player" camera look-controls position="0 3 0">
-                <a-cursor cursor="rayOrigin: mouse"></a-cursor>
+                <a-cursor cursor="rayOrigin: mouse" visible="false"></a-cursor>
             </a-entity>
         </a-entity>
 
@@ -43,7 +43,7 @@
             id="keyboard" 
             super-keyboard="hand: #mouseCursor; imagePath: assets/images/;" 
             keyboard-functions
-            position="3.5 1.25 2.25" rotation="-50 90 0" scale="6 5 3">
+            position="2.236 2.3 1.765" rotation="-30 90 0" scale="3 2.5 1">
         </a-entity>
 
         <!-- <a-entity id="navmesh" gltf-model="#nav-mesh" nav-mesh position="0 -0.1 0" visible="true"></a-entity> -->
