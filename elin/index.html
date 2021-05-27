@@ -7,17 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boss level</title>
 
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="index.js" defer></script>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
 </head>
 
 <body>
-    <a-scene>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <a-sky color="#ECECEC"></a-sky>
-      </a-scene>
+    <a-scene inspector-plugin-recast>
+        <a-asset>
+            <img id="white" src="/assets/textures/white.jpg">
+            <a-asset-item id="nav-mesh" src="/assets/models/navmesh.gltf"></a-asset-item>
+        </a-asset>
+
+        <a-entity movement-controls="speed: 0.5; constrainToNavMesh: true">
+            <a-entity id="player" camera look-controls position="0 4 0"></a-entity>
+        </a-entity>
+
+        <a-entity id="room">
+
+            <a-plane id="floor" position="0 0 0" rotation="-90 0 0" width="30" height="30" src="#white"></a-plane>
+
+            <a-entity id="walls">
+                <a-box position="0 4 -15" rotation="0 0 0" scale="30 8 1" src="#white"></a-box>
+                <a-box position="0 4 15" rotation="0 0 0" scale="30 8 1" src="#white"></a-box>
+                <a-box position="-15 4 0" rotation="0 90 0" scale="30 8 1" src="#white"></a-box>
+                <a-box position="15 4 0" rotation="0 90 0" scale="30 8 1" src="#white"></a-box>
+                <a-box position="-5 4 7.5" rotation="0 90 0" scale="15 8 0.5" src="#white"></a-box>
+                <a-box position="-5 4 -10" rotation="0 90 0" scale="10 8 0.5" src="#white"></a-box>
+            </a-entity>
+
+        </a-entity> 
+
+        <a-entity gltf-model="#nav-mesh" nav-mesh position="0 -0.1 0" visible="false"></a-entity>
+    </a-scene>
 </body>
 
 </html>

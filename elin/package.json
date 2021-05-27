@@ -4,9 +4,12 @@
   "description": "Exploring Code module - World 8 - Final level",
   "main": "index.js",
   "scripts": {
-    "start": "start",
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elin Nordin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
 }
