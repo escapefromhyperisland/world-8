@@ -45,8 +45,12 @@ AFRAME.registerComponent('dot-function', {
 
     init: function () {
         this.el.addEventListener('click', function (event) {
-            console.log("clicked")
-            this.setAttribute('material', 'color', 'black');
+            if (this.getAttribute('color') === 'white') {
+                this.setAttribute('color', 'black');
+            }
+            else if (this.getAttribute('color') === 'black') {
+                this.setAttribute('color', 'white');
+            }
         })
     }
 
