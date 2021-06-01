@@ -73,17 +73,40 @@ ROOM 2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,c,c,c,c,c,v,w,x,c,c,0,0,0
-0,0,0,c,i,c,c,c,y,z,10,c,c,0,0,0
-0,c,c,c,j,c,c,c,11,12,13,c,c,0,0,0
-0,c,c,e,e,e,e,e,e,e,e,e,e,0,0,0
-0,c,c,e,e,e,e,e,14,15,1a,1b,1c,0,0,0
-0,e,e,e,e,e,e,e,16,17,1e,e,1d,0,0,0
-0,e,e,e,e,e,e,e,18,19,1e,1f,1d,0,0,0
-0,e,e,e,e,e,e,e,e,e,e,e,e,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,c,i,c,f,c,y,z,10,c,c,0,0,0
+0,c,c,1g,j,1g,1g,1g,11,12,13,1g,1g,b,0,0
+0,c,c,e,e,e,e,e,e,e,e,e,e,b,0,0
+b,1g,1g,e,e,e,e,e,14,15,1a,1b,1c,b,0,0
+b,e,e,e,e,e,e,e,16,17,1e,0,1h,b,0,0
+b,e,e,e,e,e,e,e,18,19,1e,1f,1d,b,0,0
+b,e,e,e,e,e,e,e,e,e,e,e,e,b,0,0
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Livingroom
+EXT 12,8 3 5,8
+PAL 0
+
+ROOM 3
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,c,c,20,1i,1l,1o,1r,1u,1x,c,0
+0,0,0,0,0,c,c,21,1j,1m,1p,1s,1v,1y,c,0
+0,0,0,0,0,c,c,22,1k,1n,1q,1t,1w,1z,c,0
+0,0,0,0,0,e,e,e,e,e,e,e,e,e,c,0
+0,0,0,0,0,e,e,e,e,e,e,e,e,e,c,0
+0,0,0,0,0,e,e,e,e,e,e,e,e,e,c,0
+0,0,0,0,0,e,e,e,e,e,e,e,e,e,c,0
+0,0,0,0,0,e,e,e,e,e,e,e,e,e,c,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME kitchen
+ITM 0 10,6
+EXT 5,8 2 12,8
 PAL 0
 
 TIL 10
@@ -108,7 +131,7 @@ TIL 11
 01011111
 01111111
 NAME ShL bottom left
-WAL true
+WAL false
 
 TIL 12
 10110001
@@ -120,7 +143,7 @@ TIL 12
 11001110
 11111111
 NAME ShL bottom middle
-WAL true
+WAL false
 
 TIL 13
 11111010
@@ -132,7 +155,7 @@ TIL 13
 11101110
 11111110
 NAME ShL bottom right
-WAL true
+WAL false
 
 TIL 14
 11111001
@@ -202,6 +225,42 @@ TIL 19
 00000000
 11111110
 NAME Sofa bottom right
+
+TIL 20
+11101111
+10000100
+00000100
+11110100
+10000100
+00000100
+01111100
+01000100
+NAME Kitch19
+WAL true
+
+TIL 21
+01110100
+01000100
+00000100
+11011100
+00010100
+00000100
+10111100
+00100100
+NAME Kitch20
+WAL true
+
+TIL 22
+11011100
+00010100
+00000100
+01111100
+01000100
+00000100
+01101100
+01001100
+NAME Kitch21
+WAL false
 
 TIL b
 00000000
@@ -519,6 +578,7 @@ TIL 1b
 00000000
 00000000
 NAME TvTbl top middle
+WAL true
 
 TIL 1c
 11111111
@@ -526,15 +586,15 @@ TIL 1c
 11111111
 01111111
 01111111
-01111111
-01111111
-01111111
+01111110
+01111100
+01111100
 NAME TvTbl top right
 
 TIL 1d
-01111111
-01111111
-01111111
+01111100
+01111100
+01111110
 01111111
 01111111
 01111111
@@ -563,6 +623,239 @@ TIL 1f
 00000000
 11111111
 NAME TVtbl bottom middle
+
+TIL 1g
+11011101
+00010001
+00000000
+11110111
+10000100
+00000000
+11101111
+00001000
+NAME BrickWallPassing
+WAL false
+
+TIL 1h
+01111100
+01111100
+01111100
+01111100
+01111100
+01111100
+01111100
+01111100
+NAME TvTbl screen
+
+TIL 1i
+11111111
+00000000
+11111111
+10000001
+10000001
+10000001
+10000001
+10000001
+NAME Kitch1
+WAL true
+
+TIL 1j
+10000001
+10000001
+10000101
+10000101
+10000101
+10000001
+11111111
+10000001
+NAME Kitch2
+WAL true
+
+TIL 1k
+10000101
+10000101
+10000101
+10000001
+10000001
+10000001
+10000001
+10000001
+NAME Kitch3
+
+TIL 1l
+11111111
+00001000
+00001000
+00001000
+00010100
+00100010
+01000001
+11111111
+NAME Kitch4
+WAL true
+
+TIL 1m
+00000000
+00000000
+00000000
+11111111
+00000001
+01101101
+01101101
+00000001
+NAME Kitch5
+WAL true
+
+TIL 1n
+01101101
+01101101
+00000001
+11111111
+00000001
+01111101
+01000101
+00000001
+NAME Kitch6
+
+TIL 1o
+11111111
+00100000
+00100000
+00100000
+00100000
+00100000
+00100000
+10111111
+NAME Kitch7
+WAL true
+
+TIL 1p
+00000000
+00000000
+00000000
+11111111
+00000000
+00000000
+00000000
+00000000
+NAME Kitch8
+WAL false
+
+TIL 1q
+00000000
+00000000
+00000000
+11111111
+00001000
+00101010
+00101010
+00001000
+NAME Kitch9
+
+TIL 1r
+11111111
+00100000
+00100000
+00100000
+10101000
+10101000
+00100000
+11111111
+NAME Kitch10
+WAL true
+
+TIL 1s
+00000000
+00000000
+01101010
+10000001
+00000000
+00000000
+00000000
+00000000
+NAME Kitch11
+WAL true
+
+TIL 1t
+00000000
+00000000
+00000000
+11111111
+01000010
+01001010
+01001010
+01000010
+NAME Kitch12
+
+TIL 1u
+11111111
+00010000
+00010000
+00010000
+00010000
+00010000
+00010000
+11110000
+NAME Kitch13
+WAL true
+
+TIL 1v
+00010001
+00010001
+00010000
+11110000
+00011111
+00010000
+00010011
+00010000
+NAME Kitch14
+WAL true
+
+TIL 1w
+00011111
+00010000
+00010011
+11110000
+00011111
+10010000
+10010011
+00010000
+NAME Kitch15
+
+TIL 1x
+11111111
+01000001
+01000001
+01000001
+01000001
+01000001
+01000001
+01000001
+NAME Kitch16
+WAL true
+
+TIL 1y
+01010001
+01010001
+01000001
+01000001
+11111111
+01000001
+01011001
+01000001
+NAME Kitch17
+WAL true
+
+TIL 1z
+11111111
+01000001
+01011001
+01000001
+11111111
+01000001
+01011001
+01000001
+NAME Kitch18
 
 SPR A
 00111100
@@ -668,6 +961,44 @@ NAME Robot2
 DLG 6
 POS 1 7,6
 
+SPR g
+11000011
+11111111
+01001110
+01001110
+01111010
+01000010
+11111111
+11000011
+NAME Painting
+DLG 7
+POS 2 6,6
+
+SPR h
+01111110
+10000001
+10000001
+10000001
+11111111
+00100100
+00111111
+00010000
+NAME CoffeeMach1e
+POS 3 11,6
+
+SPR i
+00111110
+00111101
+00111110
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME CoffeeMach2
+DLG 9
+POS 3 11,7
+
 ITM 0
 00000000
 00000000
@@ -677,7 +1008,8 @@ ITM 0
 00100100
 00011000
 00000000
-NAME tea
+NAME Coffe
+DLG 8
 
 ITM 1
 00000000
@@ -722,6 +1054,18 @@ NAME TVRemote dialog
 DLG 6
 {printSprite "c"}: You dont have to stand so close to me. I have excellent audio recording oh sorry I mean hearing in every room.
 NAME sprite f dialog
+
+DLG 7
+Family portrait
+NAME Painting dialog
+
+DLG 8
+Aaah finally coffee
+NAME Coffe dialog
+
+DLG 9
+Blurrpptt Bluurrppttsss
+NAME CoffeeMach2 dialog
 
 VAR a
 42
@@ -9513,6 +9857,375 @@ CHAR 9835
 <!-- BORKSY HACKS -->
 <script type="text/javascript" id="borksyHacks">
 //borksy uses dist versions of hacks from the bitsy hacks repo now
+
+/**
+📜
+@file long dialog
+@summary put more words onscreen
+@license MIT
+@version 15.4.4
+@requires 7.0
+@author Sean S. LeBlanc
+
+@description
+Makes the dialog box variable in height, allowing it to expand as needed.
+
+Minimum and maximum size are configurable.
+Cheat sheet:
+	2: bitsy default
+	8: reaches just below the halfway mark
+	16: roughly the max of the original bitsy margins
+	19: max before cutting off text
+
+Note: this hack also includes the paragraph break hack
+A common pattern in bitsy is using intentional whitespace to force new dialog pages,
+but the long dialog hack makes that look awkward since the text box expands.
+The paragraph break hack lets you get around this by using a (p) tag to immediately end the current page.
+
+HOW TO USE:
+	1. Copy-paste this script into a new script tag after the Bitsy source code.
+	2. edit hackOptions below as needed
+*/
+this.hacks = this.hacks || {};
+(function (exports, bitsy) {
+'use strict';
+var hackOptions =  {
+minRows: 2,
+maxRows: 4,
+} ;
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+bitsy = bitsy || /*#__PURE__*/_interopDefaultLegacy(bitsy);
+
+/**
+@file utils
+@summary miscellaneous bitsy utilities
+@author Sean S. LeBlanc
+*/
+
+/*
+Helper used to replace code in a script tag based on a search regex
+To inject code without erasing original string, using capturing groups; e.g.
+	inject(/(some string)/,'injected before $1 injected after')
+*/
+function inject$1(searchRegex, replaceString) {
+	// find the relevant script tag
+	var scriptTags = document.getElementsByTagName('script');
+	var scriptTag;
+	var code;
+	for (var i = 0; i < scriptTags.length; ++i) {
+		scriptTag = scriptTags[i];
+		var matchesSearch = scriptTag.textContent.search(searchRegex) !== -1;
+		var isCurrentScript = scriptTag === document.currentScript;
+		if (matchesSearch && !isCurrentScript) {
+			code = scriptTag.textContent;
+			break;
+		}
+	}
+
+	// error-handling
+	if (!code) {
+		throw new Error('Couldn\'t find "' + searchRegex + '" in script tags');
+	}
+
+	// modify the content
+	code = code.replace(searchRegex, replaceString);
+
+	// replace the old script tag with a new one using our modified code
+	var newScriptTag = document.createElement('script');
+	newScriptTag.textContent = code;
+	scriptTag.insertAdjacentElement('afterend', newScriptTag);
+	scriptTag.remove();
+}
+
+/**
+ * Helper for getting an array with unique elements
+ * @param  {Array} array Original array
+ * @return {Array}       Copy of array, excluding duplicates
+ */
+function unique(array) {
+	return array.filter(function (item, idx) {
+		return array.indexOf(item) === idx;
+	});
+}
+
+/**
+
+@file kitsy-script-toolkit
+@summary makes it easier and cleaner to run code before and after Bitsy functions or to inject new code into Bitsy script tags
+@license WTFPL (do WTF you want)
+@requires Bitsy Version: 4.5, 4.6
+@author @mildmojo
+
+@description
+HOW TO USE:
+  import {before, after, inject, addDialogTag, addDeferredDialogTag} from "./helpers/kitsy-script-toolkit";
+
+  before(targetFuncName, beforeFn);
+  after(targetFuncName, afterFn);
+  inject(searchRegex, replaceString);
+  addDialogTag(tagName, dialogFn);
+  addDeferredDialogTag(tagName, dialogFn);
+
+  For more info, see the documentation at:
+  https://github.com/seleb/bitsy-hacks/wiki/Coding-with-kitsy
+*/
+
+// Ex: inject(/(names.sprite.set\( name, id \);)/, '$1console.dir(names)');
+function inject(searchRegex, replaceString) {
+	var kitsy = kitsyInit();
+	if (
+		!kitsy.queuedInjectScripts.some(function (script) {
+			return searchRegex.toString() === script.searchRegex.toString() && replaceString === script.replaceString;
+		})
+	) {
+		kitsy.queuedInjectScripts.push({
+			searchRegex: searchRegex,
+			replaceString: replaceString,
+		});
+	} else {
+		console.warn('Ignored duplicate inject');
+	}
+}
+
+// Ex: before('load_game', function run() { alert('Loading!'); });
+//     before('show_text', function run(text) { return text.toUpperCase(); });
+//     before('show_text', function run(text, done) { done(text.toUpperCase()); });
+function before(targetFuncName, beforeFn) {
+	var kitsy = kitsyInit();
+	kitsy.queuedBeforeScripts[targetFuncName] = kitsy.queuedBeforeScripts[targetFuncName] || [];
+	kitsy.queuedBeforeScripts[targetFuncName].push(beforeFn);
+}
+
+function kitsyInit() {
+	// return already-initialized kitsy
+	if (bitsy.kitsy) {
+		return bitsy.kitsy;
+	}
+
+	// Initialize kitsy
+	bitsy.kitsy = {
+		queuedInjectScripts: [],
+		queuedBeforeScripts: {},
+		queuedAfterScripts: {},
+	};
+
+	var oldStartFunc = bitsy.startExportedGame;
+	bitsy.startExportedGame = function doAllInjections() {
+		// Only do this once.
+		bitsy.startExportedGame = oldStartFunc;
+
+		// Rewrite scripts and hook everything up.
+		doInjects();
+		applyAllHooks();
+
+		// Start the game
+		bitsy.startExportedGame.apply(this, arguments);
+	};
+
+	return bitsy.kitsy;
+}
+
+function doInjects() {
+	bitsy.kitsy.queuedInjectScripts.forEach(function (injectScript) {
+		inject$1(injectScript.searchRegex, injectScript.replaceString);
+	});
+	reinitEngine();
+}
+
+function applyAllHooks() {
+	var allHooks = unique(Object.keys(bitsy.kitsy.queuedBeforeScripts).concat(Object.keys(bitsy.kitsy.queuedAfterScripts)));
+	allHooks.forEach(applyHook);
+}
+
+function applyHook(functionName) {
+	var functionNameSegments = functionName.split('.');
+	var obj = bitsy;
+	while (functionNameSegments.length > 1) {
+		obj = obj[functionNameSegments.shift()];
+	}
+	var lastSegment = functionNameSegments[0];
+	var superFn = obj[lastSegment];
+	var superFnLength = superFn ? superFn.length : 0;
+	var functions = [];
+	// start with befores
+	functions = functions.concat(bitsy.kitsy.queuedBeforeScripts[functionName] || []);
+	// then original
+	if (superFn) {
+		functions.push(superFn);
+	}
+	// then afters
+	functions = functions.concat(bitsy.kitsy.queuedAfterScripts[functionName] || []);
+
+	// overwrite original with one which will call each in order
+	obj[lastSegment] = function () {
+		var returnVal;
+		var args = [].slice.call(arguments);
+		var i = 0;
+
+		function runBefore() {
+			// All outta functions? Finish
+			if (i === functions.length) {
+				return returnVal;
+			}
+
+			// Update args if provided.
+			if (arguments.length > 0) {
+				args = [].slice.call(arguments);
+			}
+
+			if (functions[i].length > superFnLength) {
+				// Assume funcs that accept more args than the original are
+				// async and accept a callback as an additional argument.
+				return functions[i++].apply(this, args.concat(runBefore.bind(this)));
+			}
+			// run synchronously
+			returnVal = functions[i++].apply(this, args);
+			if (returnVal && returnVal.length) {
+				args = returnVal;
+			}
+			return runBefore.apply(this, args);
+		}
+
+		return runBefore.apply(this, arguments);
+	};
+}
+
+function reinitEngine() {
+	// recreate the script and dialog objects so that they'll be
+	// referencing the code with injections instead of the original
+	bitsy.scriptModule = new bitsy.Script();
+	bitsy.scriptInterpreter = bitsy.scriptModule.CreateInterpreter();
+
+	bitsy.dialogModule = new bitsy.Dialog();
+	bitsy.dialogRenderer = bitsy.dialogModule.CreateRenderer();
+	bitsy.dialogBuffer = bitsy.dialogModule.CreateBuffer();
+}
+
+// Rewrite custom functions' parentheses to curly braces for Bitsy's
+// interpreter. Unescape escaped parentheticals, too.
+function convertDialogTags(input, tag) {
+	return input
+		.replace(new RegExp('\\\\?\\((' + tag + '(\\s+(".*?"|.+?))?)\\\\?\\)', 'g'), function (match, group) {
+			if (match.substr(0, 1) === '\\') {
+				return '(' + group + ')'; // Rewrite \(tag "..."|...\) to (tag "..."|...)
+			}
+			return '{' + group + '}'; // Rewrite (tag "..."|...) to {tag "..."|...}
+		});
+}
+
+function addDialogFunction(tag, fn) {
+	var kitsy = kitsyInit();
+	kitsy.dialogFunctions = kitsy.dialogFunctions || {};
+	if (kitsy.dialogFunctions[tag]) {
+		console.warn('The dialog function "' + tag + '" already exists.');
+		return;
+	}
+
+	// Hook into game load and rewrite custom functions in game data to Bitsy format.
+	before('parseWorld', function (gameData) {
+		return [convertDialogTags(gameData, tag)];
+	});
+
+	kitsy.dialogFunctions[tag] = fn;
+}
+
+function injectDialogTag(tag, code) {
+	inject(
+		/(var functionMap = new Map\(\);[^]*?)(this.HasFunction)/m,
+		'$1\nfunctionMap.set("' + tag + '", ' + code + ');\n$2',
+	);
+}
+
+/**
+ * Adds a custom dialog tag which executes the provided function.
+ * For ease-of-use with the bitsy editor, tags can be written as
+ * (tagname "parameters") in addition to the standard {tagname "parameters"}
+ *
+ * Function is executed immediately when the tag is reached.
+ *
+ * @param {string}   tag Name of tag
+ * @param {Function} fn  Function to execute, with signature `function(environment, parameters, onReturn){}`
+ *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
+ *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
+ *                       onReturn: function to call with return value (just call `onReturn(null);` at the end of your function if your tag doesn't interact with the logic system)
+ */
+function addDialogTag(tag, fn) {
+	addDialogFunction(tag, fn);
+	injectDialogTag(tag, 'kitsy.dialogFunctions["' + tag + '"]');
+}
+
+/**
+ * Helper for printing a paragraph break inside of a dialog function.
+ * Adds the function `AddParagraphBreak` to `DialogBuffer`
+ */
+
+inject(/(this\.AddLinebreak = )/, 'this.AddParagraphBreak = function() { buffer.push( [[]] ); isActive = true; };\n$1');
+
+/**
+📃
+@file paragraph-break
+@summary Adds paragraph breaks to the dialogue parser
+@license WTFPL (do WTF you want)
+@version auto
+@requires Bitsy Version: 5.0, 5.1
+@author Sean S. LeBlanc, David Mowatt
+
+@description
+Adds a (p) tag to the dialogue parser that forces the following text to
+start on a fresh dialogue screen, eliminating the need to spend hours testing
+line lengths or adding multiple line breaks that then have to be reviewed
+when you make edits or change the font size.
+
+Note: Bitsy has a built-in implementation of paragraph-break as of 7.0;
+before using this, you may want to check if it fulfills your needs.
+
+Usage: (p)
+
+Example: I am a cat(p)and my dialogue contains multitudes
+
+HOW TO USE:
+  1. Copy-paste this script into a new script tag after the Bitsy source code.
+     It should appear *before* any other mods that handle loading your game
+     data so it executes *after* them (last-in first-out).
+
+NOTE: This uses parentheses "()" instead of curly braces "{}" around function
+      calls because the Bitsy editor's fancy dialog window strips unrecognized
+      curly-brace functions from dialog text. To keep from losing data, write
+      these function calls with parentheses like the examples above.
+
+      For full editor integration, you'd *probably* also need to paste this
+      code at the end of the editor's `bitsy.js` file. Untested.
+*/
+
+// Adds the actual dialogue tag. No deferred version is required.
+addDialogTag('p', function (environment, parameters, onReturn) {
+	environment.GetDialogBuffer().AddParagraphBreak();
+	onReturn(null);
+});
+// End of (p) paragraph break mod
+
+
+
+
+
+// override textbox height
+inject(/textboxInfo\.height = .+;/,
+	`Object.defineProperty(textboxInfo, 'height', {
+	get() { return textboxInfo.padding_vert + (textboxInfo.padding_vert + relativeFontHeight()) * Math.max(${hackOptions.minRows}, dialogBuffer.CurPage().indexOf(dialogBuffer.CurRow())+Math.sign(dialogBuffer.CurCharCount())) + textboxInfo.arrow_height; }
+})`);
+// prevent textbox from caching
+inject(/(if\(textboxInfo\.img == null\))/, '// $1');
+// rewrite hard-coded row limit
+inject(/(else if \(curRowIndex )== 0/g, '$1< ' + hackOptions.maxRows + ' - 1');
+inject(/(if \(lastPage\.length) <= 1/, '$1 < ' + hackOptions.maxRows);
+
+exports.hackOptions = hackOptions;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+}(this.hacks.long_dialog = this.hacks.long_dialog || {}, window));
 
 /**
 🏁
