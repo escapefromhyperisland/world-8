@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boss level</title>
 
+    <link rel="icon" type="image/png" href="/assets/images/avatar-favicon.png" sizes="16x16">
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
@@ -37,13 +38,20 @@
 
         <a-entity id="button" gltf-model="#red-button" position="7.7 3 -5.75" rotation="0 -90 0"></a-entity>
 
-        <a-entity id="briefcase" gltf-model="#briefcase" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+        <a-entity id="briefcase" gltf-model="#briefcase" position="-2.8 1 3.2" rotation="0 180 0" scale="0.5 0.5 0.5" ></a-entity>
 
         <a-entity 
             id="keyboard" 
             super-keyboard="imagePath: assets/images/;" 
             keyboard-functions
-            position="2.236 2.3 1.765" rotation="-30 90 0" scale="3 2.5 1">
+            position="2.24 2.3 1.76" rotation="-30 90 0" scale="3 2.5 1">
+        </a-entity>
+
+        <a-entity 
+            id="numpad" 
+            super-keyboard="imagePath: assets/images/; maxLength: 3; model: numpad;"
+            numpad-keyboard-functions
+            position="-2.8 1.1 1.3" rotation="-30 -90 0" scale="3 2.5 1">
         </a-entity>
 
         <a-entity id="dots" position="7.749 3.084 5.005" rotation="0 -90 0" scale="0.74 0.71 0">
