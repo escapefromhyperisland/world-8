@@ -1,14 +1,10 @@
 import React, {useState} from "react";
-import MirrorImg from "./images/mirror.jpg";
-import WallpaperImg from "./images/wallpaper.jpg";
 
-function Background () {
-
-    const [background, setBackground] = useState (MirrorImg);
+function Background ({Background}) {
 
     return (
     <div>
-        <img id="Background" src={background}></img>
+        <img id="Background" src={Background}></img>
     </div>
     )
 }
