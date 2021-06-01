@@ -21,8 +21,8 @@
 PAL 0
 NAME blueprint
 15,76,81
+31,155,165
 238,238,238
-65,218,219
 
 ROOM 0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -52,7 +52,7 @@ ROOM 1
 0,b,k,l,c,t,s,c,j,c,b,0,0,0,0,0
 0,b,p,o,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,m,n,e,e,e,e,e,e,b,0,0,0,0,0
-0,b,e,e,e,e,e,0,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
 0,0,b,b,b,b,b,g,h,b,b,0,0,0,0,0
@@ -144,6 +144,7 @@ TIL 14
 11110001
 11110001
 NAME Sofa top left
+WAL true
 
 TIL 15
 11111111
@@ -166,6 +167,7 @@ TIL 16
 11110001
 11110001
 NAME Sofa middle left
+WAL true
 
 TIL 17
 00000010
@@ -188,6 +190,7 @@ TIL 18
 11110000
 11110111
 NAME Sofa bottom left
+WAL true
 
 TIL 19
 00000010
@@ -511,10 +514,10 @@ TIL 1b
 11111111
 11111111
 00000000
-11111111
-11111111
-11111111
-11111111
+00000000
+00000000
+00000000
+00000000
 NAME TvTbl top middle
 
 TIL 1c
@@ -551,10 +554,10 @@ TIL 1e
 NAME TvTbl middle left
 
 TIL 1f
-11111111
-11111111
-11111111
-11111111
+00000000
+00000000
+00000000
+00000000
 00000000
 11111111
 00000000
@@ -612,7 +615,20 @@ NAME Robot Start
 DLG 3
 POS 0 7,6
 
-SPR d
+SPR e
+00000000
+00000000
+00000000
+00000000
+00000000
+00011100
+00011100
+00000000
+NAME TVRemote
+DLG 5
+POS 2 11,10
+
+SPR f
 01000100
 01111100
 00101000
@@ -648,22 +664,9 @@ SPR d
 01111100
 10111010
 00010000
-NAME Robot D1
-DLG 2
+NAME Robot2
+DLG 6
 POS 1 7,6
-
-SPR e
-00000000
-00000000
-00000000
-00000000
-00000000
-00011100
-00011100
-00000000
-NAME TVRemote
-DLG 5
-POS 2 11,10
 
 ITM 0
 00000000
@@ -686,10 +689,6 @@ ITM 1
 00010000
 00011000
 NAME key
-
-DLG 2
-{printSprite "c"}: You dont have to stand so close to me. I have excellent audio recording oh sorry I mean hearing in every room.
-NAME Robot D1 dialog
 
 DLG 3
 First robot!
@@ -719,6 +718,10 @@ NAME exit narration 1
 DLG 5
 TV? You can't watch TV now, you have to save the world!
 NAME TVRemote dialog
+
+DLG 6
+{printSprite "c"}: You dont have to stand so close to me. I have excellent audio recording oh sorry I mean hearing in every room.
+NAME sprite f dialog
 
 VAR a
 42
