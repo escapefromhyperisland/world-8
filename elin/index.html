@@ -11,84 +11,85 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
 
-    <script src="dist/aframe-environment-component.min.js"></script>
     <script src="dist/aframe-super-keyboard.min.js"></script>
-
-
 </head>
 
 <body>
     <script src="index.js"></script>
 
-    <a-scene inspector-plugin-recast keyboard-shortcuts="enterVR: false">
+    <a-scene inspector-plugin-recast>
         <a-asset>
             <img id="white" src="/assets/textures/white.jpg">
             <a-asset-item id="nav-mesh" src="/assets/models/navmesh.gltf"></a-asset-item>
             <a-asset-item id="room" src="/assets/models/escape-room.glb"></a-asset-item>
             <a-asset-item id="red-button" src="/assets/models/red-button.glb"></a-asset-item>
             <a-asset-item id="green-button" src="/assets/models/green-button.glb"></a-asset-item>
+            <a-asset-item id="briefcase" src="/assets/models/briefcase.glb"></a-asset-item>
         </a-asset>
 
-        <a-entity movement-controls="speed: 0.2; constrainToNavMesh: true">
+        <a-entity movement-controls="speed: 0.05; constrainToNavMesh: true">
             <a-camera id="player" look-controls position="0 3 0">
-                <a-cursor></a-cursor>
+                <a-cursor raycaster="objects: .clickable"></a-cursor>
             </a-camera>
         </a-entity>
 
         <a-entity id="room" gltf-model="#room" position="0 -0.1 0"></a-entity>
-        
+
         <a-entity id="button" gltf-model="#red-button" position="7.7 3 -5.75" rotation="0 -90 0"></a-entity>
 
-        <a-entity id="dots" position="7.749 3.084 5.005" rotation="0 -90 0" scale="0.74 0.71 0" >
+        <a-entity id="briefcase" gltf-model="#briefcase" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+
+        <a-entity 
+            id="keyboard" 
+            super-keyboard="imagePath: assets/images/;" 
+            keyboard-functions
+            position="2.236 2.3 1.765" rotation="-30 90 0" scale="3 2.5 1">
+        </a-entity>
+
+        <a-entity id="dots" position="7.749 3.084 5.005" rotation="0 -90 0" scale="0.74 0.71 0">
             <a-entity id="dot-row-1" position="0 0.35 1">
-                <a-circle dot-function color="white" radius="0.06" position="-0.35 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="-0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.35 0 0"></a-circle>
             </a-entity>
 
             <a-entity id="dot-row-2" position="0 0.175 1">
-                <a-circle dot-function color="white" radius="0.06" position="-0.35 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="-0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.35 0 0"></a-circle>
             </a-entity>
 
             <a-entity id="dot-row-3" position="0 0 1">
-                <a-circle dot-function color="white" radius="0.06" position="-0.35 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="-0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.35 0 0"></a-circle>
             </a-entity>
 
             <a-entity id="dot-row-4" position="0 -0.175 1">
-                <a-circle dot-function color="white" radius="0.06" position="-0.35 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="-0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.35 0 0"></a-circle>
             </a-entity>
 
             <a-entity id="dot-row-5" position="0 -0.35 1">
-                <a-circle dot-function color="white" radius="0.06" position="-0.35 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="-0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.175 0 0"></a-circle>
-                <a-circle dot-function color="white" radius="0.06" position="0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.35 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="-0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.175 0 0"></a-circle>
+                <a-circle dot-function class="clickable" color="white" radius="0.06" position="0.35 0 0"></a-circle>
             </a-entity>
 
         </a-entity>
 
-        
-        <!-- <a-entity 
-            id="keyboard" 
-            super-keyboard="hand: #mouseCursor; imagePath: assets/images/;" 
-            keyboard-functions
-            position="2.236 2.3 1.765" rotation="-30 90 0" scale="3 2.5 1">
-        </a-entity> -->
+
 
         <!-- <a-entity id="navmesh" gltf-model="#nav-mesh" nav-mesh position="0 -0.1 0" visible="true"></a-entity> -->
     </a-scene>
