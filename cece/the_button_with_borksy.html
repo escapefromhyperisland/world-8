@@ -86,7 +86,7 @@ b,b,b,b,b,b,b,b,b,b,b,b,b,b,0,0
 NAME Livingroom
 EXT 12,8 3 5,8
 EXT 12,7 3 5,7
-EXT 5,10 4 6,9
+EXT 5,10 4 6,9 FX tunnel
 PAL 0
 
 ROOM 3
@@ -121,7 +121,7 @@ ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
 0,0,0,0,0,0,0,b,2g,2g,2g,2g,b,0,0,0
-0,0,0,0,0,b,b,b,2g,2h,2i,2l,b,0,0,0
+0,0,0,0,0,b,b,b,2g,2h,2i,2g,b,0,0,0
 0,0,0,0,0,b,2c,2d,2u,2u,2j,2u,b,0,0,0
 0,0,0,0,0,b,2e,2f,e,e,e,e,b,0,0,0
 0,0,0,0,0,b,b,b,e,e,e,e,b,0,0,0
@@ -132,7 +132,7 @@ ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Basement entry
 EXT 6,9 2 5,10
-EXT 10,8 5 1,4 DLG e
+EXT 10,8 5 1,4 FX fade_b DLG e
 PAL 0
 
 ROOM 5
@@ -1103,6 +1103,7 @@ TIL 2i
 10000001
 10000001
 NAME Door BaseTop
+WAL true
 
 TIL 2j
 10000001
@@ -1474,6 +1475,7 @@ SPR q
 00010000
 00000000
 NAME !
+DLG g
 POS 4 9,7
 
 ITM 0
@@ -1498,6 +1500,7 @@ ITM 1
 00010000
 00011000
 NAME key
+DLG f
 
 ITM 2
 01111110
@@ -1610,12 +1613,22 @@ DLG e
   - {item "1"} >= 1 ?
     {property locked false}
     The key opens the door!
+    
+    {printSprite "A"}: I hate going into the basement... I always gets lost in here and never remember what is in my boxes.
   - else ?
     {property locked true}
     The door is locked...
 }
 """
 NAME locked exit 1
+
+DLG f
+You found the key to the basement!
+NAME key dialog
+
+DLG g
+Portal-malfuntioning! Stay alert when entering.
+NAME ! dialog
 
 VAR a
 42
