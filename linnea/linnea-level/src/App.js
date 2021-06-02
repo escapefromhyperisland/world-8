@@ -62,7 +62,7 @@ const changeRoom1 = () => {
     setWhatRoom(roomArray[2]);
     setWhatThing(thingsArray[1]);
   }
-  //Putting down calendar
+  //Putting down calendar, doesn't seem to be working....
   else if (whatRoom === "Kitchen" && whatThing === "Calendar") {
     setAlternativeText1("Look at calender on the wall");
     setAlternativeText2("Look at the old letter");
@@ -72,6 +72,18 @@ const changeRoom1 = () => {
     setWhatRoom(roomArray[2]);
     setWhatThing(thingsArray[0]);
     console.log("Tja");
+  }
+
+  //OFFICE
+
+  else if (whatRoom === "Office") {
+    setAlternativeText1("Look at the old safe");
+    setAlternativeText2("Search the desk");
+    setAlternativeText3("Go back");
+    setBackground(OfficeImg);
+    setInstructionText("OH. This sparks my interest. What could the code be?? It has to be hidden somewhere around here...")
+    setWhatRoom(roomArray[1]);
+    //Add function that pops up safe and an input field
   }
 }
 
@@ -84,6 +96,13 @@ const changeRoom2 = () => {
     setBackground(OfficeImg);
     setInstructionText("Ah all these books, reminds me of all the studying I didn't do at uni. Good times.")
     setWhatRoom(roomArray[1]);
+  } else if (whatRoom === "Office") {
+    setAlternativeText1("Look at the old safe");
+    setAlternativeText2("Search the desk");
+    setAlternativeText3("Go back");
+    setBackground(OfficeImg);
+    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless monitors")
+    setWhatRoom(roomArray[1]);
   }
 }
 
@@ -94,7 +113,7 @@ const changeRoom3 = () => {
     setAlternativeText2("Investigate the second painting");
     setAlternativeText3("Go back");
     setBackground(WallpaperImg);
-    setInstructionText("The fact that this was considered art before...")
+    setInstructionText("Where did all the painting go??")
     setWhatRoom(roomArray[3]);
   } else {
     setAlternativeText1("Go to the kitchen");
