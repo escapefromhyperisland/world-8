@@ -4,10 +4,6 @@ import Textbox2Image from "./images/game-screen.png";
 
 function Textbox2 ({functionChangeRoom1, functionChangeRoom2, functionChangeRoom3, alternativeText1, alternativeText2, alternativeText3}) {
 
-
-    // functionChangeRoom2 = () => {
-    //     this.props.functionChangeRoom()
-    // }
     
    return ( 
        
@@ -25,5 +21,3 @@ function Textbox2 ({functionChangeRoom1, functionChangeRoom2, functionChangeRoom
 }
 
 export default Textbox2
-
-// 

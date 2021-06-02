@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 
 function Background ({Background}) {
 
     return (
     <div>
-        <img id="Background" src={Background}></img>
+        <img id="Background" alt="The current background being displayed" src={Background}></img>
     </div>
     )
 }

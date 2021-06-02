@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import Textbox1Image from "./images/game-char.png";
 
 function Textbox1 ({instructionText}) {
