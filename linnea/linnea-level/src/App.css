@@ -23,6 +23,10 @@
   left: 30%;
   bottom: 0;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #text-TextBox1 {
@@ -34,10 +38,25 @@
 }
 
 #text-TextBox2 {
-  max-width: 300px;
   position: absolute;
   padding: 10px;
-  top: 20%;
-  left: 35%;
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #4dffff;
+  border: none;
+  color: black;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+#text-TextBox2 button {
+  margin: 10px 0 10px 0;
 }
