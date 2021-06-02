@@ -1,12 +1,11 @@
 const correctPassword = "correct"
 const correctCode = "1"
 let haveMarker = false
+let isPasswordCorrect = false
 
 AFRAME.registerComponent('keyboard-functions', {
 
     init: function () {
-        
-        let isPasswordCorrect = false
 
         // for referencing issues
         let self = this;
