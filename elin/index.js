@@ -1,8 +1,32 @@
-const correctPassword = "correct"
-const correctCode = "1"
+const correctPassword = "future"
+const correctCode = "835"
 let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
+
+window.addEventListener("keydown", function(e){
+    if(e.code === "Space") { 
+        const player = document.querySelector("#player")
+        const playerPosition = player.getAttribute("position")
+        const down = 1.5
+        
+        playerPosition.y = down
+
+        player.setAttribute("position", playerPosition)
+    }
+});
+
+window.addEventListener("keyup", function(e){
+    if (e.code === "Space") {
+        const player = document.querySelector("#player")
+        const playerPosition = player.getAttribute("position")
+        const up = 3
+
+        playerPosition.y = up
+
+        player.setAttribute("position", playerPosition)
+    }
+})
 
 AFRAME.registerComponent('keyboard-functions', {
 
