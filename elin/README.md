@@ -14,10 +14,10 @@ In your team, define the world where your browser game exist. Then, individually
 
 
 ### :checkered_flag: Goals:
-[x] Challange myself to try something new
-[x] Experiment and have fun with the code!
-[x] Create something that I am proud of
-[x] Make three challanges for the player to solve
+- [x] Challange myself to try something new
+- [x] Experiment and have fun with the code!
+- [x] Create something that I am proud of
+- [x] Make three challanges for the player to solve
 
 
 ### :notebook_with_decorative_cover: World 8 - The Story:
@@ -30,12 +30,13 @@ This is the last level in the story of "The Button" and you are located in the h
 
 
 ### :crossed_fingers: Nice to haves:
-[ ] Aftertexts on click of the button
-[ ] Add loading-screen with a bit of context and story-telling
-[ ] Robot-pinguin that can give you hints if you get stuck
-[ ] Make numpad visible on click of the briefcase
-[ ] Make dots ereasable through the whiteboard-eraser instead of just with the click
-[ ] Add correct navmesh
+- [ ] Add some sort of "instruction-panel"
+- [ ] Aftertexts on click of the button
+- [ ] Add loading-screen with a bit of context and story-telling
+- [ ] Robot-pinguin that can give you hints if you get stuck
+- [ ] Make numpad visible on click of the briefcase
+- [ ] Make dots ereasable through the whiteboard-eraser instead of just with the click
+- [ ] Add correct navmesh
 
 
 ### :closed_book: Learnings:
