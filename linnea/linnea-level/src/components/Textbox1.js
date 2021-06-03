@@ -1,11 +1,15 @@
 import React from "react"
 import Textbox1Image from "./images/game-char.png";
 
-function Textbox1 () {
+function Textbox1 ({instructionText}) {
+
+
     return (
-    <div>
+    <div id="TextBox1">
         <img src={Textbox1Image} alt="Textbox nr 1"></img>
-    </div>)
+        <p id="text-TextBox1">{instructionText}</p>
+    </div>
+    )
 }
 
 export default Textbox1
