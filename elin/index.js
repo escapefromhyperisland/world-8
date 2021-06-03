@@ -1,5 +1,5 @@
-const correctPassword = "correct"
-const correctCode = "1"
+const correctPassword = "future"
+const correctCode = "835"
 let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
