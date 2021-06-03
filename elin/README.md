@@ -31,6 +31,7 @@ This is the last level in the story of "The Button" and you are located in the h
 
 ### :crossed_fingers: Nice to haves:
 - [ ] Add some sort of "instruction-panel"
+- [ ] Add some turquoise details to match the rest of the levels
 - [ ] Aftertexts on click of the button
 - [ ] Add loading-screen with a bit of context and story-telling
 - [ ] Robot-pinguin that can give you hints if you get stuck
