@@ -108,6 +108,7 @@ ROOM 3
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME kitchen
 ITM 0 10,6
+ITM 1 13,12
 EXT 5,8 2 12,8
 EXT 5,7 2 12,7
 PAL 0
@@ -120,8 +121,8 @@ ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
 0,0,0,0,0,0,0,b,2g,2g,2g,2g,b,0,0,0
-0,0,0,0,0,b,b,b,2g,2h,2i,2l,b,0,0,0
-0,0,0,0,0,b,2c,2d,2g,2k,2j,2l,b,0,0,0
+0,0,0,0,0,b,b,b,2g,2h,2i,2g,b,0,0,0
+0,0,0,0,0,b,2c,2d,2u,2u,2j,2u,b,0,0,0
 0,0,0,0,0,b,2e,2f,e,e,e,e,b,0,0,0
 0,0,0,0,0,b,b,b,e,e,e,e,b,0,0,0
 0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
@@ -131,34 +132,52 @@ ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Basement entry
 EXT 6,9 2 5,10
-EXT 10,8 5 1,4
+EXT 10,8 5 1,4 FX fade_b DLG e
 PAL 0
 
 ROOM 5
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,2g,2g,2g,2g,0,0,0,2g,2g,2g,2g,2g,2m,2g,0
-0,e,e,e,2r,2g,0,0,e,e,e,e,e,e,2g,0
-0,e,e,e,e,2g,0,0,2r,e,2m,2g,2g,e,2q,0
-0,2p,e,e,e,2g,0,0,e,e,e,e,e,e,2q,0
-0,e,e,e,e,2g,0,2p,e,e,e,e,e,e,2g,0
-0,e,e,e,e,2g,0,0,e,e,e,2g,2o,2g,2g,0
-0,0,2n,0,0,0,0,0,e,e,e,e,e,2r,2g,0
-0,2g,2g,2m,2g,2g,0,0,e,e,e,e,e,e,2g,0
-0,2r,e,e,e,2g,0,0,0,0,0,0,2n,0,0,0
-0,e,e,e,e,2g,2m,2g,0,2g,2m,2g,2g,2m,2g,0
-0,e,2o,e,e,e,e,e,0,e,e,e,e,e,2g,0
-0,e,2g,2g,e,e,e,e,0,e,e,2r,e,e,2q,0
-0,e,2r,2g,2g,e,2r,e,0,0,0,e,e,e,2g,0
-0,e,e,e,e,e,e,e,0,0,0,e,e,e,2g,0
-0,0,0,2n,0,0,0,0,0,0,0,2n,0,0,0,0
+0,0,0,b,b,b,0,0,0,0,0,0,b,b,b,b
+0,2g,2g,2g,2m,b,b,b,2g,2g,2g,2g,2g,2m,2g,b
+0,2s,2s,2s,2t,2g,b,b,2s,2s,e,e,e,e,2g,b
+0,2s,2s,e,e,2g,b,b,2s,e,2m,2g,2g,e,2q,b
+b,2p,e,e,e,2q,b,b,e,e,e,e,e,e,2q,b
+b,e,e,2s,2s,2g,b,2p,e,2t,e,e,e,e,2g,b
+b,2s,e,2t,2s,2g,b,b,e,e,2s,2g,2o,2g,2g,0
+b,b,2n,b,b,0,0,0,2s,2s,2s,e,e,2t,2g,0
+b,2g,2g,2m,2g,2g,0,0,2s,2s,2s,e,e,e,2g,0
+b,2t,e,e,2s,2g,b,b,b,b,b,b,2n,b,b,b
+b,e,e,e,e,2g,2m,2g,b,2g,2m,2g,2g,2m,2g,b
+b,e,2o,2s,e,e,e,2s,b,e,e,e,e,e,2g,b
+b,e,2g,2g,2s,2s,e,e,b,2s,2s,2t,e,e,2q,b
+b,e,2t,2g,2g,2s,2s,e,b,0,b,2s,e,2s,2g,b
+b,e,e,e,e,e,e,e,b,0,b,e,e,2s,2g,b
+b,b,b,2n,b,b,b,b,b,0,b,2n,b,b,b,b
 NAME Basement
-ITM 2 13,7
-ITM 2 11,12
-ITM 2 6,13
-ITM 2 1,9
-ITM 2 2,13
-ITM 2 8,3
-EXT 1,4 4 10,8
+ITM 3 4,2
+ITM 3 3,6
+ITM 3 2,13
+ITM 3 1,9
+ITM 3 11,12
+ITM 3 9,5
+ITM 4 13,7
+EXT 5,4 5 12,6
+EXT 12,6 5 5,4
+EXT 2,7 5 10,3
+EXT 10,3 5 2,7
+EXT 13,1 5 11,15
+EXT 11,15 5 13,1
+EXT 14,3 5 14,4
+EXT 14,4 5 14,3
+EXT 3,8 5 13,10
+EXT 13,10 5 3,8
+EXT 6,10 5 10,10
+EXT 10,10 5 6,10
+EXT 2,11 5 14,12
+EXT 14,12 5 2,11
+EXT 4,1 5 7,5
+EXT 7,5 5 4,1
+EXT 3,15 5 12,9
+EXT 12,9 5 3,15
 PAL 0
 
 TIL 10
@@ -1062,6 +1081,7 @@ TIL 2g
 10100101
 01011010
 NAME Basment wall
+WAL true
 
 TIL 2h
 10010110
@@ -1083,6 +1103,7 @@ TIL 2i
 10000001
 10000001
 NAME Door BaseTop
+WAL true
 
 TIL 2j
 10000001
@@ -1181,6 +1202,40 @@ TIL 2r
 01111110
 00000000
 NAME behind chest
+
+TIL 2s
+11100111
+10011001
+01111110
+00011000
+01100000
+01110000
+10010001
+11100111
+NAME wall box
+WAL true
+
+TIL 2t
+11100111
+10011001
+01111110
+00011000
+01100000
+01110000
+10010001
+11100111
+NAME Behind box
+
+TIL 2u
+11010010
+10100101
+01010110
+10111010
+11010101
+01111010
+10100101
+01011010
+NAME Basment walkthrough wall
 
 SPR A
 00111100
@@ -1420,6 +1475,7 @@ SPR q
 00010000
 00000000
 NAME !
+DLG g
 POS 4 9,7
 
 ITM 0
@@ -1444,6 +1500,7 @@ ITM 1
 00010000
 00011000
 NAME key
+DLG f
 
 ITM 2
 01111110
@@ -1455,6 +1512,30 @@ ITM 2
 10000001
 11111111
 NAME chest
+
+ITM 3
+00011000
+01100110
+10000001
+11100111
+10011111
+10001111
+01101110
+00011000
+NAME Box
+DLG c
+
+ITM 4
+00011000
+01100110
+10000001
+11100111
+10011111
+10001111
+01101110
+00011000
+NAME RightBox
+DLG d
 
 DLG 3
 First robot!
@@ -1509,10 +1590,48 @@ DLG b
 Grandmothers camera
 NAME Camera dialog
 
+DLG c
+"""
+{sequence
+  - You found your no-needle-droping expandable Chrismatshover tree with quantum christmas ornaments.
+  - You found an emergency Portable midsummer pole.
+  - You found replacement biogel for the EPS grid.
+  - You found spare dilithium for your warpcore.
+  - You found a smorg.
+  - You found cozy blankets.
+}
+"""
+NAME item 3 dialog
+
+DLG d
+You found your grandmothers journal! Maybe there is some useful information here?
+NAME RightBox dialog
+
+DLG e
+"""
+{
+  - {item "1"} >= 1 ?
+    {property locked false}
+    The key opens the door!
+    
+    {printSprite "A"}: I hate going into the basement since the portals stopped working as they should... I always gets lost in here. On top of that, I never remember what is in my boxes!
+  - else ?
+    {property locked true}
+    The door is locked...
+}
+"""
+NAME locked exit 1
+
+DLG f
+You found the key to the basement!
+NAME key dialog
+
+DLG g
+Portal-malfuntioning! Stay alert when entering.
+NAME ! dialog
+
 VAR a
 42
-
-
 </script>
 
 <style>
