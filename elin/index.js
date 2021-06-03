@@ -1,7 +1,8 @@
 const correctPassword = "correct"
 const correctCode = "1"
 let haveMarker = false
-let isPasswordCorrect = false
+let passwordIsCorrect = false
+let codeIsCorrect = false
 
 AFRAME.registerComponent('keyboard-functions', {
 
@@ -22,12 +23,12 @@ AFRAME.registerComponent('keyboard-functions', {
             if (input === correctPassword) {
                 document.querySelector("#button").setAttribute("gltf-model", "/assets/models/green-button.glb")
                 document.querySelector("#button").flushToDOM()
-                isPasswordCorrect = true
+                passwordIsCorrect = true
             } else {
                 alert("WRONG PASSWORD.... TRY AGAIN")
                 document.querySelector("#button").setAttribute("gltf-model", "/assets/models/red-button.glb")
                 document.querySelector("#button").flushToDOM()
-                isPasswordCorrect = false
+                passwordIsCorrect = false
             }
         });
 
@@ -40,7 +41,7 @@ AFRAME.registerComponent('keyboard-functions', {
 
     tick: function (time, timeDelta) {
         // force keyboard to remain visible even after input or dismiss events triggered
-        if (!this.el.object3D.visible)
+        if (!this.el.object3D.visible && !codeIsCorrect)
             this.el.object3D.visible = true;
     }
 
@@ -66,6 +67,10 @@ AFRAME.registerComponent('numpad-keyboard-functions', {
                     '<a-entity id="briefcase" gltf-model="#briefcase" position="-2.8 1 3.1" rotation="0 180 0" scale="0.5 0.5 0.5" animation-mixer="clip: *; loop: once; clampWhenFinished: true"></a-entity>'
                 briefcaseWrapper.flushToDOM()
                 
+                codeIsCorrect = true
+
+                document.querySelector("#numpad").setAttribute("visible", "false")
+                document.querySelector("#numpad").flushToDOM()
             }
         });
 
@@ -75,7 +80,7 @@ AFRAME.registerComponent('numpad-keyboard-functions', {
     },
 
     tick: function (time, timeDelta) {
-        if (!this.el.object3D.visible)
+        if (!this.el.object3D.visible && !codeIsCorrect)
             this.el.object3D.visible = true;
     }
 
