@@ -38,6 +38,18 @@ function App() { //Might be able to clean this up by putting all of the
   const thingsArray = ["Empty", "Calendar", "Letter", "Art1", "Art2", "Safe"];
   const [whatThing, setWhatThing] = useState (roomArray[0]);
 
+ const safeInput = () => {
+    var txt;
+    var code = prompt("Please enter the code to the safe", "");
+    if (code == null || code !== "5428") {
+      txt = "WRONG INPUT";
+      console.log(txt);
+    } else {
+      txt = "CORRECT CODE";
+      console.log(txt);
+    } 
+  }
+
 
 //Controls button 1
 const changeRoom1 = () => {
@@ -49,11 +61,10 @@ const changeRoom1 = () => {
     setBackground(KitchenImg);
     setInstructionText("It smells like mold here... but I'm still getting kinda hungry. NO. FOCUS. Food can wait, the sun CANNOT!")
     setWhatRoom(roomArray[2]);
-    setWhatThing(thingsArray[1]);
   }
 
   //Look at calendar on the wall
-  else if (whatRoom === "Kitchen") {
+  else if (whatRoom === "Kitchen" && whatThing !== "Calendar") {
     setAlternativeText1("Put down calendar");
     setAlternativeText2("Look at the old letter");
     setAlternativeText3("Go back to the hallway");
@@ -62,28 +73,31 @@ const changeRoom1 = () => {
     setWhatRoom(roomArray[2]);
     setWhatThing(thingsArray[1]);
   }
-  //Putting down calendar, doesn't seem to be working....
+  //Putting down calendar
   else if (whatRoom === "Kitchen" && whatThing === "Calendar") {
     setAlternativeText1("Look at calender on the wall");
     setAlternativeText2("Look at the old letter");
     setAlternativeText3("Go back to the hallway");
-    setBackground(CalendarBackgrund);
+    setBackground(KitchenImg);
     setInstructionText("Wonder what that ment....")
     setWhatRoom(roomArray[2]);
     setWhatThing(thingsArray[0]);
-    console.log("Tja");
+    console.log("No Calendar");
   }
 
-  //OFFICE
+  //Office
 
-  else if (whatRoom === "Office") {
-    setAlternativeText1("Look at the old safe");
+  //Look at old safe
+  else if (whatRoom === "Office" && whatThing!== "Safe") {
+    setAlternativeText1("Stop looking at the old safe");
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
     setBackground(OfficeImg);
     setInstructionText("OH. This sparks my interest. What could the code be?? It has to be hidden somewhere around here...")
     setWhatRoom(roomArray[1]);
     //Add function that pops up safe and an input field
+    safeInput();
+    setWhatThing(thingsArray[5]);
   }
 }
 
