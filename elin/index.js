@@ -41,7 +41,7 @@ AFRAME.registerComponent('keyboard-functions', {
 
     tick: function (time, timeDelta) {
         // force keyboard to remain visible even after input or dismiss events triggered
-        if (!this.el.object3D.visible && !codeIsCorrect)
+        if (!this.el.object3D.visible)
             this.el.object3D.visible = true;
     }
 
