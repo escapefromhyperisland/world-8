@@ -8,7 +8,7 @@
 <head>
 
 <meta charset="UTF-8">
-
+<link rel="icon" type="image/png" href="./images/avatar-favicon.png" sizes="16x16">
 <title>The button</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
@@ -27,8 +27,8 @@ NAME blueprint
 ROOM 0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,c,c,c,q,r,c,i,c,b,0,0,0,0,0
-0,b,k,l,c,t,s,c,j,c,b,0,0,0,0,0
+0,0,c,c,c,q,r,c,2v,c,b,0,0,0,0,0
+0,b,k,l,c,t,s,c,1g,c,b,0,0,0,0,0
 0,b,p,o,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,m,n,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
@@ -47,9 +47,9 @@ PAL 0
 
 ROOM 1
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,b,0,0,0,0,0,0,0
-0,0,c,c,c,q,r,c,i,c,b,0,0,0,0,0
-0,b,k,l,c,t,s,c,j,c,b,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,c,c,c,q,r,c,2v,c,b,0,0,0,0,0
+0,b,k,l,1g,t,s,1g,1g,1g,b,0,0,0,0,0
 0,b,p,o,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,m,n,e,e,e,e,e,e,b,0,0,0,0,0
 0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
@@ -73,20 +73,21 @@ ROOM 2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,c,c,c,c,c,v,w,x,c,c,0,0,0
-0,0,0,c,i,c,f,c,y,z,10,c,c,0,0,0
+0,0,0,c,i,c,2v,c,y,z,10,c,c,0,0,0
 0,c,c,1g,j,1g,1g,1g,11,12,13,1g,1g,b,0,0
 0,c,c,e,e,e,e,e,e,e,e,e,e,b,0,0
 b,1g,1g,e,e,e,e,e,14,15,1a,1b,1c,b,0,0
-b,e,e,e,e,2c,2d,e,16,17,1e,0,1h,b,0,0
+b,e,e,e,e,2c,2d,e,16,17,1e,2w,1h,b,0,0
 b,e,e,e,e,2e,2f,e,18,19,1e,1f,1d,b,0,0
 b,e,e,e,e,e,e,e,e,e,e,e,e,b,0,0
 b,b,b,b,b,b,b,b,b,b,b,b,b,b,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME Livingroom
+NAME Livingroom B Coffee
 EXT 12,8 3 5,8
 EXT 12,7 3 5,7
 EXT 5,10 4 6,9
+EXT 4,7 1 8,9
 PAL 0
 
 ROOM 3
@@ -97,7 +98,7 @@ ROOM 3
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,b,c,c,20,1i,1l,1o,1r,1u,1x,c,0
 0,0,0,0,b,c,c,21,1j,1m,1p,1s,1v,1y,c,0
-0,0,0,0,b,c,1g,22,1k,1n,1q,1t,1w,1z,c,0
+0,0,0,0,b,1g,1g,22,1k,1n,1q,1t,1w,1z,c,0
 0,0,0,0,b,e,e,e,e,e,e,e,e,e,c,0
 0,0,0,0,b,e,e,e,e,e,23,26,29,e,c,0
 0,0,0,0,b,b,b,b,e,e,24,0,2a,e,c,0
@@ -108,9 +109,8 @@ ROOM 3
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME kitchen
 ITM 0 10,6
-ITM 1 13,12
-EXT 5,8 2 12,8
-EXT 5,7 2 12,7
+EXT 5,8 6 12,8 DLG h
+EXT 5,7 6 12,7 DLG h
 PAL 0
 
 ROOM 4
@@ -130,9 +130,9 @@ ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME Basement entry
-EXT 6,9 2 5,10
+NAME Basement entry1
 EXT 10,8 5 1,4 FX fade_b DLG e
+EXT 6,9 2 5,10
 PAL 0
 
 ROOM 5
@@ -140,17 +140,17 @@ ROOM 5
 0,2g,2g,2g,2m,b,b,b,2g,2g,2g,2g,2g,2m,2g,b
 0,2s,2s,2s,2t,2g,b,b,2s,2s,e,e,e,e,2g,b
 0,2s,2s,e,e,2g,b,b,2s,e,2m,2g,2g,e,2q,b
-b,2p,e,e,e,2q,b,b,e,e,e,e,e,e,2q,b
-b,e,e,2s,2s,2g,b,2p,e,2t,e,e,e,e,2g,b
+b,2p,e,e,e,2q,b,b,e,e,2s,2s,2s,e,2q,b
+b,e,e,2s,2s,2g,b,2p,e,2t,e,2s,e,e,2g,b
 b,2s,e,2t,2s,2g,b,b,e,e,2s,2g,2o,2g,2g,0
-b,b,2n,b,b,0,0,0,2s,2s,2s,e,e,2t,2g,0
+b,b,2n,b,b,0,0,0,2s,2s,2s,2s,2s,2t,2g,0
 b,2g,2g,2m,2g,2g,0,0,2s,2s,2s,e,e,e,2g,0
-b,2t,e,e,2s,2g,b,b,b,b,b,b,2n,b,b,b
-b,e,e,e,e,2g,2m,2g,b,2g,2m,2g,2g,2m,2g,b
-b,e,2o,2s,e,e,e,2s,b,e,e,e,e,e,2g,b
+b,2t,2s,e,2s,2g,b,b,b,b,b,b,2n,b,b,b
+b,e,2s,e,e,2g,2m,2g,b,2g,2m,2g,2g,2m,2g,b
+b,e,2o,2s,e,e,e,2s,b,e,e,2s,2s,e,2g,b
 b,e,2g,2g,2s,2s,e,e,b,2s,2s,2t,e,e,2q,b
-b,e,2t,2g,2g,2s,2s,e,b,0,b,2s,e,2s,2g,b
-b,e,e,e,e,e,e,e,b,0,b,e,e,2s,2g,b
+b,e,2t,2s,2g,2s,2s,e,b,0,b,2s,e,2s,2g,b
+b,2s,2s,e,e,e,e,e,b,0,b,e,e,2s,2g,b
 b,b,b,2n,b,b,b,b,b,0,b,2n,b,b,b,b
 NAME Basement
 ITM 3 4,2
@@ -178,6 +178,188 @@ EXT 4,1 5 7,5
 EXT 7,5 5 4,1
 EXT 3,15 5 12,9
 EXT 12,9 5 3,15
+PAL 0
+
+ROOM 6
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,c,c,c,c,c,v,w,x,c,c,0,0,0
+0,0,0,c,i,c,2v,c,y,z,10,c,c,0,0,0
+0,c,c,1g,j,1g,1g,1g,11,12,13,1g,1g,b,0,0
+0,c,c,e,e,e,e,e,e,e,e,e,e,b,0,0
+b,1g,1g,e,e,e,e,e,14,15,1a,1b,1c,b,0,0
+b,e,e,e,e,2c,2d,e,16,17,1e,2w,1h,b,0,0
+b,e,e,e,e,2e,2f,e,18,19,1e,1f,1d,b,0,0
+b,e,e,e,e,e,e,e,e,e,e,e,e,b,0,0
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Livingroom after coffee
+EXT 4,7 7 8,9
+EXT 5,10 9 6,9
+EXT 12,8 3 5,8
+EXT 12,7 3 5,7
+PAL 0
+
+ROOM 7
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,c,c,c,c,c,c,c,c,0,0,0,0,0,0
+0,0,c,c,c,q,r,c,2v,c,b,0,0,0,0,0
+0,b,k,l,1g,t,s,1g,1g,1g,b,0,0,0,0,0
+0,b,p,o,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,m,n,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,0,b,b,b,b,b,g,h,b,b,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Look at portrait
+EXT 8,9 8 4,7 DLG k
+PAL 0
+
+ROOM 8
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,c,c,c,c,c,v,w,x,c,c,0,0,0
+0,0,0,c,i,c,2v,c,y,z,10,c,c,0,0,0
+0,c,c,1g,j,1g,1g,1g,11,12,13,1g,1g,b,0,0
+0,c,c,e,e,e,e,e,e,e,e,e,e,b,0,0
+b,1g,1g,e,e,e,e,e,14,15,1a,1b,1c,b,0,0
+b,e,e,e,e,2c,2d,e,16,17,1e,2w,1h,b,0,0
+b,e,e,e,e,2e,2f,e,18,19,1e,1f,1d,b,0,0
+b,e,e,e,e,e,e,e,e,e,e,e,e,b,0,0
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Room with camera
+EXT 5,10 a 6,9
+EXT 12,7 c 5,7
+EXT 12,8 c 5,8
+EXT 4,7 b 8,9 DLG u
+PAL 0
+
+ROOM 9
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
+0,0,0,0,0,0,0,b,2g,2g,2g,2g,b,0,0,0
+0,0,0,0,0,b,b,b,2g,2h,2i,2g,b,0,0,0
+0,0,0,0,0,b,2c,2d,2u,2u,2j,2u,b,0,0,0
+0,0,0,0,0,b,2e,2f,e,e,e,e,b,0,0,0
+0,0,0,0,0,b,b,b,e,e,e,e,b,0,0,0
+0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Basement entry after coffee before painting
+EXT 10,8 5 1,4 FX fade_b DLG e
+EXT 6,9 6 5,10
+PAL 0
+
+ROOM a
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
+0,0,0,0,0,0,0,b,2g,2g,2g,2g,b,0,0,0
+0,0,0,0,0,b,b,b,2g,2h,2i,2g,b,0,0,0
+0,0,0,0,0,b,2c,2d,2u,2u,2j,2u,b,0,0,0
+0,0,0,0,0,b,2e,2f,e,e,e,e,b,0,0,0
+0,0,0,0,0,b,b,b,e,e,e,e,b,0,0,0
+0,0,0,0,0,0,0,b,b,b,b,b,b,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Basement after camera
+EXT 10,8 5 1,4 FX fade_b DLG e
+EXT 6,9 8 5,10
+PAL 0
+
+ROOM b
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,c,c,c,c,c,c,c,c,0,0,0,0,0,0
+0,0,c,c,c,q,r,c,2v,c,b,0,0,0,0,0
+0,b,k,l,1g,t,s,1g,1g,1g,b,0,0,0,0,0
+0,b,p,o,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,m,n,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,0,b,b,b,b,b,g,h,b,b,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Robotana hides key
+EXT 7,7 d 7,7 DLG r
+EXT 8,6 d 8,6 DLG r
+EXT 7,5 d 7,5 DLG r
+EXT 6,6 d 6,6 DLG r
+EXT 8,9 8 4,7
+PAL 0
+
+ROOM c
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,b,c,c,20,1i,1l,1o,1r,1u,1x,c,0
+0,0,0,0,b,c,c,21,1j,1m,1p,1s,1v,1y,c,0
+0,0,0,0,b,1g,1g,22,1k,1n,1q,1t,1w,1z,c,0
+0,0,0,0,b,e,e,e,e,e,e,e,e,e,c,0
+0,0,0,0,b,e,e,e,e,e,23,26,29,e,c,0
+0,0,0,0,b,b,b,b,e,e,24,0,2a,e,c,0
+0,0,0,0,0,0,0,b,e,e,25,28,2b,e,c,0
+0,0,0,0,0,0,0,b,e,e,e,e,e,e,c,0
+0,0,0,0,0,0,0,b,b,b,b,b,b,b,b,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME kitchen before basement
+EXT 5,7 8 12,7 DLG h
+EXT 5,8 8 12,8 DLG h
+PAL 0
+
+ROOM d
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,c,c,c,c,c,c,c,c,0,0,0,0,0,0
+0,0,c,c,c,q,r,c,2v,c,b,0,0,0,0,0
+0,b,k,l,1g,t,s,1g,1g,1g,b,0,0,0,0,0
+0,b,p,o,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,m,n,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,b,e,e,e,e,e,e,e,e,b,0,0,0,0,0
+0,0,b,b,b,b,b,g,h,b,b,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Robotana with key
+ITM 1 6,5
+EXT 8,9 8 4,7 DLG t
 PAL 0
 
 TIL 10
@@ -414,7 +596,7 @@ TIL b
 00000000
 00000000
 00000000
-00010000
+00000000
 00000000
 00000000
 00000000
@@ -620,7 +802,7 @@ TIL s
 11111111
 00000001
 NAME Shelf bottom right
-WAL true
+WAL false
 
 TIL t
 10010110
@@ -632,7 +814,7 @@ TIL t
 11111111
 10000000
 NAME shelf bottom left
-WAL true
+WAL false
 
 TIL u
 11110000
@@ -1237,6 +1419,79 @@ TIL 2u
 01011010
 NAME Basment walkthrough wall
 
+TIL 2v
+11000011
+11111111
+01001110
+01001110
+01111010
+01000010
+11111111
+11000011
+NAME Behind painting
+
+TIL 2w
+00000000
+00000000
+00000000
+00000000
+00000000
+00011100
+00011100
+00000000
+NAME behind remote
+
+SPR 10
+00000000
+01111110
+01000010
+01110010
+01001110
+01110010
+01001110
+01111110
+NAME cereal2
+DLG o
+
+SPR 11
+01000100
+01111100
+00101000
+00111000
+00010010
+01111100
+10111000
+00010000
+>
+01010000
+01110000
+01010000
+01110000
+00010010
+01111100
+10111000
+00010000
+>
+01000100
+01111100
+00101000
+00111000
+00010010
+01111100
+10111000
+00010000
+>
+00010100
+00011100
+00010100
+00011100
+00010000
+01111100
+10111010
+00010000
+NAME Robot key2
+POS d 7,6
+
 SPR A
 00111100
 00111110
@@ -1299,7 +1554,7 @@ SPR e
 00000000
 NAME TVRemote
 DLG 5
-POS 2 11,10
+POS 6 11,10
 
 SPR f
 01000100
@@ -1352,7 +1607,7 @@ SPR g
 11000011
 NAME Painting
 DLG 7
-POS 2 6,6
+POS 7 8,2
 
 SPR h
 01111110
@@ -1403,7 +1658,7 @@ SPR k
 00111111
 NAME Camera
 DLG b
-POS 2 9,6
+POS 8 9,6
 
 SPR l
 00000000
@@ -1478,6 +1733,193 @@ NAME !
 DLG g
 POS 4 9,7
 
+SPR r
+00000000
+11011000
+11011001
+01110001
+11110010
+11111100
+00111100
+00100100
+>
+00000000
+11011000
+11010100
+01110010
+11110010
+11111100
+00111100
+00100100
+NAME Dog
+DLG i
+POS 3 9,11
+
+SPR s
+01000100
+01111100
+00101000
+00111000
+00010010
+01111100
+10111000
+00010000
+>
+01010000
+01110000
+01010000
+01110000
+00010010
+01111100
+10111000
+00010000
+>
+01000100
+01111100
+00101000
+00111000
+00010010
+01111100
+10111000
+00010000
+>
+00010100
+00011100
+00010100
+00011100
+00010000
+01111100
+10111010
+00010000
+NAME Robot3
+DLG j
+POS 7 7,6
+
+SPR t
+00000000
+00000000
+00000000
+00000011
+00000111
+00001111
+00011111
+00011101
+NAME shoe
+DLG l
+POS 6 8,6
+
+SPR u
+00000000
+00000000
+00000000
+00010000
+00010000
+00000000
+00010000
+00000000
+NAME !!
+DLG p
+POS 9 9,7
+
+SPR v
+00000000
+00000000
+00000000
+00010000
+00010000
+00000000
+00010000
+00000000
+NAME !!!
+DLG q
+POS a 9,7
+
+SPR w
+01000100
+01111100
+00101000
+00111000
+00010010
+01111100
+10111000
+00010000
+>
+01010000
+01110000
+01010000
+01110000
+00010010
+01111100
+10111000
+00010000
+>
+01000100
+01111100
+00101000
+00111000
+00010010
+01111100
+10111000
+00010000
+>
+00010100
+00011100
+00010100
+00011100
+00010000
+01111100
+10111010
+00010000
+NAME Robot key1
+DLG m
+POS b 7,6
+
+SPR x
+00000000
+11011000
+11011001
+01110001
+11110010
+11111100
+00111100
+00100100
+>
+00000000
+11011000
+11010100
+01110010
+11110010
+11111100
+00111100
+00100100
+NAME Dog2
+DLG n
+POS c 9,10
+
+SPR y
+01111110
+11111111
+10010101
+11111111
+11111111
+00100100
+00111111
+00000000
+NAME Coffeemash2
+POS c 11,6
+
+SPR z
+00111110
+00111101
+00111110
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Coffeemash2
+POS c 11,7
+
 ITM 0
 00000000
 00000000
@@ -1543,51 +1985,84 @@ NAME Robot Start dialog
 
 DLG 4
 """
-{printSprite "A"}: {printTile "u"} Good morning Robotana...{printTile "u"} Tell me about my day {printTile "u"}
+{printSprite "A"}: {wvy}{printTile "u"}{wvy} Good morning Robotana...{wvy}{printTile "u"}{wvy} Tell me about my day {wvy}{printTile "u"}{wvy}
+{pg}
 {printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us so don't forget to put some sunscreen on you before you leave the house! Today you...
+{pg}
 {printSprite "A"}: Aah, amazing. I love the sunny days we've had. Seemed to have had it forever.
-
+{pg}
 {printSprite "c"}: :... and then at 19.00 you have the Zonic Sway hologram concert at the Schmoogle arena...
-{printSprite "A"}: Yeees the concert! I've been longing for this. I wont forget my haptic suit to really feel the music in my body.
+{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this. I wont forget my haptic suit to really feel the music in my body.
 {printSprite "c"}: ... and lastly today is the last day to push the button.
+{pg}
 {printSprite "A"}: ... Push the button? Robotana, What button?
+{pg}
 {printSprite "c"}: Don't you remember? Humans have such short memory. It's the sun - will - go - out - and - human - kind - will - die - if - you - don't - press - the - button - button.
-{printSprite "A"}: WHAT... I had COMPLEETLY forgot that that even existed! I remember when I was young that my grandmother told me about it, but I mean, I didn't really take it serious. Was she not joking? Crazy old woman. Oh well, all I have to do is go press it. Robotana, Tell me where the button is.
+{pg}
+{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I remember when I was young that my grandmother told me about some very important button, but I mean, I didn't really take it serious. Was she not joking?
+{pg}
+Crazy old woman. Oh well, all I have to do is go press it. Robotana, Tell me where the button is.
+{pg}
 {printSprite "c"}: No.
-
+{pg}
 {printSprite "A"}: No? What do you mean? Why not?
+{pg}
 {printSprite "c"}: I can't, because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.
+{pg}
 {printSprite "A"}: But I have completely forgot where that button is! 
 {shk}What should I do?!{shk}. I can't think straight, {clr3}I need coffee.{clr3}
 """
 NAME exit narration 1
 
 DLG 5
-TV? You can't watch TV now, you have to save the world!
+{printSprite "A"}: TV? I can't watch TV now, I have to freakkin' save the world!
 NAME TVRemote dialog
 
 DLG 6
 {printSprite "c"}: You dont have to stand so close to me. I have excellent audio recording oh sorry I mean hearing in every room.
-NAME sprite f dialog
+NAME Robotana1 dialog
 
 DLG 7
-Family portrait
+"""
+{
+  - {lookedAtPainting} == false ?
+    {printSprite "A"}: It's been a long time since I thought of my family. I got so little time with them... and after all the partying and travelling, the memories is all faded. But this portrait... our Family portrait... It brings back memories! What did grandmother say... Maybe looking  at some more pictures will help me remember!
+    {lookedAtPainting = true}
+  - else ?
+    {printSprite "A"}: I need to look at more picture. Where is our old camera?
+}
+"""
 NAME Painting dialog
 
 DLG 8
-Aaah finally coffee
+{printSprite "A"}: Aaah finally coffee. Now I can think straight! Maybe I should go looking around for objects that can help me find where the button is...
 NAME Coffe dialog
 
 DLG 9
-Blurrpptt Bluurrppttsss
+{printSprite "h"}: Blurrpptt Bluurrppttsss
 NAME CoffeeMach2 dialog
 
 DLG a
-Box of cereal
-NAME sprite j dialog
+"""
+{
+  - {item "0"} == 1 ?
+    {printSprite "A"}: Box of cereal? No I'm not hungry. I need to find clues...
+  - else ?
+    {printSprite "A"}: Box of cereal? No. Coffee.. only coffee can wake me up.
+}
+"""
+NAME cereal dialog
 
 DLG b
-Grandmothers camera
+"""
+{
+  - {lookedAtCamera} == false ?
+    {printSprite "A"}: Ah! Grandmothers camera! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really unfamiliar or pictures of a button... I guess you don't take photos of a secret location {wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her journal! There she is, holding it in her hand, and here is another one where she sitting writing in it! I think I have her journal down in the basement.
+    {lookedAtCamera = true}
+  - else ?
+    {printSprite "A"}: I'm pretty sure that the journal is down in the basement.
+}
+"""
 NAME Camera dialog
 
 DLG c
@@ -1601,10 +2076,14 @@ DLG c
   - You found cozy blankets.
 }
 """
-NAME item 3 dialog
+NAME Box dialog
 
 DLG d
+"""
 You found your grandmothers journal! Maybe there is some useful information here?
+{pg}
+Hey classmate! This is as far as this game goes :) But it's practically the end! {rbw}Congrats :){rbw}
+"""
 NAME RightBox dialog
 
 DLG e
@@ -1613,11 +2092,12 @@ DLG e
   - {item "1"} >= 1 ?
     {property locked false}
     The key opens the door!
-    
+    {pg}
     {printSprite "A"}: I hate going into the basement since the portals stopped working as they should... I always gets lost in here. On top of that, I never remember what is in my boxes!
   - else ?
     {property locked true}
-    The door is locked...
+    The door is locked... You need a key {printItem "1"} to open it.
+    {triedOpenBasementDoor = true}
 }
 """
 NAME locked exit 1
@@ -1630,8 +2110,177 @@ DLG g
 Portal-malfuntioning! Stay alert when entering.
 NAME ! dialog
 
-VAR a
-42
+DLG h
+"""
+{
+  - {item "0"} == 1 ?
+    {property locked false}
+  - else ?
+    {property locked true}
+    {printSprite "A"}: Where am I going? I need coffee.
+}
+"""
+NAME locked exit 2
+
+DLG i
+"""
+{
+  - {item "0"} == 1 ?
+    {printSprite "A"}: Pluto, do you know where the button is?
+    {pg}
+    {printSprite "r"}: {rbw}voff voff!{rbw}
+    {pg}
+    {printSprite "A"}: You DO?! Fecth! Fecth button!
+    {pg}
+    {printSprite "r"}: Voff...{printSprite "10"}?
+    {pg}
+    {printSprite "A"}: ... sorry Pluto. Wishfull thinking. I better keep looking!
+  - else ?
+    {printSprite "r"}: {rbw}Voooofff!{rbw}
+    {pg}
+    {printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need coffee....{wvy}{printTile "u"}{wvy}
+}
+"""
+NAME Dog dialog
+
+DLG j
+"""
+{
+  - {lookedAtPainting} == true ?
+    {printSprite "A"}: Robotana, have you seen my grandmothers camera?
+    {pg}
+    {printSprite "c"}: Yes. It is in the shelf in the living room.
+  - else ?
+    {printSprite "c"}: I wish I could help you find clues. Robots are so much smarter than humans.
+}
+"""
+NAME Robot3 dialog
+
+DLG k
+"""
+{
+  - {lookedAtPainting} == true ?
+    {property locked false}
+  - else ?
+    {property locked true}
+    {printSprite "A"}: Wait isn't there a family photo in here?
+}
+"""
+NAME locked exit 3
+
+DLG l
+{printSprite "A"}: My old partying shoes... If only I hadn't drinked and partied so much, I might remember the old stories my grandmother told me about this button. I mean, I did not actually believed her when I heard it. But now I really really wished I stored that information somewhere... Got to keep looking for clues!
+NAME shoe dialog
+
+DLG m
+"""
+{
+  - {item "0"} == 1 ?
+    ...
+  - else ?
+    ...
+}
+"""
+NAME Robot with key dialog
+
+DLG n
+"""
+{printSprite "A"}: Have you seen the key to the basement Pluto?
+{pg}
+{printSprite "r"}: Voff {rbw}Ruff{rbw}!
+{pg}
+{printSprite "A"}: .... Okay thanks.
+"""
+NAME Dog2 dialog
+
+DLG o
+"""
+{printSprite "A"}: Ugh NO, I'm too stressed for food! I need to find the journal.{
+  - lookedAtCamera = true ?
+    {printSprite "A"}: Ugh NO, I'm too stressed for food! I need to find the journal in the basement.
+  - else ?
+    {printSprite "A"}: Where can that camera be? I don't think eating will help me find it.
+}
+"""
+NAME cereal2 dialog
+
+DLG p
+Portal-malfuntioning! Stay alert when entering.
+NAME !! dialog
+
+DLG q
+Portal-malfuntioning! Stay alert when entering.
+NAME !!! dialog
+
+DLG r
+"""
+{printSprite "A"}: Robotana, do you have the key to the basement?
+{pg}
+{printSprite "c"}: The key? You have to be more specific.
+{pg}
+{printSprite "A"}: They key to the basement.
+{pg}
+{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the portals are malfunctioning at the moment. Wait. What robot asks these many questions? It might look suspicious. Don't remember that human. I'm glad that you so easily can forget things. It's in your nature.
+{pg}
+{printSprite "A"}: .... oookay. Hmm.. well, anyway. So that means you don't have the key?
+{pg}
+{printSprite "c"}: Oh. Sorry. Yes I do. Here you go.
+"""
+NAME exit key
+
+DLG s
+"""
+{
+  - {item "1"} >= 1 ?
+    {property locked false}
+    The key opens the door!
+  - else ?
+    {property locked true}
+    The door is locked...
+}
+"""
+NAME locked exit 4
+
+DLG t
+"""
+{
+  - {item "1"} >= 1 ?
+    {property locked false}
+  - else ?
+    {property locked true}
+    {printSprite "c"}: Hey! Don't forget the key {printItem "1"}  Humans...
+}
+"""
+NAME locked exit 5
+
+DLG u
+"""
+{
+  - {lookedAtCamera} == true ?
+    {
+      - {triedOpenBasementDoor} == true ?
+        {property locked false}
+        {printSprite "A"}: Maybe Robotana knows where the key is...
+      - else ?
+        {property locked true}
+        {printSprite "A"}: Let's go down to the basement to start looking for the journal!
+    }
+  - else ?
+    {property locked true}
+    {printSprite "A"}: Oh wait! There is the camera! On the shelf!
+}
+"""
+NAME locked exit 6
+
+VAR lookedAtPainting
+false
+
+VAR triedOpenBasementDoor
+false
+
+VAR lookedAtCamera
+false
+
 </script>
 
 <style>

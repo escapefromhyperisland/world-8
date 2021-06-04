@@ -11,21 +11,23 @@
 <body>
     <a-scene>
         <a-assets>
-            <a-asset-items id="newwarehouse" src="assets/newwarehouse.glb"></a-asset-items>
+            <a-asset-items id="newerwarehouse" src="assets/newerwarehouse.glb"></a-asset-items>
             <video id="videonew" src="assets/circle.mp4" autoplay loop preload crossorigin="anonymous"></video>
             <img id="play" src="assets/play.png">
             <img id="pause" src="assets/pause.png">
         </a-assets>
 
-        <a-entity gltf-model="#newwarehouse"></a-entity>
+        <a-sky src="assets/background3.png"></a-sky>
 
-        <a-entity position="0 0 0">
+        <a-entity gltf-model="#newerwarehouse"></a-entity>
+
+        <!-- <a-entity position="0 0 0">
             <a-sphere color="pink" position="-10 3 -20" radius="0.6" color="pink" shadow ></a-sphere>
-        </a-entity>  
+        </a-entity>   -->
 
-        <a-video src="#videonew" width="7" height="5.25" position="-10 1.4 -4.4">       
+        <!-- <a-video src="#videonew" width="7" height="5.25" position="-10 1.4 -4.4">       
             <a-image id="videoControls" src="#play" position="0 5 0" play-pause></a-image>
-        </a-video>        
+        </a-video>         -->
 
         <!-- <a-entity camera look-controls mouse-cursor>
 
