@@ -9,7 +9,8 @@ import Background from "./components/Background";
 //Imported images
 import MirrorImg from "./components/images/mirror.jpg"
 import WallpaperImg from "./components/images/wallpaper.jpg";
-import KitchenImg from "./components/images/kitchen2.png";
+import KitchenImg from "./components/images/kitchen3.png";
+import LetterBackground from "./components/images/letter.png"
 import OfficeImg from "./components/images/Office.jpg";
 import CalendarBackgrund from "./components/images/calendarBackgrund.png";
 
@@ -110,7 +111,17 @@ const changeRoom2 = () => {
     setBackground(OfficeImg);
     setInstructionText("Ah all these books, reminds me of all the studying I didn't do at uni. Good times.")
     setWhatRoom(roomArray[1]);
-  } else if (whatRoom === "Office") {
+  }
+  else if (whatRoom==="Kitchen") {
+    setAlternativeText1("Look at calender on the wall");
+    setAlternativeText2("Put down the old letter");
+    setAlternativeText3("Go back");
+    setBackground(LetterBackground);
+    setInstructionText("OH NO!!! Great great great great great great great great great granny! What did you do! Why is the letter torn in half!! And at the important bit as well! The other half MUST be in the house somehwere!!")
+    setWhatThing(thingsArray[2])
+    setWhatRoom(roomArray[2]);
+  } 
+  else if (whatRoom === "Office") {
     setAlternativeText1("Look at the old safe");
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
