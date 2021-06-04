@@ -45,12 +45,12 @@ AFRAME.registerComponent('keyboard-functions', {
 
             // handle password
             if (input === correctPassword) {
-                document.querySelector("#button").setAttribute("gltf-model", "/assets/models/green-button.glb")
+                document.querySelector("#button").setAttribute("gltf-model", "./assets/models/green-button.glb")
                 document.querySelector("#button").flushToDOM()
                 passwordIsCorrect = true
             } else {
                 alert("WRONG PASSWORD.... TRY AGAIN")
-                document.querySelector("#button").setAttribute("gltf-model", "/assets/models/red-button.glb")
+                document.querySelector("#button").setAttribute("gltf-model", "./assets/models/red-button.glb")
                 document.querySelector("#button").flushToDOM()
                 passwordIsCorrect = false
             }
