@@ -38,6 +38,9 @@ This is the last level in the story of "The Button" and you are located in the h
 - [ ] Make numpad visible on click of the briefcase
 - [ ] Make dots ereasable through the whiteboard-eraser instead of just with the click
 - [ ] Add correct navmesh
+- [ ] Add extra barcode + decrypting?
+- [ ] Change crouch key to ctrl instead of space
+- [ ] Add sound feedback (on right and wrong password/code)
 
 
 ### :closed_book: Learnings:
