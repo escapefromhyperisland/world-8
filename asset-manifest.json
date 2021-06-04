@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/world-8/linnea/static/css/main.9feb7b0a.chunk.css",
+    "main.js": "/world-8/linnea/static/js/main.3b908eb9.chunk.js",
+    "main.js.map": "/world-8/linnea/static/js/main.3b908eb9.chunk.js.map",
+    "runtime-main.js": "/world-8/linnea/static/js/runtime-main.ed809a19.js",
+    "runtime-main.js.map": "/world-8/linnea/static/js/runtime-main.ed809a19.js.map",
+    "static/js/2.7e82d748.chunk.js": "/world-8/linnea/static/js/2.7e82d748.chunk.js",
+    "static/js/2.7e82d748.chunk.js.map": "/world-8/linnea/static/js/2.7e82d748.chunk.js.map",
+    "index.html": "/world-8/linnea/index.html",
+    "static/css/main.9feb7b0a.chunk.css.map": "/world-8/linnea/static/css/main.9feb7b0a.chunk.css.map",
+    "static/js/2.7e82d748.chunk.js.LICENSE.txt": "/world-8/linnea/static/js/2.7e82d748.chunk.js.LICENSE.txt",
+    "static/media/Office.63777bf5.jpg": "/world-8/linnea/static/media/Office.63777bf5.jpg",
+    "static/media/calendarBackgrund.ae2dd9a3.png": "/world-8/linnea/static/media/calendarBackgrund.ae2dd9a3.png",
+    "static/media/kitchen3.b89d2be7.png": "/world-8/linnea/static/media/kitchen3.b89d2be7.png",
+    "static/media/letter.d09ee431.png": "/world-8/linnea/static/media/letter.d09ee431.png",
+    "static/media/mirror.91baf851.jpg": "/world-8/linnea/static/media/mirror.91baf851.jpg",
+    "static/media/wallpaper.58a5e020.jpg": "/world-8/linnea/static/media/wallpaper.58a5e020.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed809a19.js",
+    "static/js/2.7e82d748.chunk.js",
+    "static/css/main.9feb7b0a.chunk.css",
+    "static/js/main.3b908eb9.chunk.js"
+  ]
+}
