@@ -27,10 +27,13 @@
             This must be it, I'm finally here! <br>
             The headquarters of the earth is actually much smaller than expected..
             I have 60 minutes left until the sun goes out, but if I made it this far that shouldn't be a problem.
-            Now just let me find the darn button!
+            Now just let me find that darn button!
         </p>
+        <img src="./assets/images/controls.png"/>
         <button onclick="closePopup()">Close</button>
     </div>
+
+    <button id="info-button" onclick="displayPopup()">i</button>
 
     <a-scene inspector-plugin-recast>
 
@@ -58,10 +61,10 @@
                 scale="0.5 0.5 0.5"></a-entity>
         </a-entity>
 
-        <a-entity id="keyboard" super-keyboard="imagePath: assets/images/;" keyboard-functions position="2.24 2.3 1.76"
+        <a-entity id="keyboard" super-keyboard="imagePath: assets/images/; inputColor: #4dffff; keyColor: #4dffff; keyHoverColor: #0f4c51; keyPressColor: #4dffff" keyboard-functions position="2.24 2.3 1.76"
             rotation="-30 90 0" scale="3 2.5 1"></a-entity>
 
-        <a-entity id="numpad" super-keyboard="imagePath: assets/images/; maxLength: 3; model: numpad;"
+        <a-entity id="numpad" super-keyboard="imagePath: assets/images/; maxLength: 3; model: numpad; inputColor: #4dffff; keyColor: #4dffff; keyHoverColor: #0f4c51; keyPressColor: #4dffff"
             numpad-keyboard-functions position="-2.75 2.1 3.1" rotation="-30 -90 0" scale="2.8 2.4 1"></a-entity>
 
         <a-entity id="marker" marker-function class="clickable" gltf-model="#marker" position="-2.75 1.1 3.35"

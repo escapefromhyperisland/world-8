@@ -7,8 +7,8 @@
 :root {
     --dark: #0f4c51;
     --dark-opacity: rgba(15, 76, 81, 0.9);
-    --light: #2dccd7;
-    --light-opacity: rgba(45, 204, 215, 0.8);
+    --light: #4dffff;
+    --light-opacity: rgba(77, 255, 255, 0.8);
     --white: #eeeeee;
     --main-font: 'Karla', sans-serif;
 }
@@ -61,6 +61,6 @@ p {
     border: 3px var(--light) solid;
     width: 3rem;
     height: 3rem;
-    border-radius: 8px;
+    border-radius: 4px;
     visibility: hidden;
 }
