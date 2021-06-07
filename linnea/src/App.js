@@ -8,11 +8,14 @@ import Background from "./components/Background";
 
 //Imported images
 import MirrorImg from "./components/images/mirror.jpg"
-import WallpaperImg from "./components/images/wallpaper.jpg";
-import KitchenImg from "./components/images/kitchen3.png";
-import LetterBackground from "./components/images/letter.png"
+import WallpaperImg from "./components/images/paintings.jpg";
+import Painting1 from "./components/images/paintings1.jpg";
+import Painting2 from "./components/images/paintings2.jpg";
+import KitchenImg from "./components/images/kitchen.jpg";
+import LetterBackground from "./components/images/letter.jpg"
 import OfficeImg from "./components/images/Office.jpg";
-import CalendarBackgrund from "./components/images/calendarBackgrund.png";
+import OfficeLetter from "./components/images/officeLetter.jpg";
+import CalendarBackgrund from "./components/images/calendarBackground.jpg";
 
 
 // puss och lycka till :)
@@ -39,23 +42,42 @@ function App() { //Might be able to clean this up by putting all of the
   const thingsArray = ["Empty", "Calendar", "Letter", "Art1", "Art2", "Safe"];
   const [whatThing, setWhatThing] = useState (thingsArray[0]);
 
+  const [isDone, setDone] = useState (false);
+
+
+
+  //Functions controling the safe ---------------------------------
  const safeInput = () => {
-    var txt;
-    var code = prompt("Please enter the code to the safe", "");
-    if (code == null || code !== "5428") {
-      txt = "WRONG INPUT";
-      console.log(txt);
+    var code = prompt("Please enter the 4 digit ode to the safe", "");
+    if (code == null || code !== "5482") {
+      wrongCode();
     } else {
-      txt = "CORRECT CODE";
-      console.log(txt);
+        correctCode();
     } 
   }
 
+  const wrongCode = () => {
+    console.log("wrong code")
+    setInstructionText("Oh this is the wrong code... It must be hidden somewhere around the house.");
+    setWhatThing(thingsArray[0]);
+  }
+
+  const correctCode = () => {
+    console.log("correctCode");
+    setInstructionText("YES GIRL! The second half of the letter!! I have to get to the old factory ASAP!!");
+    setBackground(OfficeLetter)
+    setAlternativeText1("Get out of here");
+    setAlternativeText2("Go to the old factory");
+    setAlternativeText3("For real leave the house");
+    setDone(true);
+
+    //On all of the buttons, add if isDone=true call the next level function
+  }
+
+// -------------------------------------------------------------------
 
 //CONTROLS BUTTON 1
 const changeRoom1 = () => {
-
-
 //Command: Go to kitchen
   if (whatRoom === "Hallway") {
     setAlternativeText1("Look at calender on the wall");
@@ -111,7 +133,7 @@ const changeRoom1 = () => {
     setAlternativeText1("Stop looking at the first painting");
     setAlternativeText2("Investigate the second painting");
     setAlternativeText3("Go back");
-    setBackground(WallpaperImg);
+    setBackground(Painting1);
     console.log("Looking at painting 1")
     setInstructionText("It's all so primitive... Nothing is moving?! I'm getting boored.  ")
     setWhatRoom(roomArray[3]);
@@ -130,6 +152,8 @@ const changeRoom1 = () => {
     console.log("No painting");
   }
 }
+
+// -----------------------------------------------------------------------------------------------------
 
 //CONTROLS BUTTON 2
 const changeRoom2 = () => {
@@ -186,7 +210,7 @@ const changeRoom2 = () => {
     setAlternativeText1("Investigate the first painting");
     setAlternativeText2("Stop looking at the second painting");
     setAlternativeText3("Go back");
-    setBackground(WallpaperImg);
+    setBackground(Painting2);
     console.log("Looking at painting 2")
     setInstructionText("Oh this one is moving!! Or wait... Thats a SPIDER?! Or wait... There seems to be something on the painting?   ")
     setWhatRoom(roomArray[3]);
@@ -205,6 +229,8 @@ const changeRoom2 = () => {
       console.log("No painting");
     }
 }
+
+// -----------------------------------------------------------------------------------------------------
 
 //CONTROLS BUTTON 3
 const changeRoom3 = () => {
@@ -228,6 +254,7 @@ const changeRoom3 = () => {
   }
 }
 
+// --------------------------------------------------------------------------------------------------------
 
   return (
     <div className="App">
