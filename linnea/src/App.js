@@ -37,7 +37,7 @@ function App() { //Might be able to clean this up by putting all of the
   
   //Keeping track on what you have done ish
   const thingsArray = ["Empty", "Calendar", "Letter", "Art1", "Art2", "Safe"];
-  const [whatThing, setWhatThing] = useState (roomArray[0]);
+  const [whatThing, setWhatThing] = useState (thingsArray[0]);
 
  const safeInput = () => {
     var txt;
@@ -52,8 +52,10 @@ function App() { //Might be able to clean this up by putting all of the
   }
 
 
-//Controls button 1
+//CONTROLS BUTTON 1
 const changeRoom1 = () => {
+
+
 //Command: Go to kitchen
   if (whatRoom === "Hallway") {
     setAlternativeText1("Look at calender on the wall");
@@ -64,6 +66,7 @@ const changeRoom1 = () => {
     setWhatRoom(roomArray[2]);
   }
 
+  //KITCHEN
   //Look at calendar on the wall
   else if (whatRoom === "Kitchen" && whatThing !== "Calendar") {
     setAlternativeText1("Put down calendar");
@@ -86,7 +89,7 @@ const changeRoom1 = () => {
     console.log("No Calendar");
   }
 
-  //Office
+  //OFFICE
 
   //Look at old safe
   else if (whatRoom === "Office" && whatThing!== "Safe") {
@@ -100,10 +103,37 @@ const changeRoom1 = () => {
     safeInput();
     setWhatThing(thingsArray[5]);
   }
+
+  // ART GALLERY
+
+  //Look at painting 1
+  if (whatRoom === "Art" && whatThing !== "Art1") {
+    setAlternativeText1("Stop looking at the first painting");
+    setAlternativeText2("Investigate the second painting");
+    setAlternativeText3("Go back");
+    setBackground(WallpaperImg);
+    console.log("Looking at painting 1")
+    setInstructionText("It's all so primitive... Nothing is moving?! I'm getting boored.  ")
+    setWhatRoom(roomArray[3]);
+    setWhatThing(thingsArray[3]);
+  }
+
+  //Stop looking at painting 1
+  else if (whatRoom === "Art" && whatThing === "Art1") {
+    setAlternativeText1("Investigate the first painting");
+    setAlternativeText2("Investigate the second painting");
+    setAlternativeText3("Go back to the hallway");
+    setBackground(WallpaperImg);
+    setInstructionText("Where did all the painting go??")
+    setWhatRoom(roomArray[3]);
+    setWhatThing(thingsArray[0]);
+    console.log("No painting");
+  }
 }
 
-//Controls button 2
+//CONTROLS BUTTON 2
 const changeRoom2 = () => {
+  //Go to office
   if (whatRoom === "Hallway") {
     setAlternativeText1("Look at the old safe");
     setAlternativeText2("Search the desk");
@@ -112,7 +142,21 @@ const changeRoom2 = () => {
     setInstructionText("Ah all these books, reminds me of all the studying I didn't do at uni. Good times.")
     setWhatRoom(roomArray[1]);
   }
-  else if (whatRoom==="Kitchen") {
+
+   //Office
+
+   else if (whatRoom === "Office") {
+    setAlternativeText1("Look at the old safe");
+    setAlternativeText2("Search the desk");
+    setAlternativeText3("Go back");
+    setBackground(OfficeImg);
+    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless monitors")
+    setWhatRoom(roomArray[1]);
+  }
+
+  //KITCHEN
+  //Look at letter
+  else if (whatRoom==="Kitchen" && whatThing!=="Letter")  {
     setAlternativeText1("Look at calender on the wall");
     setAlternativeText2("Put down the old letter");
     setAlternativeText3("Go back");
@@ -121,18 +165,50 @@ const changeRoom2 = () => {
     setWhatThing(thingsArray[2])
     setWhatRoom(roomArray[2]);
   } 
-  else if (whatRoom === "Office") {
-    setAlternativeText1("Look at the old safe");
-    setAlternativeText2("Search the desk");
-    setAlternativeText3("Go back");
-    setBackground(OfficeImg);
-    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless monitors")
-    setWhatRoom(roomArray[1]);
+
+
+  //Put away letter
+  else if (whatRoom === "Kitchen" && whatThing === "Letter") {
+    setAlternativeText1("Look at calender on the wall");
+    setAlternativeText2("Look at the old letter");
+    setAlternativeText3("Go back to the hallway");
+    setBackground(KitchenImg);
+    setInstructionText("Wonder what that ment....")
+    setWhatRoom(roomArray[2]);
+    setWhatThing(thingsArray[0]);
+    console.log("No Letter");
   }
+
+  //ART
+
+  //Look at painting 2
+  if (whatRoom === "Art" && whatThing !== "Art2") {
+    setAlternativeText1("Investigate the first painting");
+    setAlternativeText2("Stop looking at the second painting");
+    setAlternativeText3("Go back");
+    setBackground(WallpaperImg);
+    console.log("Looking at painting 2")
+    setInstructionText("Oh this one is moving!! Or wait... Thats a SPIDER?! Or wait... There seems to be something on the painting?   ")
+    setWhatRoom(roomArray[3]);
+    setWhatThing(thingsArray[4]);
+  }
+  
+    //Stop looking at painting 2
+    else if (whatRoom === "Art" && whatThing === "Art2") {
+      setAlternativeText1("Investigate the first painting");
+      setAlternativeText2("Investigate the second painting");
+      setAlternativeText3("Go back to the hallway");
+      setBackground(WallpaperImg);
+      setInstructionText("Where did all the painting go??")
+      setWhatRoom(roomArray[3]);
+      setWhatThing(thingsArray[0]);
+      console.log("No painting");
+    }
 }
 
-//Controls button 3
+//CONTROLS BUTTON 3
 const changeRoom3 = () => {
+     //Go to art Hall
   if (whatRoom === "Hallway") {
     setAlternativeText1("Investigate the first painting");
     setAlternativeText2("Investigate the second painting");
@@ -140,7 +216,9 @@ const changeRoom3 = () => {
     setBackground(WallpaperImg);
     setInstructionText("Where did all the painting go??")
     setWhatRoom(roomArray[3]);
-  } else {
+  } 
+  //Go back to Hallway
+  else {
     setAlternativeText1("Go to the kitchen");
     setAlternativeText2("Go to the office");
     setAlternativeText3("Go to the art gallery");
