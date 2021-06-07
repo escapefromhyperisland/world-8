@@ -14,6 +14,10 @@ function displayPopup() {
     document.querySelector("#info-button").style.visibility = "hidden"
 }
 
+function goToNextWorld() {
+    window.parent.postMessage('nextLevel')
+}
+
 window.addEventListener("keydown", function(e){
     if(e.code === "Space") { 
         const player = document.querySelector("#player")
@@ -143,6 +147,21 @@ AFRAME.registerComponent('marker-function', {
             haveMarker = true
             this.setAttribute("visible", "false")
             this.flushToDOM()
+        })
+    }
+
+})
+
+AFRAME.registerComponent('the-button-function', {
+
+    update: function () {
+        
+        this.el.addEventListener('click', function (event) {
+            if (this.getAttribute('gltf-model').includes("green")) {
+                document.querySelector('#aftertexts').style.visibility = "visible"
+                document.querySelector("#crawl").style.animation = "crawl 20s linear forwards"
+                document.querySelector("#next-world-btn").style.animation = "fadeIn 2s ease 7s forwards"
+            }
         })
     }
 

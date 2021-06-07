@@ -32,7 +32,7 @@ This is the last level in the story of "The Button" and you are located in the h
 ### :crossed_fingers: Nice to haves:
 - [x] Add some sort of "instruction-panel"
 - [x] Add some turquoise details to match the rest of the levels
-- [ ] Aftertexts on click of the button
+- [x] Aftertexts on click of the button
 - [x] Add loading-screen with a bit of context and story-telling
 - [ ] Robot-pinguin that can give you hints if you get stuck
 - [ ] Make numpad visible on click of the briefcase
@@ -42,6 +42,7 @@ This is the last level in the story of "The Button" and you are located in the h
 - [ ] Change crouch key to ctrl instead of space
 - [ ] Add sound feedback (on right and wrong password/code)
 - [ ] Add 1 hour timer
+- [ ] Fix navmesh (doesn't reach QR-code now)
 
 
 ### :closed_book: Learnings:
