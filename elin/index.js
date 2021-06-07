@@ -6,6 +6,12 @@ let codeIsCorrect = false
 
 function closePopup() {
     document.querySelector("#popup").style.visibility = "hidden"
+    document.querySelector("#info-button").style.visibility = "visible"
+}
+
+function displayPopup() {
+    document.querySelector("#popup").style.visibility = "visible"
+    document.querySelector("#info-button").style.visibility = "hidden"
 }
 
 window.addEventListener("keydown", function(e){

@@ -30,10 +30,10 @@ This is the last level in the story of "The Button" and you are located in the h
 
 
 ### :crossed_fingers: Nice to haves:
-- [ ] Add some sort of "instruction-panel"
+- [x] Add some sort of "instruction-panel"
 - [ ] Add some turquoise details to match the rest of the levels
 - [ ] Aftertexts on click of the button
-- [ ] Add loading-screen with a bit of context and story-telling
+- [x] Add loading-screen with a bit of context and story-telling
 - [ ] Robot-pinguin that can give you hints if you get stuck
 - [ ] Make numpad visible on click of the briefcase
 - [ ] Make dots ereasable through the whiteboard-eraser instead of just with the click
