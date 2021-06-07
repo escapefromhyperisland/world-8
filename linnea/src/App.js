@@ -11,10 +11,11 @@ import MirrorImg from "./components/images/mirror.jpg"
 import WallpaperImg from "./components/images/paintings.jpg";
 import Painting1 from "./components/images/paintings1.jpg";
 import Painting2 from "./components/images/paintings2.jpg";
-import KitchenImg from "./components/images/kitchen3.png";
-import LetterBackground from "./components/images/letter.png"
+import KitchenImg from "./components/images/kitchen.jpg";
+import LetterBackground from "./components/images/letter.jpg"
 import OfficeImg from "./components/images/Office.jpg";
-import CalendarBackgrund from "./components/images/calendarBackgrund.png";
+import OfficeLetter from "./components/images/officeLetter.jpg";
+import CalendarBackgrund from "./components/images/calendarBackground.jpg";
 
 
 // puss och lycka till :)
@@ -41,6 +42,9 @@ function App() { //Might be able to clean this up by putting all of the
   const thingsArray = ["Empty", "Calendar", "Letter", "Art1", "Art2", "Safe"];
   const [whatThing, setWhatThing] = useState (thingsArray[0]);
 
+  const [isDone, setDone] = useState (false);
+
+
 
   //Functions controling the safe ---------------------------------
  const safeInput = () => {
@@ -61,7 +65,13 @@ function App() { //Might be able to clean this up by putting all of the
   const correctCode = () => {
     console.log("correctCode");
     setInstructionText("YES GIRL! The second half of the letter!! I have to get to the old factory ASAP!!");
-    //Add confirmation button and call next level when that 
+    setBackground(OfficeLetter)
+    setAlternativeText1("Get out of here");
+    setAlternativeText2("Go to the old factory");
+    setAlternativeText3("For real leave the house");
+    setDone(true);
+
+    //On all of the buttons, add if isDone=true call the next level function
   }
 
 // -------------------------------------------------------------------
