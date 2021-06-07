@@ -12,6 +12,11 @@
     <a-scene>
         <a-assets>
             <a-asset-items id="newerwarehouse" src="assets/newerwarehouse.glb"></a-asset-items>
+            <a-asset-items id="signdiner" src="assets/sign_diner.glb"></a-asset-items>
+            <a-asset-items id="oil1" src="assets/oil1.glb"></a-asset-items>
+            <a-asset-items id="oil2" src="assets/oil2.glb"></a-asset-items>
+            <a-asset-items id="oil3" src="assets/oil3.glb"></a-asset-items>
+            <a-asset-items id="oil4" src="assets/oil4.glb"></a-asset-items>
             <video id="videonew" src="assets/circle.mp4" autoplay loop preload crossorigin="anonymous"></video>
             <img id="play" src="assets/play.png">
             <img id="pause" src="assets/pause.png">
@@ -21,18 +26,34 @@
 
         <a-entity gltf-model="#newerwarehouse"></a-entity>
 
+        <a-entity gltf-model="#signdiner" scale="0.04 0.04 0.04" position="-1 -1 -33" rotation="0 25 0"></a-entity>
+
+        <a-entity gltf-model="#oil1" scale="0.002 0.002 0.002" position="-1 1 -11" rotation="0 25 0"></a-entity>
+        <a-entity gltf-model="#oil2" scale="0.03 0.03 0.03" position="3 -1 -11" rotation="0 25 0"></a-entity>
+        <a-entity gltf-model="#oil3" scale="0.45 0.45 0.45" position="5 1 -11" rotation="0 25 0"></a-entity>
+        <a-entity gltf-model="#oil4" position="8 0 -11" rotation="0 25 0"></a-entity>
+
+
         <!-- <a-entity position="0 0 0">
             <a-sphere color="pink" position="-10 3 -20" radius="0.6" color="pink" shadow ></a-sphere>
-        </a-entity>   -->
+        </a-entity> -->
 
         <!-- <a-video src="#videonew" width="7" height="5.25" position="-10 1.4 -4.4">       
             <a-image id="videoControls" src="#play" position="0 5 0" play-pause></a-image>
-        </a-video>         -->
+        </a-video> -->
 
-        <!-- <a-entity camera look-controls mouse-cursor>
-
+        <a-entity id="rig" position="-7 0.7 -42" rotation="0 201 0">
+            <a-camera id="camera">
+                <a-cursor>
+                </a-cursor>
+            </a-camera>
+        </a-entity>
 
     </a-scene>
 
 </body>
 </html>
+
+
+
+<!-- <a-entity id="rig" position="25 0 0" rotation="0 120 0"> -->
