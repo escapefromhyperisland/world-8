@@ -3072,7 +3072,6 @@ SPR w
 10111010
 00010000
 NAME Robot key1
-DLG m
 POS b 7,6
 
 SPR x
@@ -3229,16 +3228,16 @@ DLG 7
 """
 {
   - {lookedAtPainting} == false ?
-    {printSprite "A"}: It's been a long time since I thought of my family. I got so little time with them... and after all the partying and travelling, the memories is all faded. But this portrait... our Family portrait... It brings back memories! What did grandmother say... Maybe looking  at some more pictures will help me remember!
+    {printSprite "A"}: It's been a long time since I thought of my family. I got so little time with them... and after all the partying and travelling, the memories is all faded. But this portrait brings back memories! Maybe {clr2}looking at some more pictures{clr2} will help me remember!
     {lookedAtPainting = true}
   - else ?
-    {printSprite "A"}: I need to look at more picture. Where is our old camera?
+    {printSprite "A"}: I need to look at more picture. Where is our {clr2}old camera{clr2}?
 }
 """
 NAME Painting dialog
 
 DLG 8
-{printSprite "A"}: Aaah finally coffee. Now I can think straight! Maybe I should go looking around for objects that can help me find where the button is...
+{printSprite "A"}: Aaah finally {clr2}coffee{clr2}. Now I can think straight! Maybe I should go looking around for objects that can help me find where the button is...
 NAME Coffe dialog
 
 DLG 9
@@ -3249,9 +3248,9 @@ DLG a
 """
 {
   - {item "0"} == 1 ?
-    {printSprite "A"}: Box of cereal? No I'm not hungry. I need to find clues...
+    {printSprite "A"}: Cereal? No I'm not hungry. I need to find clues...
   - else ?
-    {printSprite "A"}: Box of cereal? No. Coffee.. only coffee can wake me up.
+    {printSprite "A"}: Food? No. Coffee.. only coffee can wake me up.
 }
 """
 NAME cereal dialog
@@ -3260,10 +3259,10 @@ DLG b
 """
 {
   - {lookedAtCamera} == false ?
-    {printSprite "A"}: Ah! Grandmothers camera! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really unfamiliar or pictures of a button... I guess you don't take photos of a secret location {wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her journal! There she is, holding it in her hand, and here is another one where she sitting writing in it! I think I have her journal down in the basement.
+    {printSprite "A"}: {clr2}Grandmothers camera{clr2}! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really...{wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her {clr2}journal{clr2}! Maybe she wrote something in it? I think I have her journal down in the {clr2}basement{clr2}.
     {lookedAtCamera = true}
   - else ?
-    {printSprite "A"}: I'm pretty sure that the journal is down in the basement.
+    {printSprite "A"}: I need to get her {clr2}journal{clr2} in the {clr2}basement{clr2}.
 }
 """
 NAME Camera dialog
@@ -3284,7 +3283,7 @@ NAME Box dialog
 
 DLG d
 """
-You found your grandmothers journal! Maybe there is some useful information here? You need to go out of the labyrinth to have a closer look.
+You found your {clr2}grandmothers journal{clr2}! Maybe there is some useful information here? Need to exit this small room to see better.
 
 """
 NAME RightBox dialog
@@ -3294,23 +3293,23 @@ DLG e
 {
   - {item "1"} >= 1 ?
     {property locked false}
-    The key opens the door!
+    The {clr2}key{clr2} opens the door!
     {pg}
-    {printSprite "A"}: I hate going into the basement since the portals stopped working as they should... I always gets lost in here. On top of that, I never remember what is in my boxes!
+    {printSprite "A"}: I hate going into the basement since the {clr2}portals stopped working{clr2} as they should... I always gets lost in here and there is random {clr2}boxes{clr2} everywhere!
   - else ?
     {property locked true}
-    The door is locked... You need a key {printItem "1"} to open it.
+    The door is locked... You need a {clr2}key {printItem "1"}{clr2} to open it.
     {triedOpenBasementDoor = true}
 }
 """
 NAME locked exit 1
 
 DLG f
-You found the key to the basement!
+You found the {clr2}key to the basement{clr2}!
 NAME key dialog
 
 DLG g
-Portal-malfuntioning! Stay alert when entering.
+{clr2}Portal-malfunctioning{clr2}! Stay alert when entering.
 NAME ! dialog
 
 DLG h
@@ -3320,7 +3319,7 @@ DLG h
     {property locked false}
   - else ?
     {property locked true}
-    {printSprite "A"}: Where am I going? I need coffee.
+    {printSprite "A"}: Where am I going? I need {clr2}coffee{clr2}.
 }
 """
 NAME locked exit 2
@@ -3331,17 +3330,14 @@ DLG i
   - {item "0"} == 1 ?
     {printSprite "A"}: Pluto, do you know where the button is?
     {pg}
-    {printSprite "r"}: {rbw}voff voff!{rbw}
+    {printSprite "r"}: Voff... {rbw}voff voff!{rbw}
     {pg}
-    {printSprite "A"}: You DO?! Fecth! Fecth button!
-    {pg}
-    {printSprite "r"}: Voff...{printSprite "10"}?
-    {pg}
-    {printSprite "A"}: ... sorry Pluto. Wishfull thinking. I better keep looking!
+    {printSprite "A"}: Aww... Too bad you dont, but {rbw}I love you too{rbw}!
+
   - else ?
     {printSprite "r"}: {rbw}Voooofff!{rbw}
     {pg}
-    {printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need coffee....{wvy}{printTile "u"}{wvy}
+    {printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need {clr2}coffee{clr2}....{wvy}{printTile "u"}{wvy}
 }
 """
 NAME Dog dialog
@@ -3350,9 +3346,9 @@ DLG j
 """
 {
   - {lookedAtPainting} == true ?
-    {printSprite "A"}: Robotana, have you seen my grandmothers camera?
+    {printSprite "A"}: Robotana, have you seen my {clr2}grandmothers camera{clr2}?
     {pg}
-    {printSprite "c"}: Yes. It is in the shelf in the living room.
+    {printSprite "c"}: Yes. It is in the {clr2}shelf in the living room{clr2}.
   - else ?
     {printSprite "c"}: I wish I could help you find clues. Robots are so much smarter than humans.
 }
@@ -3366,64 +3362,39 @@ DLG k
     {property locked false}
   - else ?
     {property locked true}
-    {printSprite "A"}: Wait isn't there a family photo in here?
+    {printSprite "A"}: Wait isn't there a {clr2}family photo{clr2} in here?
 }
 """
 NAME locked exit 3
 
 DLG l
-{printSprite "A"}: My old partying shoes... If only I hadn't drinked and partied so much, I might remember the old stories my grandmother told me about this button. I mean, I did not actually believed her when I heard it. But now I really really wished I stored that information somewhere... Got to keep looking for clues!
+{printSprite "A"}: My old partying shoes... If only I hadn't drunk and partied so much, I might remember where this button is. I really wished I had listened more carefully... Got to keep looking for clues!
 NAME shoe dialog
-
-DLG m
-"""
-{
-  - {item "0"} == 1 ?
-    ...
-  - else ?
-    ...
-}
-"""
-NAME Robot with key dialog
 
 DLG n
 """
-{printSprite "A"}: Aren't you the cutest, Pluto?
-{pg}
-{printSprite "r"}: {rbw}Voff Ruff{rbw}!
-{pg}
-{printSprite "A"}: {rbw}Aaaawww...{rbw} wait I need to focus!
+{printSprite "A"}: Aren't you the cutest, Pluto? Too bad can't help me!
+
 """
 NAME Dog2 dialog
 
 DLG o
-"""
-{printSprite "A"}: Ugh NO, I'm too stressed for food! I need to find the journal.{
-  - lookedAtCamera = true ?
-    {printSprite "A"}: Ugh NO, I'm too stressed for food! I need to find the journal in the basement.
-  - else ?
-    {printSprite "A"}: Where can that camera be? I don't think eating will help me find it.
-}
-"""
+{printSprite "A"}: I'm too stressed for food! I need to keep looking.
 NAME cereal2 dialog
 
 DLG p
-Portal-malfuntioning! Stay alert when entering.
+{clr2}Portal-malfunctioning{clr2}! Stay alert when entering.
 NAME !! dialog
 
 DLG q
-Portal-malfuntioning! Stay alert when entering.
+{clr2}Portal-malfunctioning{clr2}! Stay alert when entering.
 NAME !!! dialog
 
 DLG r
 """
-{printSprite "A"}: Robotana, do you have the key to the basement?
+{printSprite "A"}: Robotana, do you have the {clr2}key to the basement{clr2}?
 {pg}
-{printSprite "c"}: The key? You have to be more specific.
-{pg}
-{printSprite "A"}: They key to the basement.
-{pg}
-{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the portals are malfunctioning at the moment. Wait. What robot asks these many questions? It might look suspicious. Don't remember that human. I'm glad that you so easily can forget things. It's in your nature.
+{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the {clr2}portals are malfunctioning{clr2} at the moment. Wait. What robot asks these many questions? Never mind. I'm glad that you so easily can forget things. It's in your nature.
 {pg}
 {printSprite "A"}: .... oookay. Hmm.. well, anyway. So that means you don't have the key?
 {pg}
@@ -3463,14 +3434,13 @@ DLG u
     {
       - {triedOpenBasementDoor} == true ?
         {property locked false}
-        {printSprite "A"}: Maybe Robotana knows where the key is...
       - else ?
         {property locked true}
-        {printSprite "A"}: Let's go down to the basement to start looking for the journal!
+        {printSprite "A"}: Let's {clr2}go down to the basement{clr2} to start looking for the journal!
     }
   - else ?
     {property locked true}
-    {printSprite "A"}: Oh wait! There is the camera! On the shelf!
+    {printSprite "A"}: Oh wait! There is {clr2}the camera{clr2}! On the shelf!
 }
 """
 NAME locked exit 6
