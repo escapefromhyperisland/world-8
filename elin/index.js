@@ -4,6 +4,10 @@ let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
 
+function closePopup() {
+    document.querySelector("#popup").style.visibility = "hidden"
+}
+
 window.addEventListener("keydown", function(e){
     if(e.code === "Space") { 
         const player = document.querySelector("#player")
