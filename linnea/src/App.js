@@ -7,14 +7,14 @@ import Textbox2 from "./components/Textbox2";
 import Background from "./components/Background";
 
 //Imported images
-import MirrorImg from "./components/images/mirror.jpg"
-import WallpaperImg from "./components/images/paintings.jpg";
-import Painting1 from "./components/images/paintings1.jpg";
-import Painting2 from "./components/images/paintings2.jpg";
+import MirrorImg from "./components/imagesSmall/mirror.jpg"
+import WallpaperImg from "./components/imagesSmall/paintings.jpg";
+import Painting1 from "./components/imagesSmall/paintings1.jpg";
+import Painting2 from "./components/imagesSmall/paintings2.jpg";
 import KitchenImg from "./components/images/kitchen.jpg";
 import LetterBackground from "./components/images/letter.jpg"
-import OfficeImg from "./components/images/Office.jpg";
-import OfficeLetter from "./components/images/officeLetter.jpg";
+import OfficeImg from "./components/imagesSmall/Office.jpg";
+import OfficeLetter from "./components/imagesSmall/officeLetter.jpg";
 import CalendarBackgrund from "./components/images/calendarBackground.jpg";
 
 
