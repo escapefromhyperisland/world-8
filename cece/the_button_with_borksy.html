@@ -3305,7 +3305,7 @@ NAME Robot Start dialog
 
 DLG 4
 """
-{printSprite "A"}: {wvy}{printTile "u"}{wvy} Good morning Robotana...{wvy}{printTile "u"}{wvy} Tell me about my day {wvy}{printTile "u"}{wvy}{pg}{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us! Today you...{pg}{printSprite "A"}: Aah, amazing. Lovely sunny weather we been having for ages!{pg}{printSprite "c"}: :... and then at 19.00 you have the Zonic Sway hologram concert at the Schmoogle arena...{pg}{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this.{pg}{printSprite "c"}: ... and lastly today is the last day to push the button.{pg}{printSprite "A"}: ... Push the button? Robotana, What button?{pg}{printSprite "c"}: Don't you remember? Humans have such short memory. The sun - will - go - out - and - human - kind - will - die - if - you - don't - press - the - button - button.{pg}{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I think my grandmother told me about it when I was young but I didn't take it serious. Was she not joking? Oh well, all I have to do is go press it. Robotana, Tell me where the button is.{pg}{printSprite "c"}: No.{pg}{printSprite "A"}: No? What do you mean? Why not?{pg}{printSprite "c"}: Well, I can't because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.{pg}{printSprite "A"}: But I have completely forgot where that button is! {shk}What should I do?!{shk}. I can't think straight, {clr2}I need coffee.{clr2}
+{printSprite "A"}: {wvy}{printTile "u"}{wvy} Good morning Robotana...{wvy}{printTile "u"}{wvy} Tell me about my day {wvy}{printTile "u"}{wvy}{pg}{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us! Today you...{pg}{printSprite "A"}: Aah, amazing. Lovely sunny weather we been having for ages!{pg}{printSprite "c"}: :... and then at 19.00 you have the Zonic Sway hologram concert at the Schmoogle arena...{pg}{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this.{pg}{printSprite "c"}: ... and lastly today is the last day to push the button.{pg}{printSprite "A"}: ... Push the button? Robotana, What button?{pg}{printSprite "c"}: Don't you remember? Humans have such short memory. The sun - will - go - out - and - humankind - will - die - if - you - don't - press - the - button - button.{pg}{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I think my grandmother told me about it when I was young but I didn't take it serious. Was she not joking? Oh well, all I have to do is go press it. Robotana, Tell me where the button is.{pg}{printSprite "c"}: No.{pg}{printSprite "A"}: No? What do you mean? Why not?{pg}{printSprite "c"}: Well, I can't because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.{pg}{printSprite "A"}: But I have completely forgot where that button is! {shk}What should I do?!{shk}. I can't think straight, {clr2}I need coffee.{clr2}
 """
 NAME exit narration 1
 
@@ -3342,7 +3342,7 @@ DLG a
   - {item "0"} == 1 ?
     {printSprite "A"}: Cereal? No I'm not hungry. I need to find clues...
   - else ?
-    {printSprite "A"}: Food? No. Coffee.. only coffee can wake me up.
+    {printSprite "A"}:{wvy}{printTile "u"}{wvy}Food? No. Coffee.. only coffee can wake me up.. {wvy}{printTile "u"}{wvy}
 }
 """
 NAME cereal dialog
@@ -3362,7 +3362,7 @@ DLG c
 """
 {sequence
   - You found replacement biogel for the EPS grid.
-  - You found your no-needle-droping expandable Chrismatshover tree.
+  - You found your no-needle-droping expandable Christmas hover tree.
   - You found an emergency portable air hockey game.
   - You found spare dilithium for your warpcore.
   - You found the GSS's new ONI headset.
@@ -3372,21 +3372,16 @@ DLG c
 NAME Box dialog
 
 DLG d
-You found your {clr2}grandmothers journal{clr2}! But the book is badly damaged, you don't really dare to pick it up, but there seems to be something sticking out of it? (exit "Thebook,5,9")
+You found your {clr2}grandmothers journal{clr2}! But the book is badly damaged, you don't really dare to pick it up. But there seems to be something sticking out of it? (exit "Thebook,5,9")
 NAME RightBox dialog
 
 DLG e
 """
 {
   - {item "1"} >= 1 ?
-    {property locked false}
-    The {clr2}key{clr2} opens the door!
-    {pg}
-    {printSprite "A"}: I hate going into the basement since the {clr2}portals stopped working{clr2} as they should... I always gets lost in here and there is random {clr2}boxes{clr2} everywhere!
+    {property locked false}The {clr2}key{clr2} opens the door!{pg}{printSprite "A"}: I hate going into the basement... I always gets lost in here and there is random {clr2}boxes{clr2} everywhere!
   - else ?
-    {property locked true}
-    The door is locked... You need a {clr2}key {printItem "1"}{clr2} to open it.
-    {triedOpenBasementDoor = true}
+    {property locked true}The door is locked... You need a {clr2}key {printItem "1"}{clr2} to open it.{triedOpenBasementDoor = true}
 }
 """
 NAME locked exit 1
@@ -3503,7 +3498,7 @@ NAME locked exit 6
 
 DLG v
 """
-A note with the sun on it, and {clr2}an address{clr2}! And not any address, this is {clr2}the address to our old country home{clr2}!(end "Horray! Finally a clue where the button could be! Let's hurry to the old Family home, I hope that old house are still standing!")
+You see a note with the sun on it, and an address! And not any address, this is {clr2}the address to your families old country home{clr2}!(end "Horray! Finally a clue where the button could be! Let's hurry to the old family house, I hope that it is still standing!")
 """
 NAME Note8 dialog
 
@@ -8390,8 +8385,8 @@ function updateInput() {
 	else if ( isEnding ) {
 		if (input.anyKeyPressed() || input.isTapReleased()) {
 			/* RESTART GAME */
-			console.log("The End of this level, thanks for playing!")
-			windows.parent.postMessage('nextLevel')
+			console.log("The End of this level, thanks for playing!");
+			windows.parent.postMessage('nextLevel');
 			// reset_cur_game();
 		}
 	}
