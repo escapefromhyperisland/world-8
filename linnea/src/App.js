@@ -60,6 +60,7 @@ function App() { //Might be able to clean this up by putting all of the
     console.log("wrong code")
     setInstructionText("Oh this is the wrong code... It must be hidden somewhere around the house.");
     setWhatThing(thingsArray[0]);
+    console.log(whatThing);
   }
 
   const correctCode = () => {
@@ -69,7 +70,8 @@ function App() { //Might be able to clean this up by putting all of the
     setAlternativeText1("Get out of here");
     setAlternativeText2("Go to the old factory");
     setAlternativeText3("For real leave the house");
-    setDone(true);
+    setDone(!isDone);
+    console.log(isDone)
 
     //On all of the buttons, add if isDone=true call the next level function
   }
@@ -114,16 +116,15 @@ const changeRoom1 = () => {
   //OFFICE
 
   //Look at old safe
-  else if (whatRoom === "Office" && whatThing!== "Safe") {
-    setAlternativeText1("Stop looking at the old safe");
+  else if (whatRoom === "Office" && isDone!==true) {
+    setAlternativeText1("Look at the old safe");
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
     setBackground(OfficeImg);
     setInstructionText("OH. This sparks my interest. What could the code be?? It has to be hidden somewhere around here...")
     setWhatRoom(roomArray[1]);
-    //Add function that pops up safe and an input field
     safeInput();
-    setWhatThing(thingsArray[5]);
+  
   }
 
   // ART GALLERY
@@ -151,6 +152,11 @@ const changeRoom1 = () => {
     setWhatThing(thingsArray[0]);
     console.log("No painting");
   }
+
+  else if (isDone===true) {
+    console.log("End of game")
+    window.parent.postMessage('nextLevel');
+  }
 }
 
 // -----------------------------------------------------------------------------------------------------
@@ -169,7 +175,7 @@ const changeRoom2 = () => {
 
    //Office
 
-   else if (whatRoom === "Office") {
+   else if (whatRoom === "Office" && isDone!==true) {
     setAlternativeText1("Look at the old safe");
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
@@ -228,6 +234,11 @@ const changeRoom2 = () => {
       setWhatThing(thingsArray[0]);
       console.log("No painting");
     }
+
+    else if (isDone===true) {
+      window.parent.postMessage('nextLevel');
+      console.log("End of game 2")
+    }
 }
 
 // -----------------------------------------------------------------------------------------------------
@@ -242,7 +253,13 @@ const changeRoom3 = () => {
     setBackground(WallpaperImg);
     setInstructionText("Where did all the painting go??")
     setWhatRoom(roomArray[3]);
-  } 
+  }
+
+  else if (isDone===true) {
+    window.parent.postMessage('nextLevel');
+    console.log("End of game 3")
+  }
+
   //Go back to Hallway
   else {
     setAlternativeText1("Go to the kitchen");
