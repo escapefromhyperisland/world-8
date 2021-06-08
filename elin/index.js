@@ -4,6 +4,20 @@ let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
 
+function closePopup() {
+    document.querySelector("#popup").style.visibility = "hidden"
+    document.querySelector("#info-button").style.visibility = "visible"
+}
+
+function displayPopup() {
+    document.querySelector("#popup").style.visibility = "visible"
+    document.querySelector("#info-button").style.visibility = "hidden"
+}
+
+function goToNextWorld() {
+    window.parent.postMessage('nextLevel')
+}
+
 window.addEventListener("keydown", function(e){
     if(e.code === "Space") { 
         const player = document.querySelector("#player")
@@ -45,12 +59,12 @@ AFRAME.registerComponent('keyboard-functions', {
 
             // handle password
             if (input === correctPassword) {
-                document.querySelector("#button").setAttribute("gltf-model", "/assets/models/green-button.glb")
+                document.querySelector("#button").setAttribute("gltf-model", "./assets/models/green-button.glb")
                 document.querySelector("#button").flushToDOM()
                 passwordIsCorrect = true
             } else {
                 alert("WRONG PASSWORD.... TRY AGAIN")
-                document.querySelector("#button").setAttribute("gltf-model", "/assets/models/red-button.glb")
+                document.querySelector("#button").setAttribute("gltf-model", "./assets/models/red-button.glb")
                 document.querySelector("#button").flushToDOM()
                 passwordIsCorrect = false
             }
@@ -133,6 +147,21 @@ AFRAME.registerComponent('marker-function', {
             haveMarker = true
             this.setAttribute("visible", "false")
             this.flushToDOM()
+        })
+    }
+
+})
+
+AFRAME.registerComponent('the-button-function', {
+
+    update: function () {
+        
+        this.el.addEventListener('click', function (event) {
+            if (this.getAttribute('gltf-model').includes("green")) {
+                document.querySelector('#aftertexts').style.visibility = "visible"
+                document.querySelector("#crawl").style.animation = "crawl 20s linear forwards"
+                document.querySelector("#next-world-btn").style.animation = "fadeIn 2s ease 7s forwards"
+            }
         })
     }
 
