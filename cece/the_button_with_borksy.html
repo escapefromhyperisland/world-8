@@ -3360,7 +3360,7 @@ DLG c
 NAME Box dialog
 
 DLG d
-You found your {clr2}grandmothers journal{clr2}! But the book is badly damaged, you don't really dare to pick it up. But there seems to be something sticking out of it? (exit "Thebook,5,9")
+You found your {clr2}grandmothers journal{clr2}! But the book is badly damaged, you don't really dare to pick it up. But...{pg}...there seems to be something sticking out of it? A note?(exit "Thebook,5,9")
 NAME RightBox dialog
 
 DLG e
@@ -3460,8 +3460,7 @@ DLG t
   - {item "1"} >= 1 ?
     {property locked false}
   - else ?
-    {property locked true}
-    {printSprite "c"}: Hey! Don't forget the key {printItem "1"}  Humans...
+    {property locked true}{printSprite "c"}: Hey! Don't forget the key {printItem "1"}  Humans...
 }
 """
 NAME locked exit 5
@@ -3474,19 +3473,17 @@ DLG u
       - {triedOpenBasementDoor} == true ?
         {property locked false}
       - else ?
-        {property locked true}
-        {printSprite "A"}: Let's {clr2}go down to the basement{clr2} to start looking for the journal!
+        {property locked true}{printSprite "A"}: Let's {clr2}go down to the basement{clr2} to start looking for the journal!
     }
   - else ?
-    {property locked true}
-    {printSprite "A"}: Oh wait! There is {clr2}the camera{clr2}! On the shelf!
+    {property locked true}{printSprite "A"}: Oh wait! There is {clr2}the camera{clr2}! On the shelf!
 }
 """
 NAME locked exit 6
 
 DLG v
 """
-You see a note with the sun on it, and it has an address too! And not any address, this is {clr2}the address to your familys old country home{clr2}!(end "Horray! Finally a clue where the button could be! Let's hurry to the old family house, I hope that it is still standing!")
+You see a note with the sun on it, and it has an address too! It's {clr2}the address to your familys old country home{clr2}!(end "Horray! Finally a clue where the button could be! Let's hurry to the old family house, I hope that it is still standing!")
 """
 NAME Note8 dialog
 
