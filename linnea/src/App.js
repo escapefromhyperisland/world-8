@@ -97,7 +97,7 @@ const changeRoom1 = () => {
     setAlternativeText2("Look at the old letter");
     setAlternativeText3("Go back to the hallway");
     setBackground(CalendarBackgrund);
-    setInstructionText("That big ring... Todays date. I wish I would have remembered this earlier. Feels like I'm letting my family down... But NO! I'll keep on pushing forward!")
+    setInstructionText("Those big circles, its todays date. I wish I would have remembered this mission earlier. Feels like I'm letting my family down... But I have no time for moping around! I'll keep on pushing forward!")
     setWhatRoom(roomArray[2]);
     setWhatThing(thingsArray[1]);
   }
@@ -147,7 +147,7 @@ const changeRoom1 = () => {
     setAlternativeText2("Investigate the second painting");
     setAlternativeText3("Go back to the hallway");
     setBackground(WallpaperImg);
-    setInstructionText("Where did all the painting go??")
+    setInstructionText("Where did all the painting go?? I could have swore it would have to be more than two to be considered an 'art gallery', but oh well! Things where different back then.")
     setWhatRoom(roomArray[3]);
     setWhatThing(thingsArray[0]);
     console.log("No painting");
@@ -180,7 +180,7 @@ const changeRoom2 = () => {
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
     setBackground(OfficeImg);
-    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless monitors")
+    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless our new high tech monitors that reads everything for me")
     setWhatRoom(roomArray[1]);
   }
 
@@ -229,7 +229,7 @@ const changeRoom2 = () => {
       setAlternativeText2("Investigate the second painting");
       setAlternativeText3("Go back to the hallway");
       setBackground(WallpaperImg);
-      setInstructionText("Where did all the painting go??")
+      setInstructionText("Where did all the painting go?? I could have swore it would have to be more than two to be considered an 'art gallery', but oh well! Things where different back then.")
       setWhatRoom(roomArray[3]);
       setWhatThing(thingsArray[0]);
       console.log("No painting");
@@ -251,7 +251,7 @@ const changeRoom3 = () => {
     setAlternativeText2("Investigate the second painting");
     setAlternativeText3("Go back");
     setBackground(WallpaperImg);
-    setInstructionText("Where did all the painting go??")
+    setInstructionText("Where did all the painting go?? I could have swore it would have to be more than two to be considered an 'art gallery', but oh well! Things where different back then.")
     setWhatRoom(roomArray[3]);
   }
 
