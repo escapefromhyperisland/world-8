@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boss level</title>
-
+    <title>The Button - Headquarters of the Earth</title>
     <link rel="icon" type="image/png" href="./assets/images/avatar-favicon.png" sizes="16x16">
+
+    <link rel="icon" type="image/png" href="/assets/images/avatar-favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
@@ -18,35 +23,88 @@
 <body>
     <script src="index.js"></script>
 
+    <div id="popup">
+        <p>
+            This must be it, I'm finally here! <br>
+            The headquarters of the earth is actually much smaller than expected..
+            I have 60 minutes left until the sun goes out, but if I made it this far that shouldn't be a problem.
+            Now just let me find that darn button!
+        </p>
+        <img src="./assets/images/controls.png" />
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <button id="info-button" onclick="displayPopup()">i</button>
+
+    <div id="aftertexts">
+        <div id="crawl">
+            <h1>You saved the world!</h1>
+            <p>"The Button" was brought to you by team 8 as a Hyper Island student project.</p>
+    
+            <h2>Developers</h2>
+            <ul>
+                <li>Level 1, The Mission - Cecilia Hallerby</li>
+                <li>Level 2, The House - Linnéa Gistrand</li>
+                <li>Level 3, The Warehouse - Malin Olofsson</li>
+                <li>Level 4, The Headquarters - Elin Nordin</li>
+            </ul>
+    
+            <h2>Game Testers and Ideation</h2>
+            <ul>
+                <li>Paul Fleming</li>
+                <li>Lisa Lee Källman</li>
+                <li>Linnéa Gistrand</li>
+                <li>Cecilia Hallerby</li>
+                <li>Elin Nordin</li>
+                <li>Malin Olofsson</li>
+            </ul>
+    
+            <h2>Coach and Guidance</h2>
+            <ul>
+                <li>Jonas Johansson</li>
+            </ul>
+    
+            <p>And a huge thank you to our dear classmates of FED22!</p>
+        </div>
+        <button id="next-world-btn" onclick="goToNextWorld()">Go to next world</button>
+    </div>
+
     <a-scene inspector-plugin-recast>
+
         <a-asset>
-            <a-asset-item id="nav-mesh" src="./assets/models/navmesh.gltf"></a-asset-item>
-            <a-asset-item id="room" src="./assets/models/escape-room.glb"></a-asset-item> 
-            <a-asset-item id="red-button" src="./assets/models/red-button.glb"></a-asset-item>
-            <a-asset-item id="green-button" src="./assets/models/green-button.glb"></a-asset-item>
-            <a-asset-item id="briefcase" src="./assets/models/briefcase.glb"></a-asset-item>
-            <a-asset-item id="marker" src="./assets/models/marker.glb"></a-asset-item>
+            <a-asset-item id="nav-mesh" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/navmesh.glb"></a-asset-item>
+            <a-asset-item id="room" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/escape-room.glb"></a-asset-item>
+            <a-asset-item id="red-button" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/red-button.glb"></a-asset-item>
+            <a-asset-item id="green-button" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/green-button.glb"></a-asset-item>
+            <a-asset-item id="briefcase" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/briefcase.glb"></a-asset-item>
+            <a-asset-item id="marker" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/marker.glb"></a-asset-item>
         </a-asset>
 
-        <a-entity movement-controls="speed: 0.01; constrainToNavMesh: true">
-            <a-camera id="player" look-controls="pointerLockEnabled: true;" position="0 3 0">
+        <a-entity movement-controls="speed: 0.5; constrainToNavMesh: true">
+            <a-entity camera id="player" look-controls="pointerLockEnabled: true;" position="0 3 0">
                 <a-cursor raycaster="objects: .clickable"></a-cursor>
-            </a-camera>
+            </a-entity>
         </a-entity>
 
         <a-entity id="room" gltf-model="#room" position="0 -0.1 0"></a-entity>
 
-        <a-entity id="button" gltf-model="#red-button" position="7.7 3 -5.75" rotation="0 -90 0"></a-entity>
+        <a-entity id="button" class="clickable" the-button-function gltf-model="#red-button" position="7.7 3 -5.75" rotation="0 -90 0"></a-entity>
 
         <a-entity id="briefcase-wrapper">
-            <a-entity id="briefcase" gltf-model="#briefcase" position="-2.8 1 3.1" rotation="0 180 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity id="briefcase" gltf-model="#briefcase" position="-2.8 1 3.1" rotation="0 180 0"
+                scale="0.5 0.5 0.5"></a-entity>
         </a-entity>
-        
-        <a-entity id="keyboard" super-keyboard="imagePath: assets/images/;" keyboard-functions position="2.24 2.3 1.76" rotation="-30 90 0" scale="3 2.5 1"></a-entity>
 
-        <a-entity id="numpad" super-keyboard="imagePath: assets/images/; maxLength: 3; model: numpad;" numpad-keyboard-functions position="-2.75 2.1 3.1" rotation="-30 -90 0" scale="2.8 2.4 1"></a-entity>
+        <a-entity id="keyboard"
+            super-keyboard="imagePath: assets/images/; inputColor: #4dffff; keyColor: #4dffff; keyHoverColor: #0f4c51; keyPressColor: #4dffff"
+            keyboard-functions position="2.24 2.3 1.76" rotation="-30 90 0" scale="3 2.5 1"></a-entity>
 
-        <a-entity id="marker" marker-function class="clickable" gltf-model="#marker" position="-2.75 1.1 3.35" rotation="0 0 0" scale="0.05 0.05 0.05" visible="true" ></a-entity>
+        <a-entity id="numpad"
+            super-keyboard="imagePath: assets/images/; maxLength: 3; model: numpad; inputColor: #4dffff; keyColor: #4dffff; keyHoverColor: #0f4c51; keyPressColor: #4dffff"
+            numpad-keyboard-functions position="-2.75 2.1 3.1" rotation="-30 -90 0" scale="2.8 2.4 1"></a-entity>
+
+        <a-entity id="marker" marker-function class="clickable" gltf-model="#marker" position="-2.75 1.1 3.35"
+            rotation="0 0 0" scale="0.05 0.05 0.05" visible="true"></a-entity>
 
         <a-entity id="dots" position="7.749 3.084 5.005" rotation="0 -90 0" scale="0.74 0.71 0">
             <a-entity id="dot-row-1" position="0 0.35 1">
@@ -93,7 +151,7 @@
 
 
 
-        <!-- <a-entity id="navmesh" gltf-model="#nav-mesh" nav-mesh position="0 -0.1 0" visible="true"></a-entity> -->
+        <a-entity id="navmesh" gltf-model="#nav-mesh" nav-mesh visible="false"></a-entity>
     </a-scene>
 </body>
 
