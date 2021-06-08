@@ -42,7 +42,8 @@ This is the last level in the story of "The Button" and you are located in the h
 - [ ] Change crouch key to ctrl instead of space
 - [ ] Add sound feedback (on right and wrong password/code)
 - [ ] Add 1 hour timer
-- [ ] Fix navmesh (doesn't reach QR-code now)
+- [x] Fix navmesh (doesn't reach QR-code now)
+- [ ] Play with lights
 
 
 ### :closed_book: Learnings:
