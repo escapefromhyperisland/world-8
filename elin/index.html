@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Button - Headquarters of the Earth</title>
+    <link rel="icon" type="image/png" href="./assets/images/avatar-favicon.png" sizes="16x16">
 
     <link rel="icon" type="image/png" href="/assets/images/avatar-favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles.css">
@@ -71,6 +72,7 @@
     <a-scene inspector-plugin-recast>
 
         <a-asset>
+
             <a-asset-item id="nav-mesh" src="./assets/models/navmesh.glb"></a-asset-item>
             <a-asset-item id="room" src="./assets/models/escape-room.glb"></a-asset-item>
             <a-asset-item id="red-button" src="./assets/models/red-button.glb"></a-asset-item>
@@ -80,7 +82,7 @@
         </a-asset>
 
         <a-entity movement-controls="speed: 0.5; constrainToNavMesh: true">
-            <a-entity camera id="player" look-controls="pointerLockEnabled: false;" position="0 3 0">
+            <a-entity camera id="player" look-controls="pointerLockEnabled: true;" position="0 3 0">
                 <a-cursor raycaster="objects: .clickable"></a-cursor>
             </a-entity>
         </a-entity>
