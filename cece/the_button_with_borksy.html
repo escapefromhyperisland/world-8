@@ -3305,34 +3305,7 @@ NAME Robot Start dialog
 
 DLG 4
 """
-{printSprite "A"}: {wvy}{printTile "u"}{wvy} Good morning Robotana...{wvy}{printTile "u"}{wvy} Tell me about my day {wvy}{printTile "u"}{wvy}
-{pg}
-{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us! Today you...
-{pg}
-{printSprite "A"}: Aah, amazing. Lovely sunny weather we been having for ages!
-{pg}
-{printSprite "c"}: :... and then at 19.00 you have the Zonic Sway hologram concert at the Schmoogle arena...
-{pg}
-{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this.
-{pg}
-{printSprite "c"}: ... and lastly today is the last day to push the button.
-{pg}
-{printSprite "A"}: ... Push the button? Robotana, What button?
-{pg}
-{printSprite "c"}: Don't you remember? Humans have such short memory. It's the sun - will - go - out - and - human - kind - will - die - if - you - don't - press - the - button - button.
-{pg}
-{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I think my grandmother told me about it when I was young but I didn't take it serious. Was she not joking?
-{pg}
-Oh well, all I have to do is go press it. Robotana, Tell me where the button is.
-{pg}
-{printSprite "c"}: No.
-{pg}
-{printSprite "A"}: No? What do you mean? Why not?
-{pg}
-{printSprite "c"}: Well, I can't because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.
-{pg}
-{printSprite "A"}: But I have completely forgot where that button is! 
-{shk}What should I do?!{shk}. I can't think straight, {clr2}I need coffee.{clr2}
+{printSprite "A"}: {wvy}{printTile "u"}{wvy} Good morning Robotana...{wvy}{printTile "u"}{wvy} Tell me about my day {wvy}{printTile "u"}{wvy}{pg}{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us! Today you...{pg}{printSprite "A"}: Aah, amazing. Lovely sunny weather we been having for ages!{pg}{printSprite "c"}: :... and then at 19.00 you have the Zonic Sway hologram concert at the Schmoogle arena...{pg}{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this.{pg}{printSprite "c"}: ... and lastly today is the last day to push the button.{pg}{printSprite "A"}: ... Push the button? Robotana, What button?{pg}{printSprite "c"}: Don't you remember? Humans have such short memory. The sun - will - go - out - and - human - kind - will - die - if - you - don't - press - the - button - button.{pg}{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I think my grandmother told me about it when I was young but I didn't take it serious. Was she not joking? Oh well, all I have to do is go press it. Robotana, Tell me where the button is.{pg}{printSprite "c"}: No.{pg}{printSprite "A"}: No? What do you mean? Why not?{pg}{printSprite "c"}: Well, I can't because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.{pg}{printSprite "A"}: But I have completely forgot where that button is! {shk}What should I do?!{shk}. I can't think straight, {clr2}I need coffee.{clr2}
 """
 NAME exit narration 1
 
@@ -3348,16 +3321,15 @@ DLG 7
 """
 {
   - {lookedAtPainting} == false ?
-    {printSprite "A"}: It's been a long time since I thought of my family. I got so little time with them... and after all the partying and travelling, the memories is all faded. But this portrait brings back memories! Maybe {clr2}looking at some more pictures{clr2} will help me remember!
-    {lookedAtPainting = true}
+    {printSprite "A"}: This family portrait actually brings back memories! It's been a long time since I thought of my family,{pg}I got so little time with them... and after all the partying, the memories have faded.{pg}Maybe {clr2}looking at more pictures{clr2} will help me remember!{lookedAtPainting = true}
   - else ?
-    {printSprite "A"}: I need to look at more picture. Where is our {clr2}old camera{clr2}?
+    {printSprite "A"}: I need to look at more family pictures. Where is our {clr2}old camera{clr2}?
 }
 """
 NAME Painting dialog
 
 DLG 8
-{printSprite "A"}: Aaah finally {clr2}coffee{clr2}. Now I can think straight! Maybe I should go looking around for objects that can help me find where the button is...
+{printSprite "A"}: Aaah {clr2}coffee{clr2}, finally I feel awake! Now I should look around for things to help me find this button...
 NAME Coffe dialog
 
 DLG 9
@@ -3379,8 +3351,7 @@ DLG b
 """
 {
   - {lookedAtCamera} == false ?
-    {printSprite "A"}: {clr2}Grandmothers camera{clr2}! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really...{wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her {clr2}journal{clr2}! Maybe she wrote something in it? I think I have her journal down in the {clr2}basement{clr2}.
-    {lookedAtCamera = true}
+    {printSprite "A"}: {clr2}Our old camera{clr2}! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really...{wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her {clr2}journal{clr2}!{pg}Maybe she wrote something in it? I think I have her journal down in the {clr2}basement{clr2}.{lookedAtCamera = true}
   - else ?
     {printSprite "A"}: I need to get her {clr2}journal{clr2} in the {clr2}basement{clr2}.
 }
@@ -3390,19 +3361,18 @@ NAME Camera dialog
 DLG c
 """
 {sequence
-  - You found your no-needle-droping expandable Chrismatshover tree with quantum christmas ornaments.
-  - You found an emergency Portable midsummer pole.
   - You found replacement biogel for the EPS grid.
+  - You found your no-needle-droping expandable Chrismatshover tree.
+  - You found an emergency portable air hockey game.
   - You found spare dilithium for your warpcore.
-  - You found a smorg.
-  - You found the GSS new ONI headset.
+  - You found the GSS's new ONI headset.
   - You found cozy blankets.
 }
 """
 NAME Box dialog
 
 DLG d
-You found your {clr2}grandmothers journal{clr2}! Maybe there is some useful information here? (exit "Thebook,5,9")
+You found your {clr2}grandmothers journal{clr2}! But the book is badly damaged, you don't really dare to pick it up, but there seems to be something sticking out of it? (exit "Thebook,5,9")
 NAME RightBox dialog
 
 DLG e
@@ -3445,16 +3415,9 @@ DLG i
 """
 {
   - {item "0"} == 1 ?
-    {printSprite "A"}: Pluto, do you know where the button is?
-    {pg}
-    {printSprite "r"}: Voff... {rbw}voff voff!{rbw}
-    {pg}
-    {printSprite "A"}: Aww... Too bad you dont, but {rbw}I love you too{rbw}!
-
+    {printSprite "A"}: Pluto, do you know where the button is?{pg}{printSprite "r"}: Voff... {rbw}voff voff!{rbw}{pg}{printSprite "A"}: Aww... Too bad you dont, but {rbw}I love you too{rbw}!
   - else ?
-    {printSprite "r"}: {rbw}Voooofff!{rbw}
-    {pg}
-    {printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need {clr2}coffee{clr2}....{wvy}{printTile "u"}{wvy}
+    {printSprite "r"}: {rbw}Voooofff!{rbw}{pg}{printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need {clr2}coffee{clr2}....{wvy}{printTile "u"}{wvy}
 }
 """
 NAME Dog dialog
@@ -3463,9 +3426,7 @@ DLG j
 """
 {
   - {lookedAtPainting} == true ?
-    {printSprite "A"}: Robotana, have you seen my {clr2}grandmothers camera{clr2}?
-    {pg}
-    {printSprite "c"}: Yes. It is in the {clr2}shelf in the living room{clr2}.
+    {printSprite "A"}: Robotana, have you seen our {clr2}old camera{clr2}?{pg}{printSprite "c"}: Yes. It is in the {clr2}shelf in the living room{clr2}.
   - else ?
     {printSprite "c"}: I wish I could help you find clues. Robots are so much smarter than humans.
 }
@@ -3479,20 +3440,17 @@ DLG k
     {property locked false}
   - else ?
     {property locked true}
-    {printSprite "A"}: Wait isn't there a {clr2}family photo{clr2} in here?
+    {printSprite "A"}: Wait isn't there a {clr2}family portrait{clr2} in here?
 }
 """
 NAME locked exit 3
 
 DLG l
-{printSprite "A"}: My old partying shoes... If only I hadn't drunk and partied so much, I might remember where this button is. I really wished I had listened more carefully... Got to keep looking for clues!
+{printSprite "A"}: My old partying shoes... If only I hadn't drunk and partied so much, I might remember where this button is.{pg}I really wished I had listened more carefully... Got to keep looking for clues!
 NAME shoe dialog
 
 DLG n
-"""
 {printSprite "A"}: Aren't you the cutest, Pluto? Too bad can't help me!
-
-"""
 NAME Dog2 dialog
 
 DLG o
@@ -3509,28 +3467,9 @@ NAME !!! dialog
 
 DLG r
 """
-{printSprite "A"}: Robotana, do you have the {clr2}key to the basement{clr2}?
-{pg}
-{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the {clr2}portals are malfunctioning{clr2} at the moment. Wait. What robot asks these many questions? Never mind. I'm glad that you so easily can forget things. It's in your nature.
-{pg}
-{printSprite "A"}: .... oookay. Hmm.. well, anyway. So that means you don't have the key?
-{pg}
-{printSprite "c"}: Oh. Sorry. Yes I do. Here you go.
+{printSprite "A"}: Robotana, do you have the {clr2}key to the basement{clr2}?{pg}{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the {clr2}portals are malfunctioning{clr2} at the moment. Wait. What robot asks these many questions? Never mind. I'm glad that you so easily can forget things. It's in your nature.{pg}{printSprite "A"}: .... oookay. Hmm.. well, anyway. So that means you don't have the key?{pg}{printSprite "c"}: Oh. Sorry. Yes I do. Here you go.
 """
 NAME exit key
-
-DLG s
-"""
-{
-  - {item "1"} >= 1 ?
-    {property locked false}
-    The key opens the door!
-  - else ?
-    {property locked true}
-    The door is locked...
-}
-"""
-NAME locked exit 4
 
 DLG t
 """
@@ -3564,8 +3503,7 @@ NAME locked exit 6
 
 DLG v
 """
-{printSprite "A"}: A note with the sun on it, and {clr2}an address{clr2}! And not any address, this is {clr2}the address to our old country home{clr2}! 
-(end "Horray! Finally a clue where the button could be! Let's hurry to the old Family home, I hope that old house are still standing!")
+A note with the sun on it, and {clr2}an address{clr2}! And not any address, this is {clr2}the address to our old country home{clr2}!(end "Horray! Finally a clue where the button could be! Let's hurry to the old Family home, I hope that old house are still standing!")
 """
 NAME Note8 dialog
 
@@ -8452,7 +8390,8 @@ function updateInput() {
 	else if ( isEnding ) {
 		if (input.anyKeyPressed() || input.isTapReleased()) {
 			/* RESTART GAME */
-			alert("The game is ending here")
+			console.log("The End of this level, thanks for playing!")
+			windows.parent.postMessage('nextLevel')
 			// reset_cur_game();
 		}
 	}
