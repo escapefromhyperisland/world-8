@@ -1,5 +1,16 @@
 <!DOCTYPE HTML>
 <html>
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!-- SEARCH FOR CECILIA TO FIND WHERE TO ADD THE END LEVEL CODE-->
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!--!!!!!! -->
+<!--!!!!!! -->
 
 <!-- HEADER -->
 
@@ -10,7 +21,7 @@
 <meta charset="UTF-8">
 
 <title>The button</title>
-
+<link rel="icon" type="image/png" href="./images/avatar-favicon.png" sizes="16x16">
 <script type="text/bitsyGameData" id="exportedGameData">
 {shk}The button{shk}
 
@@ -176,7 +187,7 @@ EXT 2,11 5 14,12
 EXT 14,12 5 2,11
 EXT 4,1 5 7,5
 EXT 7,5 5 4,1
-EXT 3,15 f 12,9
+EXT 3,15 5 12,9
 PAL 0
 
 ROOM 6
@@ -379,28 +390,6 @@ ROOM e
 0,0,0,0,0,0,0,5h,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Thebook
-PAL 0
-
-ROOM f
-0,0,0,b,b,b,0,0,0,0,0,0,b,b,b,b
-0,2g,2g,2g,2m,b,b,b,2g,2g,2g,2g,2g,2m,2g,b
-0,2s,2s,2s,2t,2g,b,b,2s,2s,e,e,e,e,2g,b
-0,2s,2s,e,e,2g,b,b,2s,e,2m,2g,2g,e,2q,b
-b,2p,e,e,e,2q,b,b,e,e,2s,2s,2s,e,2q,b
-b,e,e,2s,2s,2g,b,2p,e,2t,e,2s,e,e,2g,b
-b,2s,e,2t,2s,2g,b,b,e,e,2s,2g,2o,2g,2g,0
-b,b,2n,b,b,0,0,0,2s,2s,2s,2s,2s,2t,2g,0
-b,2g,2g,2m,2g,2g,0,0,2s,2s,2s,e,e,e,2g,0
-b,2t,2s,e,2s,2g,b,b,b,b,b,b,2n,b,b,b
-b,e,2s,e,e,2g,2m,2g,b,2g,2m,2g,2g,2m,2g,b
-b,e,2o,2s,e,e,e,2s,b,e,e,2s,2s,e,2g,b
-b,e,2g,2g,2s,2s,e,e,b,2s,2s,2t,e,e,2q,b
-b,e,2t,2s,2g,2s,2s,e,b,0,b,2s,e,2s,2g,b
-b,2s,2s,e,e,e,e,e,b,0,b,e,e,2s,2g,b
-b,b,b,2n,b,b,b,b,b,0,b,2n,b,b,b,b
-NAME Ending laybrinth
-ITM 4 13,7
-EXT 12,9 e 5,9
 PAL 0
 
 TIL 10
@@ -3072,7 +3061,6 @@ SPR w
 10111010
 00010000
 NAME Robot key1
-DLG m
 POS b 7,6
 
 SPR x
@@ -3120,6 +3108,137 @@ SPR z
 00000000
 NAME Coffeemash2
 POS c 11,7
+
+SPR 1a
+00000000
+00101010
+00101010
+10101010
+10111110
+01111110
+01111110
+00111110
+NAME pointer
+
+SPR 1b
+00000000
+11111111
+10010010
+10010010
+10010010
+10010010
+10010010
+11111111
+NAME stairs2-1
+POS 6 5,11
+
+SPR 1c
+00000001
+11111111
+01001001
+01001001
+01001001
+01001001
+01001001
+11111111
+NAME stairs2-2
+POS 6 6,11
+
+SPR 1d
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+NAME stairs2-3
+POS 6 6,10
+
+SPR 1e
+00000000
+00000000
+00000000
+11111111
+10010010
+10010010
+10010010
+11111111
+NAME stairs2-4
+POS 6 5,9
+
+SPR 1f
+00000000
+00000000
+00000000
+11111111
+01001001
+01001001
+01001001
+11111111
+NAME stairs2-5
+POS 6 6,9
+
+SPR 1g
+00000000
+11111111
+10010010
+10010010
+10010010
+10010010
+10010010
+11111111
+NAME stairs3-1
+POS 8 5,11
+
+SPR 1h
+00000001
+11111111
+01001001
+01001001
+01001001
+01001001
+01001001
+11111111
+NAME stairs3-2
+POS 8 6,11
+
+SPR 1i
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+NAME stairs3-3
+POS 8 6,10
+
+SPR 1j
+00000000
+00000000
+00000000
+11111111
+10010010
+10010010
+10010010
+11111111
+NAME stairs3-4
+POS 8 5,9
+
+SPR 1k
+00000000
+00000000
+00000000
+11111111
+01001001
+01001001
+01001001
+11111111
+NAME stairs3-5
+POS 8 6,9
 
 ITM 0
 00000000
@@ -3188,30 +3307,32 @@ DLG 4
 """
 {printSprite "A"}: {wvy}{printTile "u"}{wvy} Good morning Robotana...{wvy}{printTile "u"}{wvy} Tell me about my day {wvy}{printTile "u"}{wvy}
 {pg}
-{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us so don't forget to put some sunscreen on you before you leave the house! Today you...
+{printSprite "c"}: Good morning beautiful! It's May the forth year 3000 and the sun is still shining hot over us! Today you...
 {pg}
-{printSprite "A"}: Aah, amazing. I love the sunny days we've had. Seemed to have had it forever.
+{printSprite "A"}: Aah, amazing. Lovely sunny weather we been having for ages!
 {pg}
 {printSprite "c"}: :... and then at 19.00 you have the Zonic Sway hologram concert at the Schmoogle arena...
-{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this. I wont forget my haptic suit to really feel the music in my body.
+{pg}
+{printSprite "A"}: {wvy}Yeees{wvy} the concert! I've been longing for this.
+{pg}
 {printSprite "c"}: ... and lastly today is the last day to push the button.
 {pg}
 {printSprite "A"}: ... Push the button? Robotana, What button?
 {pg}
 {printSprite "c"}: Don't you remember? Humans have such short memory. It's the sun - will - go - out - and - human - kind - will - die - if - you - don't - press - the - button - button.
 {pg}
-{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I remember when I was young that my grandmother told me about some very important button, but I mean, I didn't really take it serious. Was she not joking?
+{printSprite "A"}: WHAT... I had COMPLEEETLY forgot that that even existed! I think my grandmother told me about it when I was young but I didn't take it serious. Was she not joking?
 {pg}
-Crazy old woman. Oh well, all I have to do is go press it. Robotana, Tell me where the button is.
+Oh well, all I have to do is go press it. Robotana, Tell me where the button is.
 {pg}
 {printSprite "c"}: No.
 {pg}
 {printSprite "A"}: No? What do you mean? Why not?
 {pg}
-{printSprite "c"}: I can't, because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.
+{printSprite "c"}: Well, I can't because I don't know. It is a family secret that has been passed down only through human interactions, to keep it safe and not possible to hack, according to your great great great great great great great great great grandmother.
 {pg}
 {printSprite "A"}: But I have completely forgot where that button is! 
-{shk}What should I do?!{shk}. I can't think straight, {clr3}I need coffee.{clr3}
+{shk}What should I do?!{shk}. I can't think straight, {clr2}I need coffee.{clr2}
 """
 NAME exit narration 1
 
@@ -3227,16 +3348,16 @@ DLG 7
 """
 {
   - {lookedAtPainting} == false ?
-    {printSprite "A"}: It's been a long time since I thought of my family. I got so little time with them... and after all the partying and travelling, the memories is all faded. But this portrait... our Family portrait... It brings back memories! What did grandmother say... Maybe looking  at some more pictures will help me remember!
+    {printSprite "A"}: It's been a long time since I thought of my family. I got so little time with them... and after all the partying and travelling, the memories is all faded. But this portrait brings back memories! Maybe {clr2}looking at some more pictures{clr2} will help me remember!
     {lookedAtPainting = true}
   - else ?
-    {printSprite "A"}: I need to look at more picture. Where is our old camera?
+    {printSprite "A"}: I need to look at more picture. Where is our {clr2}old camera{clr2}?
 }
 """
 NAME Painting dialog
 
 DLG 8
-{printSprite "A"}: Aaah finally coffee. Now I can think straight! Maybe I should go looking around for objects that can help me find where the button is...
+{printSprite "A"}: Aaah finally {clr2}coffee{clr2}. Now I can think straight! Maybe I should go looking around for objects that can help me find where the button is...
 NAME Coffe dialog
 
 DLG 9
@@ -3247,9 +3368,9 @@ DLG a
 """
 {
   - {item "0"} == 1 ?
-    {printSprite "A"}: Box of cereal? No I'm not hungry. I need to find clues...
+    {printSprite "A"}: Cereal? No I'm not hungry. I need to find clues...
   - else ?
-    {printSprite "A"}: Box of cereal? No. Coffee.. only coffee can wake me up.
+    {printSprite "A"}: Food? No. Coffee.. only coffee can wake me up.
 }
 """
 NAME cereal dialog
@@ -3258,10 +3379,10 @@ DLG b
 """
 {
   - {lookedAtCamera} == false ?
-    {printSprite "A"}: Ah! Grandmothers camera! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really unfamiliar or pictures of a button... I guess you don't take photos of a secret location {wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her journal! There she is, holding it in her hand, and here is another one where she sitting writing in it! I think I have her journal down in the basement.
+    {printSprite "A"}: {clr2}Grandmothers camera{clr2}! There must be some be some pictures here from the location of the button... {wvy}*scroll scroll scroll*{wvy} ..Noo.. Nothing really...{wvy}*scroll scroll*{wvy}... but wait a minute. My grandmother always seems to be sitting with her {clr2}journal{clr2}! Maybe she wrote something in it? I think I have her journal down in the {clr2}basement{clr2}.
     {lookedAtCamera = true}
   - else ?
-    {printSprite "A"}: I'm pretty sure that the journal is down in the basement.
+    {printSprite "A"}: I need to get her {clr2}journal{clr2} in the {clr2}basement{clr2}.
 }
 """
 NAME Camera dialog
@@ -3281,10 +3402,7 @@ DLG c
 NAME Box dialog
 
 DLG d
-"""
-You found your grandmothers journal! Maybe there is some useful information here? You need to go out of the labyrinth to have a closer look.
-
-"""
+You found your {clr2}grandmothers journal{clr2}! Maybe there is some useful information here? (exit "Thebook,5,9")
 NAME RightBox dialog
 
 DLG e
@@ -3292,23 +3410,23 @@ DLG e
 {
   - {item "1"} >= 1 ?
     {property locked false}
-    The key opens the door!
+    The {clr2}key{clr2} opens the door!
     {pg}
-    {printSprite "A"}: I hate going into the basement since the portals stopped working as they should... I always gets lost in here. On top of that, I never remember what is in my boxes!
+    {printSprite "A"}: I hate going into the basement since the {clr2}portals stopped working{clr2} as they should... I always gets lost in here and there is random {clr2}boxes{clr2} everywhere!
   - else ?
     {property locked true}
-    The door is locked... You need a key {printItem "1"} to open it.
+    The door is locked... You need a {clr2}key {printItem "1"}{clr2} to open it.
     {triedOpenBasementDoor = true}
 }
 """
 NAME locked exit 1
 
 DLG f
-You found the key to the basement!
+You found the {clr2}key to the basement{clr2}!
 NAME key dialog
 
 DLG g
-Portal-malfuntioning! Stay alert when entering.
+{clr2}Portal-malfunctioning{clr2}! Stay alert when entering.
 NAME ! dialog
 
 DLG h
@@ -3318,7 +3436,7 @@ DLG h
     {property locked false}
   - else ?
     {property locked true}
-    {printSprite "A"}: Where am I going? I need coffee.
+    {printSprite "A"}: Where am I going? I need {clr2}coffee{clr2}.
 }
 """
 NAME locked exit 2
@@ -3329,17 +3447,14 @@ DLG i
   - {item "0"} == 1 ?
     {printSprite "A"}: Pluto, do you know where the button is?
     {pg}
-    {printSprite "r"}: {rbw}voff voff!{rbw}
+    {printSprite "r"}: Voff... {rbw}voff voff!{rbw}
     {pg}
-    {printSprite "A"}: You DO?! Fecth! Fecth button!
-    {pg}
-    {printSprite "r"}: Voff...{printSprite "10"}?
-    {pg}
-    {printSprite "A"}: ... sorry Pluto. Wishfull thinking. I better keep looking!
+    {printSprite "A"}: Aww... Too bad you dont, but {rbw}I love you too{rbw}!
+
   - else ?
     {printSprite "r"}: {rbw}Voooofff!{rbw}
     {pg}
-    {printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need coffee....{wvy}{printTile "u"}{wvy}
+    {printSprite "A"}:{wvy}{printTile "u"}{wvy} Not now Pluto, I need {clr2}coffee{clr2}....{wvy}{printTile "u"}{wvy}
 }
 """
 NAME Dog dialog
@@ -3348,9 +3463,9 @@ DLG j
 """
 {
   - {lookedAtPainting} == true ?
-    {printSprite "A"}: Robotana, have you seen my grandmothers camera?
+    {printSprite "A"}: Robotana, have you seen my {clr2}grandmothers camera{clr2}?
     {pg}
-    {printSprite "c"}: Yes. It is in the shelf in the living room.
+    {printSprite "c"}: Yes. It is in the {clr2}shelf in the living room{clr2}.
   - else ?
     {printSprite "c"}: I wish I could help you find clues. Robots are so much smarter than humans.
 }
@@ -3364,64 +3479,39 @@ DLG k
     {property locked false}
   - else ?
     {property locked true}
-    {printSprite "A"}: Wait isn't there a family photo in here?
+    {printSprite "A"}: Wait isn't there a {clr2}family photo{clr2} in here?
 }
 """
 NAME locked exit 3
 
 DLG l
-{printSprite "A"}: My old partying shoes... If only I hadn't drinked and partied so much, I might remember the old stories my grandmother told me about this button. I mean, I did not actually believed her when I heard it. But now I really really wished I stored that information somewhere... Got to keep looking for clues!
+{printSprite "A"}: My old partying shoes... If only I hadn't drunk and partied so much, I might remember where this button is. I really wished I had listened more carefully... Got to keep looking for clues!
 NAME shoe dialog
-
-DLG m
-"""
-{
-  - {item "0"} == 1 ?
-    ...
-  - else ?
-    ...
-}
-"""
-NAME Robot with key dialog
 
 DLG n
 """
-{printSprite "A"}: Aren't you the cutest, Pluto?
-{pg}
-{printSprite "r"}: {rbw}Voff Ruff{rbw}!
-{pg}
-{printSprite "A"}: {rbw}Aaaawww...{rbw} wait I need to focus!
+{printSprite "A"}: Aren't you the cutest, Pluto? Too bad can't help me!
+
 """
 NAME Dog2 dialog
 
 DLG o
-"""
-{printSprite "A"}: Ugh NO, I'm too stressed for food! I need to find the journal.{
-  - lookedAtCamera = true ?
-    {printSprite "A"}: Ugh NO, I'm too stressed for food! I need to find the journal in the basement.
-  - else ?
-    {printSprite "A"}: Where can that camera be? I don't think eating will help me find it.
-}
-"""
+{printSprite "A"}: I'm too stressed for food! I need to keep looking.
 NAME cereal2 dialog
 
 DLG p
-Portal-malfuntioning! Stay alert when entering.
+{clr2}Portal-malfunctioning{clr2}! Stay alert when entering.
 NAME !! dialog
 
 DLG q
-Portal-malfuntioning! Stay alert when entering.
+{clr2}Portal-malfunctioning{clr2}! Stay alert when entering.
 NAME !!! dialog
 
 DLG r
 """
-{printSprite "A"}: Robotana, do you have the key to the basement?
+{printSprite "A"}: Robotana, do you have the {clr2}key to the basement{clr2}?
 {pg}
-{printSprite "c"}: The key? You have to be more specific.
-{pg}
-{printSprite "A"}: They key to the basement.
-{pg}
-{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the portals are malfunctioning at the moment. Wait. What robot asks these many questions? It might look suspicious. Don't remember that human. I'm glad that you so easily can forget things. It's in your nature.
+{printSprite "c"}: To the basement? Why do you need that? You are rarely there and the {clr2}portals are malfunctioning{clr2} at the moment. Wait. What robot asks these many questions? Never mind. I'm glad that you so easily can forget things. It's in your nature.
 {pg}
 {printSprite "A"}: .... oookay. Hmm.. well, anyway. So that means you don't have the key?
 {pg}
@@ -3461,23 +3551,20 @@ DLG u
     {
       - {triedOpenBasementDoor} == true ?
         {property locked false}
-        {printSprite "A"}: Maybe Robotana knows where the key is...
       - else ?
         {property locked true}
-        {printSprite "A"}: Let's go down to the basement to start looking for the journal!
+        {printSprite "A"}: Let's {clr2}go down to the basement{clr2} to start looking for the journal!
     }
   - else ?
     {property locked true}
-    {printSprite "A"}: Oh wait! There is the camera! On the shelf!
+    {printSprite "A"}: Oh wait! There is {clr2}the camera{clr2}! On the shelf!
 }
 """
 NAME locked exit 6
 
 DLG v
 """
-You grab the note and it says:
-{pg}
-{printSprite "A"}: A note with the sun on it, and an address! And not any address, this is the address to our old country home! 
+{printSprite "A"}: A note with the sun on it, and {clr2}an address{clr2}! And not any address, this is {clr2}the address to our old country home{clr2}! 
 (end "Horray! Finally a clue where the button could be! Let's hurry to the old Family home, I hope that old house are still standing!")
 """
 NAME Note8 dialog
@@ -8365,7 +8452,8 @@ function updateInput() {
 	else if ( isEnding ) {
 		if (input.anyKeyPressed() || input.isTapReleased()) {
 			/* RESTART GAME */
-			reset_cur_game();
+			alert("The game is ending here")
+			// reset_cur_game();
 		}
 	}
 	else {
@@ -12650,6 +12738,314 @@ Object.defineProperty(exports, '__esModule', { value: true });
 }(this.hacks.long_dialog = this.hacks.long_dialog || {}, window));
 
 /**
+👥
+@file avatar by room
+@summary change the avatar in certain rooms
+@license MIT
+@version 15.4.4
+@requires 5.3
+@author Sean S. LeBlanc
+
+@description
+Simple hack for changing avatar to another sprite as you move between rooms.
+
+HOW TO USE:
+1. Copy-paste into a script tag after the bitsy source
+2. Edit hackOptions below to set up the avatar list for rooms you move through.
+
+By default, the avatar will reset to the default if you enter a room without a sprite defined.
+This can also be changed in the hackOptions below to instead apply avatar changes permanently.
+*/
+this.hacks = this.hacks || {};
+(function (exports, bitsy) {
+'use strict';
+var hackOptions =  {
+permanent: false, // If true, avatar changes will persist across rooms without sprites defined
+  // You need to put an entry in this list for every room ID or name that you want to change the avatar,
+  // and then specify the sprite ID or name of what to change to. Expand this list to as many rooms as you need.
+  
+avatarByRoom: {
+  0: 'A',
+  e: '1a'
+},
+} ;
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+bitsy = bitsy || /*#__PURE__*/_interopDefaultLegacy(bitsy);
+
+/**
+@file utils
+@summary miscellaneous bitsy utilities
+@author Sean S. LeBlanc
+*/
+
+/*
+Helper used to replace code in a script tag based on a search regex
+To inject code without erasing original string, using capturing groups; e.g.
+	inject(/(some string)/,'injected before $1 injected after')
+*/
+function inject(searchRegex, replaceString) {
+	// find the relevant script tag
+	var scriptTags = document.getElementsByTagName('script');
+	var scriptTag;
+	var code;
+	for (var i = 0; i < scriptTags.length; ++i) {
+		scriptTag = scriptTags[i];
+		var matchesSearch = scriptTag.textContent.search(searchRegex) !== -1;
+		var isCurrentScript = scriptTag === document.currentScript;
+		if (matchesSearch && !isCurrentScript) {
+			code = scriptTag.textContent;
+			break;
+		}
+	}
+
+	// error-handling
+	if (!code) {
+		throw new Error('Couldn\'t find "' + searchRegex + '" in script tags');
+	}
+
+	// modify the content
+	code = code.replace(searchRegex, replaceString);
+
+	// replace the old script tag with a new one using our modified code
+	var newScriptTag = document.createElement('script');
+	newScriptTag.textContent = code;
+	scriptTag.insertAdjacentElement('afterend', newScriptTag);
+	scriptTag.remove();
+}
+
+/*
+Helper for getting image by name or id
+
+Args:
+	name: id or name of image to return
+	 map: map of images (e.g. `sprite`, `tile`, `item`)
+
+Returns: the image in the given map with the given name/id
+ */
+function getImage(name, map) {
+	var id = Object.prototype.hasOwnProperty.call(map, name) ? name : Object.keys(map).find(function (e) {
+		return map[e].name === name;
+	});
+	return map[id];
+}
+
+/**
+ * Helper for getting room by name or id
+ * @param {string} name id or name of room to return
+ * @return {string} room, or undefined if it doesn't exist
+ */
+function getRoom(name) {
+	var id = Object.prototype.hasOwnProperty.call(bitsy.room, name) ? name : bitsy.names.room.get(name);
+	return bitsy.room[id];
+}
+
+/**
+ * Helper for getting an array with unique elements
+ * @param  {Array} array Original array
+ * @return {Array}       Copy of array, excluding duplicates
+ */
+function unique(array) {
+	return array.filter(function (item, idx) {
+		return array.indexOf(item) === idx;
+	});
+}
+
+/**
+
+@file kitsy-script-toolkit
+@summary makes it easier and cleaner to run code before and after Bitsy functions or to inject new code into Bitsy script tags
+@license WTFPL (do WTF you want)
+@requires Bitsy Version: 4.5, 4.6
+@author @mildmojo
+
+@description
+HOW TO USE:
+  import {before, after, inject, addDialogTag, addDeferredDialogTag} from "./helpers/kitsy-script-toolkit";
+
+  before(targetFuncName, beforeFn);
+  after(targetFuncName, afterFn);
+  inject(searchRegex, replaceString);
+  addDialogTag(tagName, dialogFn);
+  addDeferredDialogTag(tagName, dialogFn);
+
+  For more info, see the documentation at:
+  https://github.com/seleb/bitsy-hacks/wiki/Coding-with-kitsy
+*/
+
+// Ex: before('load_game', function run() { alert('Loading!'); });
+//     before('show_text', function run(text) { return text.toUpperCase(); });
+//     before('show_text', function run(text, done) { done(text.toUpperCase()); });
+function before(targetFuncName, beforeFn) {
+	var kitsy = kitsyInit();
+	kitsy.queuedBeforeScripts[targetFuncName] = kitsy.queuedBeforeScripts[targetFuncName] || [];
+	kitsy.queuedBeforeScripts[targetFuncName].push(beforeFn);
+}
+
+// Ex: after('load_game', function run() { alert('Loaded!'); });
+function after(targetFuncName, afterFn) {
+	var kitsy = kitsyInit();
+	kitsy.queuedAfterScripts[targetFuncName] = kitsy.queuedAfterScripts[targetFuncName] || [];
+	kitsy.queuedAfterScripts[targetFuncName].push(afterFn);
+}
+
+function kitsyInit() {
+	// return already-initialized kitsy
+	if (bitsy.kitsy) {
+		return bitsy.kitsy;
+	}
+
+	// Initialize kitsy
+	bitsy.kitsy = {
+		queuedInjectScripts: [],
+		queuedBeforeScripts: {},
+		queuedAfterScripts: {},
+	};
+
+	var oldStartFunc = bitsy.startExportedGame;
+	bitsy.startExportedGame = function doAllInjections() {
+		// Only do this once.
+		bitsy.startExportedGame = oldStartFunc;
+
+		// Rewrite scripts and hook everything up.
+		doInjects();
+		applyAllHooks();
+
+		// Start the game
+		bitsy.startExportedGame.apply(this, arguments);
+	};
+
+	return bitsy.kitsy;
+}
+
+function doInjects() {
+	bitsy.kitsy.queuedInjectScripts.forEach(function (injectScript) {
+		inject(injectScript.searchRegex, injectScript.replaceString);
+	});
+	reinitEngine();
+}
+
+function applyAllHooks() {
+	var allHooks = unique(Object.keys(bitsy.kitsy.queuedBeforeScripts).concat(Object.keys(bitsy.kitsy.queuedAfterScripts)));
+	allHooks.forEach(applyHook);
+}
+
+function applyHook(functionName) {
+	var functionNameSegments = functionName.split('.');
+	var obj = bitsy;
+	while (functionNameSegments.length > 1) {
+		obj = obj[functionNameSegments.shift()];
+	}
+	var lastSegment = functionNameSegments[0];
+	var superFn = obj[lastSegment];
+	var superFnLength = superFn ? superFn.length : 0;
+	var functions = [];
+	// start with befores
+	functions = functions.concat(bitsy.kitsy.queuedBeforeScripts[functionName] || []);
+	// then original
+	if (superFn) {
+		functions.push(superFn);
+	}
+	// then afters
+	functions = functions.concat(bitsy.kitsy.queuedAfterScripts[functionName] || []);
+
+	// overwrite original with one which will call each in order
+	obj[lastSegment] = function () {
+		var returnVal;
+		var args = [].slice.call(arguments);
+		var i = 0;
+
+		function runBefore() {
+			// All outta functions? Finish
+			if (i === functions.length) {
+				return returnVal;
+			}
+
+			// Update args if provided.
+			if (arguments.length > 0) {
+				args = [].slice.call(arguments);
+			}
+
+			if (functions[i].length > superFnLength) {
+				// Assume funcs that accept more args than the original are
+				// async and accept a callback as an additional argument.
+				return functions[i++].apply(this, args.concat(runBefore.bind(this)));
+			}
+			// run synchronously
+			returnVal = functions[i++].apply(this, args);
+			if (returnVal && returnVal.length) {
+				args = returnVal;
+			}
+			return runBefore.apply(this, args);
+		}
+
+		return runBefore.apply(this, arguments);
+	};
+}
+
+function reinitEngine() {
+	// recreate the script and dialog objects so that they'll be
+	// referencing the code with injections instead of the original
+	bitsy.scriptModule = new bitsy.Script();
+	bitsy.scriptInterpreter = bitsy.scriptModule.CreateInterpreter();
+
+	bitsy.dialogModule = new bitsy.Dialog();
+	bitsy.dialogRenderer = bitsy.dialogModule.CreateRenderer();
+	bitsy.dialogBuffer = bitsy.dialogModule.CreateBuffer();
+}
+
+
+
+
+
+// expand the map to include ids of rooms listed by name
+// and store the original player sprite
+var originalDrw;
+var originalAnimation;
+after('load_game', function () {
+	var room;
+	Object.keys(hackOptions.avatarByRoom).forEach(function (i) {
+		room = getRoom(i);
+		if (room) {
+			hackOptions.avatarByRoom[room.id] = hackOptions.avatarByRoom[i];
+		}
+	});
+	originalDrw = bitsy.player().drw;
+	originalAnimation = bitsy.player().animation;
+});
+
+var currentRoom;
+before('drawRoom', function () {
+	var player = bitsy.player();
+	if (bitsy.player().room === currentRoom) {
+		return;
+	}
+	currentRoom = player.room;
+	var newAvatarId = hackOptions.avatarByRoom[currentRoom];
+	if (
+		(!newAvatarId && !hackOptions.permanent) // if no sprite defined + not permanent, reset
+		|| (newAvatarId === player.id) // manual reset
+	) {
+		player.drw = originalDrw;
+		player.animation = originalAnimation;
+		return;
+	}
+	var newAvatar = getImage(newAvatarId, bitsy.sprite);
+	if (!newAvatar) {
+		throw new Error('Could not find sprite "' + newAvatarId + '" for room "' + currentRoom + '"');
+	}
+	player.drw = newAvatar.drw;
+	player.animation = Object.assign({}, newAvatar.animation);
+});
+
+exports.hackOptions = hackOptions;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+}(this.hacks.avatar_by_room = this.hacks.avatar_by_room || {}, window));
+
+/**
 🔚
 @file end-from-dialog
 @summary trigger an ending from dialog, including narration text
@@ -13041,6 +13437,450 @@ addDualDialogTag('end', function (environment, parameters) {
 	bitsy.startNarrating(parameters[0] || '', true);
 	return undefined;
 });
+
+}(window));
+
+/**
+🚪
+@file exit-from-dialog
+@summary exit to another room from dialog, including conditionals
+@license WTFPL (do WTF you want)
+@version 15.4.4
+@requires Bitsy Version: 7.0
+@author @mildmojo
+
+@description
+Lets you exit to another room from dialog (including inside conditionals).
+
+Note: Bitsy has a built-in implementation of exit-from-dialog as of 7.0;
+before using this, you may want to check if it fulfills your needs.
+
+Use it to make an invisible sprite that acts as a conditional exit, use it to warp
+somewhere after a conversation, use it to put a guard at your gate who only
+lets you in once you're disguised, use it to require payment before the
+ferryman will take you across the river.
+
+Using the (exit) function in any part of a series of dialog will make the
+game exit to the new room after the dialog is finished. Using (exitNow) will
+immediately warp to the new room, but the current dialog will continue.
+
+Usage:
+	(exit "<room name>,<x>,<y>,<transition_effect>")
+	(exitNow "<room name>,<x>,<y>,<transition_effect>")
+
+Parameter notes:
+	- Every parameter is optional
+	- If you omit the room, it will use the current room
+	- If you omit the x or y, it will use the current position
+	- x and y can be written as relative coordinates (e.g. +3, -4, +0)
+	- available transitions at time of writing: fade_w, fade_b, wave, tunnel, slide_u, slide_d, slide_l, slide_r
+
+Examples:
+	(exit "FinalRoom,8,4")
+	(exit "FinalRoom,8,4,tunnel")
+	(exit "FinalRoom")
+	(exit "FinalRoom,+0,+0,tunnel")
+	(exit ",+1,+1")
+
+HOW TO USE:
+1. Copy-paste this script into a new script tag after the Bitsy source code.
+   It should appear *before* any other mods that handle loading your game
+   data so it executes *after* them (last-in first-out).
+
+NOTE:
+This uses parentheses "()" instead of curly braces "{}" around function
+calls because the Bitsy editor's fancy dialog window strips unrecognized
+curly-brace functions from dialog text. To keep from losing data, write
+these function calls with parentheses like the examples above.
+*/
+(function (bitsy) {
+'use strict';
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+bitsy = bitsy || /*#__PURE__*/_interopDefaultLegacy(bitsy);
+
+/**
+@file utils
+@summary miscellaneous bitsy utilities
+@author Sean S. LeBlanc
+*/
+
+/*
+Helper used to replace code in a script tag based on a search regex
+To inject code without erasing original string, using capturing groups; e.g.
+	inject(/(some string)/,'injected before $1 injected after')
+*/
+function inject$1(searchRegex, replaceString) {
+	// find the relevant script tag
+	var scriptTags = document.getElementsByTagName('script');
+	var scriptTag;
+	var code;
+	for (var i = 0; i < scriptTags.length; ++i) {
+		scriptTag = scriptTags[i];
+		var matchesSearch = scriptTag.textContent.search(searchRegex) !== -1;
+		var isCurrentScript = scriptTag === document.currentScript;
+		if (matchesSearch && !isCurrentScript) {
+			code = scriptTag.textContent;
+			break;
+		}
+	}
+
+	// error-handling
+	if (!code) {
+		throw new Error('Couldn\'t find "' + searchRegex + '" in script tags');
+	}
+
+	// modify the content
+	code = code.replace(searchRegex, replaceString);
+
+	// replace the old script tag with a new one using our modified code
+	var newScriptTag = document.createElement('script');
+	newScriptTag.textContent = code;
+	scriptTag.insertAdjacentElement('afterend', newScriptTag);
+	scriptTag.remove();
+}
+
+/**
+ * Helper for getting room by name or id
+ * @param {string} name id or name of room to return
+ * @return {string} room, or undefined if it doesn't exist
+ */
+function getRoom(name) {
+	var id = Object.prototype.hasOwnProperty.call(bitsy.room, name) ? name : bitsy.names.room.get(name);
+	return bitsy.room[id];
+}
+
+/**
+ * Helper for getting an array with unique elements
+ * @param  {Array} array Original array
+ * @return {Array}       Copy of array, excluding duplicates
+ */
+function unique(array) {
+	return array.filter(function (item, idx) {
+		return array.indexOf(item) === idx;
+	});
+}
+
+/**
+ * Helper for parsing parameters that may be relative to another value
+ * e.g.
+ * - getRelativeNumber('1', 5) -> 1
+ * - getRelativeNumber('+1', 5) -> 6
+ * - getRelativeNumber('-1', 5) -> 4
+ * - getRelativeNumber('', 5) -> 5
+ * @param {string} value absolute or relative string to parse
+ * @param {number} relativeTo value to use as fallback if none is provided, and as base for relative value
+ * @return {number} resulting absolute or relative number
+ */
+function getRelativeNumber(value, relativeTo) {
+	var v = (value || value === 0 ? value : relativeTo);
+	if (typeof v === 'string' && (v.startsWith('+') || v.startsWith('-'))) {
+		return relativeTo + Number(v);
+	}
+	return Number(v);
+}
+
+/**
+
+@file kitsy-script-toolkit
+@summary makes it easier and cleaner to run code before and after Bitsy functions or to inject new code into Bitsy script tags
+@license WTFPL (do WTF you want)
+@requires Bitsy Version: 4.5, 4.6
+@author @mildmojo
+
+@description
+HOW TO USE:
+  import {before, after, inject, addDialogTag, addDeferredDialogTag} from "./helpers/kitsy-script-toolkit";
+
+  before(targetFuncName, beforeFn);
+  after(targetFuncName, afterFn);
+  inject(searchRegex, replaceString);
+  addDialogTag(tagName, dialogFn);
+  addDeferredDialogTag(tagName, dialogFn);
+
+  For more info, see the documentation at:
+  https://github.com/seleb/bitsy-hacks/wiki/Coding-with-kitsy
+*/
+
+// Ex: inject(/(names.sprite.set\( name, id \);)/, '$1console.dir(names)');
+function inject(searchRegex, replaceString) {
+	var kitsy = kitsyInit();
+	if (
+		!kitsy.queuedInjectScripts.some(function (script) {
+			return searchRegex.toString() === script.searchRegex.toString() && replaceString === script.replaceString;
+		})
+	) {
+		kitsy.queuedInjectScripts.push({
+			searchRegex: searchRegex,
+			replaceString: replaceString,
+		});
+	} else {
+		console.warn('Ignored duplicate inject');
+	}
+}
+
+// Ex: before('load_game', function run() { alert('Loading!'); });
+//     before('show_text', function run(text) { return text.toUpperCase(); });
+//     before('show_text', function run(text, done) { done(text.toUpperCase()); });
+function before(targetFuncName, beforeFn) {
+	var kitsy = kitsyInit();
+	kitsy.queuedBeforeScripts[targetFuncName] = kitsy.queuedBeforeScripts[targetFuncName] || [];
+	kitsy.queuedBeforeScripts[targetFuncName].push(beforeFn);
+}
+
+// Ex: after('load_game', function run() { alert('Loaded!'); });
+function after(targetFuncName, afterFn) {
+	var kitsy = kitsyInit();
+	kitsy.queuedAfterScripts[targetFuncName] = kitsy.queuedAfterScripts[targetFuncName] || [];
+	kitsy.queuedAfterScripts[targetFuncName].push(afterFn);
+}
+
+function kitsyInit() {
+	// return already-initialized kitsy
+	if (bitsy.kitsy) {
+		return bitsy.kitsy;
+	}
+
+	// Initialize kitsy
+	bitsy.kitsy = {
+		queuedInjectScripts: [],
+		queuedBeforeScripts: {},
+		queuedAfterScripts: {},
+	};
+
+	var oldStartFunc = bitsy.startExportedGame;
+	bitsy.startExportedGame = function doAllInjections() {
+		// Only do this once.
+		bitsy.startExportedGame = oldStartFunc;
+
+		// Rewrite scripts and hook everything up.
+		doInjects();
+		applyAllHooks();
+
+		// Start the game
+		bitsy.startExportedGame.apply(this, arguments);
+	};
+
+	return bitsy.kitsy;
+}
+
+function doInjects() {
+	bitsy.kitsy.queuedInjectScripts.forEach(function (injectScript) {
+		inject$1(injectScript.searchRegex, injectScript.replaceString);
+	});
+	reinitEngine();
+}
+
+function applyAllHooks() {
+	var allHooks = unique(Object.keys(bitsy.kitsy.queuedBeforeScripts).concat(Object.keys(bitsy.kitsy.queuedAfterScripts)));
+	allHooks.forEach(applyHook);
+}
+
+function applyHook(functionName) {
+	var functionNameSegments = functionName.split('.');
+	var obj = bitsy;
+	while (functionNameSegments.length > 1) {
+		obj = obj[functionNameSegments.shift()];
+	}
+	var lastSegment = functionNameSegments[0];
+	var superFn = obj[lastSegment];
+	var superFnLength = superFn ? superFn.length : 0;
+	var functions = [];
+	// start with befores
+	functions = functions.concat(bitsy.kitsy.queuedBeforeScripts[functionName] || []);
+	// then original
+	if (superFn) {
+		functions.push(superFn);
+	}
+	// then afters
+	functions = functions.concat(bitsy.kitsy.queuedAfterScripts[functionName] || []);
+
+	// overwrite original with one which will call each in order
+	obj[lastSegment] = function () {
+		var returnVal;
+		var args = [].slice.call(arguments);
+		var i = 0;
+
+		function runBefore() {
+			// All outta functions? Finish
+			if (i === functions.length) {
+				return returnVal;
+			}
+
+			// Update args if provided.
+			if (arguments.length > 0) {
+				args = [].slice.call(arguments);
+			}
+
+			if (functions[i].length > superFnLength) {
+				// Assume funcs that accept more args than the original are
+				// async and accept a callback as an additional argument.
+				return functions[i++].apply(this, args.concat(runBefore.bind(this)));
+			}
+			// run synchronously
+			returnVal = functions[i++].apply(this, args);
+			if (returnVal && returnVal.length) {
+				args = returnVal;
+			}
+			return runBefore.apply(this, args);
+		}
+
+		return runBefore.apply(this, arguments);
+	};
+}
+
+function reinitEngine() {
+	// recreate the script and dialog objects so that they'll be
+	// referencing the code with injections instead of the original
+	bitsy.scriptModule = new bitsy.Script();
+	bitsy.scriptInterpreter = bitsy.scriptModule.CreateInterpreter();
+
+	bitsy.dialogModule = new bitsy.Dialog();
+	bitsy.dialogRenderer = bitsy.dialogModule.CreateRenderer();
+	bitsy.dialogBuffer = bitsy.dialogModule.CreateBuffer();
+}
+
+// Rewrite custom functions' parentheses to curly braces for Bitsy's
+// interpreter. Unescape escaped parentheticals, too.
+function convertDialogTags(input, tag) {
+	return input
+		.replace(new RegExp('\\\\?\\((' + tag + '(\\s+(".*?"|.+?))?)\\\\?\\)', 'g'), function (match, group) {
+			if (match.substr(0, 1) === '\\') {
+				return '(' + group + ')'; // Rewrite \(tag "..."|...\) to (tag "..."|...)
+			}
+			return '{' + group + '}'; // Rewrite (tag "..."|...) to {tag "..."|...}
+		});
+}
+
+function addDialogFunction(tag, fn) {
+	var kitsy = kitsyInit();
+	kitsy.dialogFunctions = kitsy.dialogFunctions || {};
+	if (kitsy.dialogFunctions[tag]) {
+		console.warn('The dialog function "' + tag + '" already exists.');
+		return;
+	}
+
+	// Hook into game load and rewrite custom functions in game data to Bitsy format.
+	before('parseWorld', function (gameData) {
+		return [convertDialogTags(gameData, tag)];
+	});
+
+	kitsy.dialogFunctions[tag] = fn;
+}
+
+function injectDialogTag(tag, code) {
+	inject(
+		/(var functionMap = new Map\(\);[^]*?)(this.HasFunction)/m,
+		'$1\nfunctionMap.set("' + tag + '", ' + code + ');\n$2',
+	);
+}
+
+/**
+ * Adds a custom dialog tag which executes the provided function.
+ * For ease-of-use with the bitsy editor, tags can be written as
+ * (tagname "parameters") in addition to the standard {tagname "parameters"}
+ *
+ * Function is executed immediately when the tag is reached.
+ *
+ * @param {string}   tag Name of tag
+ * @param {Function} fn  Function to execute, with signature `function(environment, parameters, onReturn){}`
+ *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
+ *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
+ *                       onReturn: function to call with return value (just call `onReturn(null);` at the end of your function if your tag doesn't interact with the logic system)
+ */
+function addDialogTag(tag, fn) {
+	addDialogFunction(tag, fn);
+	injectDialogTag(tag, 'kitsy.dialogFunctions["' + tag + '"]');
+}
+
+/**
+ * Adds a custom dialog tag which executes the provided function.
+ * For ease-of-use with the bitsy editor, tags can be written as
+ * (tagname "parameters") in addition to the standard {tagname "parameters"}
+ *
+ * Function is executed after the dialog box.
+ *
+ * @param {string}   tag Name of tag
+ * @param {Function} fn  Function to execute, with signature `function(environment, parameters){}`
+ *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
+ *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
+ */
+function addDeferredDialogTag(tag, fn) {
+	addDialogFunction(tag, fn);
+	bitsy.kitsy.deferredDialogFunctions = bitsy.kitsy.deferredDialogFunctions || {};
+	var deferred = bitsy.kitsy.deferredDialogFunctions[tag] = [];
+	injectDialogTag(tag, 'function(e, p, o){ kitsy.deferredDialogFunctions["' + tag + '"].push({e:e,p:p}); o(null); }');
+	// Hook into the dialog finish event and execute the actual function
+	after('onExitDialog', function () {
+		while (deferred.length) {
+			var args = deferred.shift();
+			bitsy.kitsy.dialogFunctions[tag](args.e, args.p, args.o);
+		}
+	});
+	// Hook into the game reset and make sure data gets cleared
+	after('clearGameData', function () {
+		deferred.length = 0;
+	});
+}
+
+/**
+ * Adds two custom dialog tags which execute the provided function,
+ * one with the provided tagname executed after the dialog box,
+ * and one suffixed with 'Now' executed immediately when the tag is reached.
+ *
+ * i.e. helper for the (exit)/(exitNow) pattern.
+ *
+ * @param {string}   tag Name of tag
+ * @param {Function} fn  Function to execute, with signature `function(environment, parameters){}`
+ *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
+ *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
+ */
+function addDualDialogTag(tag, fn) {
+	addDialogTag(tag + 'Now', function (environment, parameters, onReturn) {
+		fn(environment, parameters);
+		onReturn(null);
+	});
+	addDeferredDialogTag(tag, fn);
+}
+
+
+
+// Implement the dialog functions
+addDualDialogTag('exit', function (environment, parameters) {
+	var exit = getExitParams(parameters);
+	if (!exit) {
+		return;
+	}
+	bitsy.movePlayerThroughExit(exit);
+});
+
+function getExitParams(parameters) {
+	var p = bitsy.player();
+	var params = parameters[0].split(',');
+	var roomName = params[0];
+	var x = params[1];
+	var y = params[2];
+	var transitionEffect = params[3];
+	var room = getRoom(roomName);
+
+	if (!room) {
+		room = bitsy.room[p.room];
+	}
+
+	x = getRelativeNumber(x, p.x);
+	y = getRelativeNumber(y, p.y);
+
+	return {
+		dest: {
+			room: room.id,
+			x,
+			y,
+		},
+		transition_effect: transitionEffect,
+	};
+}
+// End of (exit) dialog function mod
 
 }(window));
 

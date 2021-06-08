@@ -6,10 +6,11 @@
     <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>  -->
     <script src="js/video.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script> -->
+    <script src="js/clickcan.js"></script>
 
 </head>
 <body>
-    <a-scene>
+    <a-scene cursor="rayOrigin: mouse">
         <a-assets>
             <a-asset-items id="newerwarehouse" src="assets/newerwarehouse.glb"></a-asset-items>
             <a-asset-items id="signdiner" src="assets/sign_diner.glb"></a-asset-items>
@@ -28,10 +29,10 @@
 
         <a-entity gltf-model="#signdiner" scale="0.04 0.04 0.04" position="-1 -1 -33" rotation="0 25 0"></a-entity>
 
-        <a-entity gltf-model="#oil1" scale="0.002 0.002 0.002" position="-1 1 -11" rotation="0 25 0"></a-entity>
-        <a-entity gltf-model="#oil2" scale="0.03 0.03 0.03" position="3 -1 -11" rotation="0 25 0"></a-entity>
-        <a-entity gltf-model="#oil3" scale="0.45 0.45 0.45" position="5 1 -11" rotation="0 25 0"></a-entity>
-        <a-entity gltf-model="#oil4" position="8 0 -11" rotation="0 25 0"></a-entity>
+        <a-entity gltf-model="#oil1" scale="0.002 0.002 0.002" position="-1 1 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
+        <a-entity gltf-model="#oil2" scale="0.03 0.03 0.03" position="3 -1 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
+        <a-entity gltf-model="#oil3" scale="0.45 0.45 0.45" position="5 1 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
+        <a-entity gltf-model="#oil4" position="8 0 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
 
 
         <!-- <a-entity position="0 0 0">
@@ -44,7 +45,7 @@
 
         <a-entity id="rig" position="-7 0.7 -42" rotation="0 201 0">
             <a-camera id="camera">
-                <a-cursor>
+                <a-cursor id="cursor" raycaster>
                 </a-cursor>
             </a-camera>
         </a-entity>
