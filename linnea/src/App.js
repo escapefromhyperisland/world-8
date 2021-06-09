@@ -7,14 +7,14 @@ import Textbox2 from "./components/Textbox2";
 import Background from "./components/Background";
 
 //Imported images
-import MirrorImg from "./components/images/mirror.jpg"
-import WallpaperImg from "./components/images/paintings.jpg";
-import Painting1 from "./components/images/paintings1.jpg";
-import Painting2 from "./components/images/paintings2.jpg";
+import MirrorImg from "./components/imagesSmall/mirror.jpg"
+import WallpaperImg from "./components/imagesSmall/paintings.jpg";
+import Painting1 from "./components/imagesSmall/paintings1.jpg";
+import Painting2 from "./components/imagesSmall/paintings2.jpg";
 import KitchenImg from "./components/images/kitchen.jpg";
 import LetterBackground from "./components/images/letter.jpg"
-import OfficeImg from "./components/images/Office.jpg";
-import OfficeLetter from "./components/images/officeLetter.jpg";
+import OfficeImg from "./components/imagesSmall/Office.jpg";
+import OfficeLetter from "./components/imagesSmall/officeLetter.jpg";
 import CalendarBackgrund from "./components/images/calendarBackground.jpg";
 
 
@@ -60,6 +60,7 @@ function App() { //Might be able to clean this up by putting all of the
     console.log("wrong code")
     setInstructionText("Oh this is the wrong code... It must be hidden somewhere around the house.");
     setWhatThing(thingsArray[0]);
+    console.log(whatThing);
   }
 
   const correctCode = () => {
@@ -69,7 +70,8 @@ function App() { //Might be able to clean this up by putting all of the
     setAlternativeText1("Get out of here");
     setAlternativeText2("Go to the old factory");
     setAlternativeText3("For real leave the house");
-    setDone(true);
+    setDone(!isDone);
+    console.log(isDone)
 
     //On all of the buttons, add if isDone=true call the next level function
   }
@@ -95,7 +97,7 @@ const changeRoom1 = () => {
     setAlternativeText2("Look at the old letter");
     setAlternativeText3("Go back to the hallway");
     setBackground(CalendarBackgrund);
-    setInstructionText("That big ring... Todays date. I wish I would have remembered this earlier. Feels like I'm letting my family down... But NO! I'll keep on pushing forward!")
+    setInstructionText("Those big circles, its todays date. I wish I would have remembered this mission earlier. Feels like I'm letting my family down... But I have no time for moping around! I'll keep on pushing forward!")
     setWhatRoom(roomArray[2]);
     setWhatThing(thingsArray[1]);
   }
@@ -114,16 +116,15 @@ const changeRoom1 = () => {
   //OFFICE
 
   //Look at old safe
-  else if (whatRoom === "Office" && whatThing!== "Safe") {
-    setAlternativeText1("Stop looking at the old safe");
+  else if (whatRoom === "Office" && isDone!==true) {
+    setAlternativeText1("Look at the old safe");
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
     setBackground(OfficeImg);
     setInstructionText("OH. This sparks my interest. What could the code be?? It has to be hidden somewhere around here...")
     setWhatRoom(roomArray[1]);
-    //Add function that pops up safe and an input field
     safeInput();
-    setWhatThing(thingsArray[5]);
+  
   }
 
   // ART GALLERY
@@ -146,10 +147,15 @@ const changeRoom1 = () => {
     setAlternativeText2("Investigate the second painting");
     setAlternativeText3("Go back to the hallway");
     setBackground(WallpaperImg);
-    setInstructionText("Where did all the painting go??")
+    setInstructionText("Where did all the painting go?? I could have swore it would have to be more than two to be considered an 'art gallery', but oh well! Things where different back then.")
     setWhatRoom(roomArray[3]);
     setWhatThing(thingsArray[0]);
     console.log("No painting");
+  }
+
+  else if (isDone===true) {
+    console.log("End of game")
+    window.parent.postMessage('nextLevel');
   }
 }
 
@@ -169,12 +175,12 @@ const changeRoom2 = () => {
 
    //Office
 
-   else if (whatRoom === "Office") {
+   else if (whatRoom === "Office" && isDone!==true) {
     setAlternativeText1("Look at the old safe");
     setAlternativeText2("Search the desk");
     setAlternativeText3("Go back");
     setBackground(OfficeImg);
-    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless monitors")
+    setInstructionText("There seems to be nothing of interest here. I can barely read all these handwritten scribbles! God bless our new high tech monitors that reads everything for me")
     setWhatRoom(roomArray[1]);
   }
 
@@ -223,10 +229,15 @@ const changeRoom2 = () => {
       setAlternativeText2("Investigate the second painting");
       setAlternativeText3("Go back to the hallway");
       setBackground(WallpaperImg);
-      setInstructionText("Where did all the painting go??")
+      setInstructionText("Where did all the painting go?? I could have swore it would have to be more than two to be considered an 'art gallery', but oh well! Things where different back then.")
       setWhatRoom(roomArray[3]);
       setWhatThing(thingsArray[0]);
       console.log("No painting");
+    }
+
+    else if (isDone===true) {
+      window.parent.postMessage('nextLevel');
+      console.log("End of game 2")
     }
 }
 
@@ -240,9 +251,15 @@ const changeRoom3 = () => {
     setAlternativeText2("Investigate the second painting");
     setAlternativeText3("Go back");
     setBackground(WallpaperImg);
-    setInstructionText("Where did all the painting go??")
+    setInstructionText("Where did all the painting go?? I could have swore it would have to be more than two to be considered an 'art gallery', but oh well! Things where different back then.")
     setWhatRoom(roomArray[3]);
-  } 
+  }
+
+  else if (isDone===true) {
+    window.parent.postMessage('nextLevel');
+    console.log("End of game 3")
+  }
+
   //Go back to Hallway
   else {
     setAlternativeText1("Go to the kitchen");
