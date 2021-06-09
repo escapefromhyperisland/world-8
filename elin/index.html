@@ -150,7 +150,13 @@
 
         </a-entity>
 
-
+        <a-entity id="pinguin" 
+        gltf-model="#pinguin" 
+        position="3 0 -13"
+        rotation="0 0 0" 
+        scale="0.5 0.5 0.5"
+        animation="property: rotation; to: 0 -360 0; dur: 15000; easing: linear; loop: true"
+        ></a-entity>
 
         <a-entity id="navmesh" gltf-model="#nav-mesh" nav-mesh visible="false"></a-entity>
     </a-scene>
