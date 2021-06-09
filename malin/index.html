@@ -1,51 +1,79 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>My game</title>
+    <title>Factory territory</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!-- <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>  -->
-    <script src="js/video.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script> -->
-    <script src="js/clickcan.js"></script>
+    <script src="https://unpkg.com/aframe-super-keyboard@2.1.0/dist/aframe-super-keyboard.min.js"></script> 
+
+    <script>
+        const play = () => {
+          window.removeEventListener("click", play);
+          window.removeEventListener("touchstart", play);
+          document.querySelectorAll("video, audio").forEach(el => el.play());
+          document
+            .querySelectorAll("[sound],a-sound")
+            .forEach(el => el.components.sound.playSound());
+        };
+        window.addEventListener("click", play);
+        window.addEventListener("touchstart", play);
+      </script>
 
 </head>
 <body>
-    <a-scene cursor="rayOrigin: mouse">
+
+    <script src="js/clickevent.js"></script>
+
+    <a-scene>
         <a-assets>
-            <a-asset-items id="newerwarehouse" src="assets/newerwarehouse.glb"></a-asset-items>
+            <a-asset-items id="newestwarehouse" src="assets/newestwarehouse.glb"></a-asset-items>
             <a-asset-items id="signdiner" src="assets/sign_diner.glb"></a-asset-items>
             <a-asset-items id="oil1" src="assets/oil1.glb"></a-asset-items>
             <a-asset-items id="oil2" src="assets/oil2.glb"></a-asset-items>
             <a-asset-items id="oil3" src="assets/oil3.glb"></a-asset-items>
             <a-asset-items id="oil4" src="assets/oil4.glb"></a-asset-items>
-            <video id="videonew" src="assets/circle.mp4" autoplay loop preload crossorigin="anonymous"></video>
-            <img id="play" src="assets/play.png">
-            <img id="pause" src="assets/pause.png">
+            <a-asset-items id="oilfluid" src="assets/oilfluid.glb"></a-asset-items>
+            <a-asset-items id="bear" src="assets/bear.glb"></a-asset-items>
+            <video id="videonew" src="assets/testmovie.mp4" autoplay loop preload crossorigin="anonymous"></video>
+            <img id="speechbubble" src="assets/speechbubble.png">
+            <img id="speechfinished" src="assets/speechfinished.png">
         </a-assets>
 
         <a-sky src="assets/background3.png"></a-sky>
 
-        <a-entity gltf-model="#newerwarehouse"></a-entity>
-
+        <a-entity gltf-model="#newestwarehouse"></a-entity>
         <a-entity gltf-model="#signdiner" scale="0.04 0.04 0.04" position="-1 -1 -33" rotation="0 25 0"></a-entity>
 
-        <a-entity gltf-model="#oil1" scale="0.002 0.002 0.002" position="-1 1 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
-        <a-entity gltf-model="#oil2" scale="0.03 0.03 0.03" position="3 -1 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
-        <a-entity gltf-model="#oil3" scale="0.45 0.45 0.45" position="5 1 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
-        <a-entity gltf-model="#oil4" position="8 0 -11" rotation="0 25 0" visible="true" clickcan></a-entity>
+        <a-entity id="oilOne" class="clickable" gltf-model="#oil1" scale="0.0025 0.0025 0.0025" position="-1 1 2" visible="true" clickevent></a-entity>
+        <a-entity id="oilTwo" class="clickable" gltf-model="#oil2" scale="0.036 0.036 0.036" position="33.5 -1 -1" visible="true" clickevent></a-entity>
+        <a-entity id="oilThree" class="clickable" gltf-model="#oil3" scale="0.41 0.41 0.41" position="23 1 -11" rotation="0 130 0" visible="true" clickevent></a-entity>
+        <a-entity id="oilFour" class="clickable" gltf-model="#oil3" scale="0.41 0.41 0.41" position="20.5 1 -11" rotation="0 170 0" visible="true" clickevent></a-entity>
+        <a-entity id="oilFive" class="clickable" gltf-model="#oil4" scale="0.9 0.9 0.9" position="8 -1 12" visible="true" clickevent></a-entity>
+        <a-entity id="oilSix" class="clickable" gltf-model="#oil2" scale="0.032 0.032 0.032" position="16 0 -9" visible="true" clickevent></a-entity>
 
+        <a-entity id="fluidOne" gltf-model="#oilfluid" position="18 -1.8 -14" scale="4 4 4" rotation="0 25 0"></a-entity>
+        <a-entity id="fluidTwo" gltf-model="#oilfluid" position="14 -1.8 -14" scale="4 4 4" rotation="0 25 0"></a-entity>
+        <a-entity id="fluidThree" gltf-model="#oilfluid" position="-5 -2 -2" scale="4 4 4" rotation="0 25 0"></a-entity>
+        <a-entity id="fluidFour" gltf-model="#oilfluid" position="33 -2 -5" scale="4 4 4" rotation="0 25 0"></a-entity>
+        <a-entity id="fluidFive" gltf-model="#oilfluid" position="3 -2 16" scale="4 4 4" rotation="0 100 0"></a-entity>
+        
+        <a-entity id="startbubble" visible="true">
+        <a-image id="speechbubble" src="#speechbubble" position="0.6 2.3 -18.5" rotation="0 20 0"></a-image>
+        </a-entity>
+        <a-entity  id="finishbubble" visible="false">
+        <a-image id="speechfinished" src="#speechfinished" position="0.6 2.3 -18.5" rotation="0 20 0"></a-image>
+        </a-entity>
+        <a-entity gltf-model="#bear" position="2 3 -16" scale="5.9 5.9 5.9" rotation="0 210 0"></a-entity>
 
-        <!-- <a-entity position="0 0 0">
-            <a-sphere color="pink" position="-10 3 -20" radius="0.6" color="pink" shadow ></a-sphere>
-        </a-entity> -->
+        <a-video id="videomessage" src="#videonew" width="10.1" height="5.35" position="31.3 2.6 -0.14" rotation="0 -90 0" visible="false">       
+        </a-video>
 
-        <!-- <a-video src="#videonew" width="7" height="5.25" position="-10 1.4 -4.4">       
-            <a-image id="videoControls" src="#play" position="0 5 0" play-pause></a-image>
-        </a-video> -->
+        <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+        <a-entity id="hand" laser-controls="hand: right"></a-entity>
+        <a-entity id="keyboard" super-keyboard="hand: #mouseCursor; imagePath: assets/images/;" keyboard-functions position="6 2 9" rotation="-20 180 0" scale="4 4 4" keyboard-input></a-entity>
 
         <a-entity id="rig" position="-7 0.7 -42" rotation="0 201 0">
             <a-camera id="camera">
-                <a-cursor id="cursor" raycaster>
+                <a-cursor id="cursor" color="white" raycaster="objects: .clickable">
                 </a-cursor>
             </a-camera>
         </a-entity>
@@ -54,7 +82,3 @@
 
 </body>
 </html>
-
-
-
-<!-- <a-entity id="rig" position="25 0 0" rotation="0 120 0"> -->

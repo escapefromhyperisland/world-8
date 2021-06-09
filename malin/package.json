@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "aframe-mouse-cursor-component": "^0.5.3"
+  },
+  "dependencies": {
+    "aframe-super-keyboard": "^2.1.0"
   }
 }
