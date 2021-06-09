@@ -1,7 +1,6 @@
 const correctPassword = "mother earth"
 let passwordIsCorrect = false
 
-
 AFRAME.registerComponent('clickevent', {
     init: function() {
         let el = this.el;
@@ -38,7 +37,10 @@ AFRAME.registerComponent('keyboard-input', {
             self.el.setAttribute("super-keyboard", "value", "");
 
             if (input === correctPassword) {
-                alert('You made it!');
+                let teleport = document.getElementById("teleport");
+                teleport.attributes.visible.value = "true";
+                let finishpopup = document.getElementById("finalimage");
+                finishpopup.attributes.visible.value = "true";
                 passwordIsCorrect = true
             } else {
                 alert('Wrong password, try again!');
@@ -56,4 +58,19 @@ AFRAME.registerComponent('keyboard-input', {
             this.el.object3D.visible = true;
     }
 
+})
+
+AFRAME.registerComponent('click-nextlevel', {
+    init: function() {
+        console.log('aa');
+        let el = this.el;
+        this.clickcanhide = function() {
+            alert('You will now be teleported to the next level!');
+            window.parent.postMessage('nextLevel')
+        }
+        this.el.addEventListener('click', this.clickcanhide);
+    },
+    remove: function() {
+        this.el.removeEventListener('click', this.clickcanhide);
+    }
 })
