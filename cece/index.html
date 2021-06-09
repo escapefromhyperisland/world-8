@@ -8,7 +8,7 @@
 
 <meta charset="UTF-8">
 
-<title>The button</title>
+<title>The button - The Wake Up</title>
 <link rel="icon" type="image/png" href="./images/avatar-favicon.png" sizes="16x16">
 <script type="text/bitsyGameData" id="exportedGameData">
 {shk}The button{shk}
@@ -8371,7 +8371,7 @@ function updateInput() {
 		if (input.anyKeyPressed() || input.isTapReleased()) {
 			/* RESTART GAME */
 			console.log("The End of this level, thanks for playing!");
-			windows.parent.postMessage('nextLevel');
+			window.parent.postMessage('nextLevel');
 			// reset_cur_game();
 		}
 	}
