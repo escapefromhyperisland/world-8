@@ -14,10 +14,10 @@ In your team, define the world where your browser game exist. Then, individually
 
 
 ### :checkered_flag: Goals:
-- [x] Challange myself to try something new
+- [x] Challenge myself to try something new
 - [x] Experiment and have fun with the code!
 - [x] Create something that I am proud of
-- [x] Make three challanges for the player to solve
+- [x] Make three challenges for the player to solve
 
 
 ### :notebook_with_decorative_cover: World 8 - The Story:
@@ -26,7 +26,7 @@ Your family has for generations pressed "The Button" to keep the sun shining, wh
 You realize that it's already the year 3000 and it's YOUR duty to save the world! You need to find all the heirloom from your family to remember how to get to the button and find keys desiphering the cryptig riddles left behind by your ancestors.
 
 #### My Level
-This is the last level in the story of "The Button" and you are located in the headquarters of the earth where the button is actually hidden. Your ultimate goal is to press the button to save the planet, but to enable it you need to tackle some challanges.
+This is the last level in the story of "The Button" and you are located in the headquarters of the earth where the button is actually hidden. Your ultimate goal is to press the button to save the planet, but to enable it you need to tackle some challenges.
 
 
 ### :crossed_fingers: Nice to haves:
