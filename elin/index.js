@@ -1,44 +1,44 @@
-const correctPassword = "future"
-const correctCode = "835"
+const correctPassword = 'future'
+const correctCode = '835'
 let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
 
 function closePopup() {
-    document.querySelector("#popup").style.visibility = "hidden"
-    document.querySelector("#info-button").style.visibility = "visible"
+    document.querySelector('#popup').style.visibility = 'hidden'
+    document.querySelector('#info-button').style.visibility = 'visible'
 }
 
 function displayPopup() {
-    document.querySelector("#popup").style.visibility = "visible"
-    document.querySelector("#info-button").style.visibility = "hidden"
+    document.querySelector('#popup').style.visibility = 'visible'
+    document.querySelector('#info-button').style.visibility = 'hidden'
 }
 
 function goToNextWorld() {
     window.parent.postMessage('nextLevel')
 }
 
-window.addEventListener("keydown", function(e){
-    if(e.code === "Space") { 
-        const player = document.querySelector("#player")
-        const playerPosition = player.getAttribute("position")
+window.addEventListener('keydown', function(e){
+    if(e.code === 'Space') { 
+        const player = document.querySelector('#player')
+        const playerPosition = player.getAttribute('position')
         const down = 1.5
         
         playerPosition.y = down
 
-        player.setAttribute("position", playerPosition)
+        player.setAttribute('position', playerPosition)
     }
 });
 
-window.addEventListener("keyup", function(e){
-    if (e.code === "Space") {
-        const player = document.querySelector("#player")
-        const playerPosition = player.getAttribute("position")
+window.addEventListener('keyup', function(e){
+    if (e.code === 'Space') {
+        const player = document.querySelector('#player')
+        const playerPosition = player.getAttribute('position')
         const up = 3
 
         playerPosition.y = up
 
-        player.setAttribute("position", playerPosition)
+        player.setAttribute('position', playerPosition)
     }
 })
 
@@ -51,21 +51,21 @@ AFRAME.registerComponent('keyboard-functions', {
 
         // input event triggered when user presses enter
         this.el.addEventListener('superkeyboardinput', function (event) {
-            // text also accessible via: self.el.getAttribute("super-keyboard")["value"]
+            // text also accessible via: self.el.getAttribute('super-keyboard')['value']
             let input = event.detail.value;
 
             // clear the input bar (since keyboard is not disappearing)
-            self.el.setAttribute("super-keyboard", "value", "");
+            self.el.setAttribute('super-keyboard', 'value', '');
 
             // handle password
             if (input === correctPassword) {
-                document.querySelector("#button").setAttribute("gltf-model", "https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/green-button.glb")
-                document.querySelector("#button").flushToDOM()
+                document.querySelector('#button').setAttribute('gltf-model', 'https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/green-button.glb')
+                document.querySelector('#button').flushToDOM()
                 passwordIsCorrect = true
             } else {
-                alert("WRONG PASSWORD.... TRY AGAIN")
-                document.querySelector("#button").setAttribute("gltf-model", "https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/red-button.glb")
-                document.querySelector("#button").flushToDOM()
+                alert('WRONG PASSWORD.... TRY AGAIN')
+                document.querySelector('#button').setAttribute('gltf-model', 'https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/red-button.glb')
+                document.querySelector('#button').flushToDOM()
                 passwordIsCorrect = false
             }
         });
@@ -73,7 +73,7 @@ AFRAME.registerComponent('keyboard-functions', {
         // dismiss event triggered when user closes keyboard
         this.el.addEventListener('superkeyboarddismiss', function (event) {
             // repurpose close functionality to clear all input text without submitting
-            self.el.setAttribute("super-keyboard", "value", "");
+            self.el.setAttribute('super-keyboard', 'value', '');
         });
     },
 
@@ -96,24 +96,24 @@ AFRAME.registerComponent('numpad-keyboard-functions', {
             
             let number = event.detail.value;
             
-            self.el.setAttribute("super-keyboard", "value", "");
+            self.el.setAttribute('super-keyboard', 'value', '');
 
             if (number == correctCode) {
                 
-                const briefcaseWrapper = document.querySelector("#briefcase-wrapper")
+                const briefcaseWrapper = document.querySelector('#briefcase-wrapper')
                 briefcaseWrapper.innerHTML = 
                     '<a-entity id="briefcase" gltf-model="#briefcase" position="-2.8 1 3.1" rotation="0 180 0" scale="0.5 0.5 0.5" animation-mixer="clip: *; loop: once; clampWhenFinished: true"></a-entity>'
                 briefcaseWrapper.flushToDOM()
                 
                 codeIsCorrect = true
 
-                document.querySelector("#numpad").setAttribute("visible", "false")
-                document.querySelector("#numpad").flushToDOM()
+                document.querySelector('#numpad').setAttribute('visible', 'false')
+                document.querySelector('#numpad').flushToDOM()
             }
         });
 
         this.el.addEventListener('superkeyboarddismiss', function (event) {
-            self.el.setAttribute("super-keyboard", "value", "");
+            self.el.setAttribute('super-keyboard', 'value', '');
         });
     },
 
@@ -127,13 +127,28 @@ AFRAME.registerComponent('numpad-keyboard-functions', {
 AFRAME.registerComponent('dot-function', {
 
     update: function () {
+
         this.el.addEventListener('click', function (event) {
+
+            const dotsAnswer = ['black', 'white', 'white', 'white', 'white',
+                                'black', 'white', 'white', 'white', 'white',
+                                'white', 'white', 'black', 'white', 'white',
+                                'black', 'white', 'white', 'black', 'white',
+                                'black', 'white', 'white', 'white', 'white']
+            
             if (this.getAttribute('color') === 'white' && haveMarker) {
-                this.setAttribute('color', 'black');
+                this.setAttribute('color', 'black');           
             }
             else if (this.getAttribute('color') === 'black' && haveMarker) {
                 this.setAttribute('color', 'white');
             }
+
+            const dots = Array.from(document.querySelectorAll('.dot'))
+            const dotsColors = dots.map(dot => dot.getAttribute('color'))
+
+            if (JSON.stringify(dotsColors)==JSON.stringify(dotsAnswer)) {
+                alert('You are hired!')
+            } 
         })
     }
 
@@ -145,7 +160,7 @@ AFRAME.registerComponent('marker-function', {
         
         this.el.addEventListener('click', function (event) {
             haveMarker = true
-            this.setAttribute("visible", "false")
+            this.setAttribute('visible', 'false')
             this.flushToDOM()
         })
     }
@@ -157,10 +172,10 @@ AFRAME.registerComponent('the-button-function', {
     update: function () {
         
         this.el.addEventListener('click', function (event) {
-            if (this.getAttribute('gltf-model').includes("green")) {
-                document.querySelector('#aftertexts').style.visibility = "visible"
-                document.querySelector("#crawl").style.animation = "crawl 20s linear forwards"
-                document.querySelector("#next-world-btn").style.animation = "fadeIn 2s ease 7s forwards"
+            if (this.getAttribute('gltf-model').includes('green')) {
+                document.querySelector('#aftertexts').style.visibility = 'visible'
+                document.querySelector('#crawl').style.animation = 'crawl 20s linear forwards'
+                document.querySelector('#next-world-btn').style.animation = 'fadeIn 2s ease 7s forwards'
             }
         })
     }
