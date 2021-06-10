@@ -4,13 +4,27 @@ let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
 
-const correct = new Audio("./assets/audios/correct.mp3");
-const wrong = new Audio("./assets/audios/wrong.mp3");
+const correct = new Audio("./assets/audios/correct.mp3")
+const wrong = new Audio("./assets/audios/wrong.mp3")
+const background = new Audio("./assets/audios/background.mp3")
+background.volume = 0.1;
+background.loop = true;
+let musicIsPlaying = false;
 
+
+function handleMusic () {
+    const musicIcon = document.querySelector('#music-icon')
+    musicIsPlaying? background.pause() : background.play();
+    musicIsPlaying? musicIcon.className = 'fas fa-volume-mute fa-xs' : musicIcon.className = 'fas fa-volume-down fa-xs';
+    musicIsPlaying = !musicIsPlaying;
+}
 
 function closePopup() {
+    background.play()
+    let musicIsPlaying = true;
     document.querySelector('#popup').style.visibility = 'hidden'
     document.querySelector('#info-button').style.visibility = 'visible'
+    document.querySelector('#music-button').style.visibility = 'visible'
 }
 
 function displayPopup() {
