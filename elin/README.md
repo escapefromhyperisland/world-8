@@ -46,8 +46,8 @@ This is the last level in the story of "The Button" and you are located in the h
 - [ ] Play with lights
 - [ ] Add instructions to glitch-page to open it in firefox instead if you have a android
 - [x] Change code to #?X
-- [ ] Add feedback on right answer of logic test (sound or alert)
-- [ ] Add the middle number hidden somewhere
+- [x] Add feedback on right answer of logic test (sound or alert)
+- [x] Add the middle number hidden somewhere
 
 
 ### :closed_book: Learnings:

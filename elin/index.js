@@ -147,7 +147,7 @@ AFRAME.registerComponent('dot-function', {
             const dotsColors = dots.map(dot => dot.getAttribute('color'))
 
             if (JSON.stringify(dotsColors)==JSON.stringify(dotsAnswer)) {
-                alert('You are hired!')
+                alert('Well done, you genius!')
             } 
         })
     }
