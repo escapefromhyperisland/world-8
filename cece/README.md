@@ -1,4 +1,4 @@
-# Find the button - Escape Room
+# Find the button
 
 Hyper Island - Exploring Code module - Brief 10
 
@@ -8,7 +8,8 @@ Build a participation-driven online escape game, with worlds and levels. Individ
 The challenges can be made using one or several web technologies, from workshops or elsewhere.
 <br />
 <br />
-**📔 World 8 - The Story created by our group:**
+<br />
+**🌎 World 8 - The Story created by our group:**
 
 "Your family has for generations pressed "The Button" to keep the sun shining, which only needs to be done every hundred year. You lost interest in it when you hit your teens and after all the partying and traveling you had completely forgot about your responsibility and the process how to press this well hidden (from the world) button. You realize that it's already the year 3000 and it's YOUR duty to save the world! You need to find all the heirloom from your family to remember how to get to the button and find keys desiphering the cryptig riddles left behind by your ancestors."
 <br />
@@ -26,7 +27,9 @@ I used the Pixilart to plan the look of my tiles and sprites and items before en
 <br />
 <br />
 <br />
-**🦸‍♀️ Play (only) my level here: https://escapefromhyperisland.github.io/game/?world=8&level=0**
+**🦸‍♀️ Play (only) my level here: https://escapefromhyperisland.github.io/game/?world=8&level=0** 
+<br />
+or just https://escapefromhyperisland.github.io/world-8/cece/ if something have changed in the class's master file that would make it inaccessible :)
 
 If you want to play our whole world, you can do it here: https://escapefromhyperisland.github.io/game/?world=8
 <br />
