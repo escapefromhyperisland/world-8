@@ -4,6 +4,10 @@ let haveMarker = false
 let passwordIsCorrect = false
 let codeIsCorrect = false
 
+const correct = new Audio("./assets/audios/correct.mp3");
+const wrong = new Audio("./assets/audios/wrong.mp3");
+
+
 function closePopup() {
     document.querySelector('#popup').style.visibility = 'hidden'
     document.querySelector('#info-button').style.visibility = 'visible'
@@ -59,11 +63,12 @@ AFRAME.registerComponent('keyboard-functions', {
 
             // handle password
             if (input === correctPassword) {
+                correct.play()
                 document.querySelector('#button').setAttribute('gltf-model', 'https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/green-button.glb')
                 document.querySelector('#button').flushToDOM()
                 passwordIsCorrect = true
             } else {
-                alert('WRONG PASSWORD.... TRY AGAIN')
+                wrong.play()
                 document.querySelector('#button').setAttribute('gltf-model', 'https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/red-button.glb')
                 document.querySelector('#button').flushToDOM()
                 passwordIsCorrect = false
@@ -99,7 +104,7 @@ AFRAME.registerComponent('numpad-keyboard-functions', {
             self.el.setAttribute('super-keyboard', 'value', '');
 
             if (number == correctCode) {
-                
+                correct.play()
                 const briefcaseWrapper = document.querySelector('#briefcase-wrapper')
                 briefcaseWrapper.innerHTML = 
                     '<a-entity id="briefcase" gltf-model="#briefcase" position="-2.8 1 3.1" rotation="0 180 0" scale="0.5 0.5 0.5" animation-mixer="clip: *; loop: once; clampWhenFinished: true"></a-entity>'
@@ -109,6 +114,9 @@ AFRAME.registerComponent('numpad-keyboard-functions', {
 
                 document.querySelector('#numpad').setAttribute('visible', 'false')
                 document.querySelector('#numpad').flushToDOM()
+            }
+            else {
+                wrong.play()
             }
         });
 
@@ -147,7 +155,7 @@ AFRAME.registerComponent('dot-function', {
             const dotsColors = dots.map(dot => dot.getAttribute('color'))
 
             if (JSON.stringify(dotsColors)==JSON.stringify(dotsAnswer)) {
-                alert('Well done, you genius!')
+                correct.play()
             } 
         })
     }
