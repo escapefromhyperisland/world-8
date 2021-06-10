@@ -9,7 +9,7 @@ const wrong = new Audio("./assets/audios/wrong.mp3")
 const background = new Audio("./assets/audios/background.mp3")
 background.volume = 0.1;
 background.loop = true;
-let musicIsPlaying = false;
+let musicIsPlaying = true;
 
 
 function handleMusic () {
@@ -21,7 +21,6 @@ function handleMusic () {
 
 function closePopup() {
     background.play()
-    let musicIsPlaying = true;
     document.querySelector('#popup').style.visibility = 'hidden'
     document.querySelector('#info-button').style.visibility = 'visible'
     document.querySelector('#music-button').style.visibility = 'visible'
