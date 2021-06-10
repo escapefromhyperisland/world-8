@@ -44,7 +44,7 @@ This is the last level in the story of "The Button" and you are located in the h
 - [ ] Add 1 hour timer
 - [x] Fix navmesh (doesn't reach QR-code now)
 - [ ] Play with lights
-- [ ] Add instructions to glitch-page to open it in firefox instead if you have a android
+- [x] Add instructions to glitch-page to open it in firefox instead if you have a android
 - [x] Change code to #?X
 - [x] Add feedback on right answer of logic test (sound or alert)
 - [x] Add the middle number hidden somewhere
