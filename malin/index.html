@@ -35,10 +35,13 @@
             <a-asset-items id="oilfluid" src="assets/oilfluid.glb"></a-asset-items>
             <a-asset-items id="bear" src="assets/bear.glb"></a-asset-items>
             <a-asset-items id="teleporter" src="https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/malin/assets/teleporter.glb"></a-asset-items>
+            <a-asset-items id="warningsign" src="assets/warningsign.glb"></a-asset-items>
             <video id="videonew" src="assets/testmovie.mp4" autoplay loop preload crossorigin="anonymous"></video>
             <img id="speechbubble" src="assets/speechbubble.png">
             <img id="speechfinished" src="assets/speechfinished.png">
             <img id="finishpic" src="assets/finishpic.png">
+            <!-- <audio id="darkforestsound" src="assets/darkforestsound.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio id="musicfactory" src="null" preload="auto" crossorigin="anonymous"></audio> -->
         </a-assets>
 
         <a-sky src="assets/background3.png"></a-sky>
@@ -66,12 +69,16 @@
         <a-image id="speechfinished" src="#speechfinished" position="0.6 2.3 -18.5" rotation="0 20 0"></a-image>
         </a-entity>
         <a-entity gltf-model="#bear" position="2 3 -16" scale="5.9 5.9 5.9" rotation="0 210 0"></a-entity>
-        
-        <a-entity id="teleport" gltf-model="#teleporter" class="clickable" position="12 2 1" scale="1.9 1.9 1.9" rotation="0 272 0" visible="false" click-nextlevel></a-entity>
+        <a-entity gltf-model="#warningsign" position="6 0 -21" scale="1.22 1.22 1.22" rotation="0 211 0"></a-entity>
+
+        <a-entity id="teleport" gltf-model="#teleporter" class="none" position="12 2 1" scale="1.9 1.9 1.9" rotation="0 272 0" visible="false" click-nextlevel></a-entity>
         <a-image id="finalimage" src="#finishpic" position="6 2.5 8.5" scale="1.6 1.6 1.6" rotation="0 0 0" visible="false"></a-image>
 
         <a-video id="videomessage" src="#videonew" width="10.1" height="5.35" position="31.3 2.6 -0.14" rotation="0 -90 0" visible="false">       
         </a-video>
+
+        <!-- <a-entity id="music" sound="src: #darkforestsound;" geometry="primitive: plane" material="color: blue"></a-entity>
+        <a-entity id="changemusic" sound="src: #musicfactory;" geometry="primitive: plane"  material="color: blue"></a-entity> -->
 
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
         <a-entity id="hand" laser-controls="hand: right"></a-entity>

@@ -19,6 +19,13 @@ AFRAME.registerComponent('clickevent', {
                 speechhide.attributes['visible'].value = "false";
                 let speechshow = document.getElementById("finishbubble");
                 speechshow.attributes['visible'].value = "true";
+                // let newmusic = document.getElementById("darkforestsound");
+                // newmusic.attributes.src.value = "null";
+                // let changemusic = document.getElementById("musicfactory");
+                // changemusic.attributes.src.value = "assets/musicfactory.mp3";
+                // let tryit = document.getElementById("changemusic");
+                // tryit.components.sound.playSound();
+
             }
         }
         this.el.addEventListener('click', this.clickcanhide);
@@ -39,6 +46,7 @@ AFRAME.registerComponent('keyboard-input', {
             if (input === correctPassword) {
                 let teleport = document.getElementById("teleport");
                 teleport.attributes.visible.value = "true";
+                teleport.attributes.class.value = "clickable";
                 let finishpopup = document.getElementById("finalimage");
                 finishpopup.attributes.visible.value = "true";
                 passwordIsCorrect = true
@@ -62,7 +70,6 @@ AFRAME.registerComponent('keyboard-input', {
 
 AFRAME.registerComponent('click-nextlevel', {
     init: function() {
-        console.log('aa');
         let el = this.el;
         this.clickcanhide = function() {
             alert('You will now be teleported to the next level!');
