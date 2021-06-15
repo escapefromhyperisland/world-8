@@ -7,7 +7,7 @@ let codeIsCorrect = false
 const correct = new Audio("./assets/audios/correct.mp3")
 const wrong = new Audio("./assets/audios/wrong.mp3")
 const background = new Audio("./assets/audios/background.mp3")
-background.volume = 0.1;
+background.volume = 0.2;
 background.loop = true;
 let musicIsPlaying = true;
 
