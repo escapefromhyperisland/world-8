@@ -77,12 +77,12 @@ AFRAME.registerComponent('keyboard-functions', {
             // handle password
             if (input === correctPassword) {
                 correct.play()
-                document.querySelector('#button').setAttribute('gltf-model', 'https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/green-button.glb')
+                document.querySelector('#button').setAttribute('gltf-model', 'https://cdn.glitch.com/a8b67769-8fe9-4204-9ac5-5e22d0c2b2ff%2Fgreen-button.glb?v=1626343364402')
                 document.querySelector('#button').flushToDOM()
                 passwordIsCorrect = true
             } else {
                 wrong.play()
-                document.querySelector('#button').setAttribute('gltf-model', 'https://media.githubusercontent.com/media/escapefromhyperisland/world-8/main/elin/assets/models/red-button.glb')
+                document.querySelector('#button').setAttribute('gltf-model', 'https://cdn.glitch.com/a8b67769-8fe9-4204-9ac5-5e22d0c2b2ff%2Fred-button.glb?v=1626343373104')
                 document.querySelector('#button').flushToDOM()
                 passwordIsCorrect = false
             }
